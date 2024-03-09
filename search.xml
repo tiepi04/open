@@ -1,0 +1,1041 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>常用指令</title>
+    <url>/posts/7590/</url>
+    <content><![CDATA[<h2 id="文件管理指令"><a href="#文件管理指令" class="headerlink" title="文件管理指令"></a>文件管理指令</h2><p>1.nano(系统自带的短小美)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nano </span><br></pre></td></tr></table></figure>
+<p>2.vim(比较常用的)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim </span><br></pre></td></tr></table></figure>
+<h1 id="fastboot"><a href="#fastboot" class="headerlink" title="fastboot"></a>fastboot</h1><p>进入方法:<br>电源键加音量-键进入或者使用这条指令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">adb rebboot bootloader</span><br></pre></td></tr></table></figure>
+<p>fastboot是一种比recovery更底层的模式，俗称线刷</p>
+<h3 id="查看连接设备"><a href="#查看连接设备" class="headerlink" title="查看连接设备"></a>查看连接设备</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastboot devices</span><br></pre></td></tr></table></figure>
+<h3 id="获取手机相关信息"><a href="#获取手机相关信息" class="headerlink" title="获取手机相关信息"></a>获取手机相关信息</h3><p>1.输出该设备的所有信息</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastboot getvar all</span><br></pre></td></tr></table></figure>
+<p>2.输出该机型内部代号名称（线刷包文件名前缀）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastboot getvar product</span><br></pre></td></tr></table></figure>
+<p>3.输出防回滚机制（ANTI）版本号</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastboot getvar anti</span><br></pre></td></tr></table></figure>
+<h3 id="关于重启"><a href="#关于重启" class="headerlink" title="关于重启"></a>关于重启</h3><p>1.重启手机</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastboot reboot</span><br></pre></td></tr></table></figure>
+<p>2.重启到bootloader模式</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastboot reboot-bootloader</span><br></pre></td></tr></table></figure>
+<p>3.重启到HTC RUU刷机模式</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastboot oem rebootRUU</span><br></pre></td></tr></table></figure>
+<p>4.进高通edl模式(9008模式)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastboot oem edl</span><br></pre></td></tr></table></figure>
+<p>5.退出fastboot模式并关闭设备</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastboot oem poweroff</span><br></pre></td></tr></table></figure>
+<p>6.退出fastboot模式并重启进入Recovery模式</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastboot oem reboot-recovery</span><br></pre></td></tr></table></figure>
+<h3 id="分区"><a href="#分区" class="headerlink" title="分区"></a>分区</h3><p>先介绍一下fastboot的常操作的一些分区</p>
+<p>1.system:系统分区<br>2.userdata:数据分区<br>3.cache:缓存分区，擦除这个分区，不会影响个人数据，只是删除了这个分区中已经保存的缓存内容，缓存内容会在后续手机使用过程中重新自动生成。<br>4.recovery:Recovery分区.相当于电脑pe<br>5.boot:存放内核和ramdisk的分区<br>6.hboot:这个是SPL所在的分区.很重要哦.也是7.fastboot所在的分区.刷错就真的变砖了<br>8.splash1:这个就是开机第一屏幕了<br>9.radio:基带<br>10.oem:(运营商配置文件，和运营商配置有关)</p>
+<h3 id="写入指令-flash"><a href="#写入指令-flash" class="headerlink" title="写入指令(flash)"></a>写入指令(flash)</h3><p>使用格式:<br>fastboot flash &lt;要刷写的对应分区&gt; &lt;某个目录下的要刷写的镜像&gt;</p>
+<p>内核临时引导启动(相当于电脑的PE)<br>fastboot boot &lt;内核镜像文件名或路径&gt;</p>
+<p>1.写入system分区(还有分段式的方法：刷机时，方法还是一致的，只不过要从分段0开始，按次序刷到分段N)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastboot flash system system.img</span><br></pre></td></tr></table></figure>
+<p>2.刷人boot分区(内核)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastboot flash boot boot.img</span><br></pre></td></tr></table></figure>
+<p>3.写入recovery分区(大家常用的卡刷模式所在分区)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastboot flash recovery recovery.img</span><br></pre></td></tr></table></figure>
+<p>刷完后直接电源键加音量+键进入recovery，不然还是原版recovery镜像。<br>或者尝试fastboot oem reboot-recovery<br>4.刷写radio分区(基带)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastboot flash radio radio.img</span><br></pre></td></tr></table></figure>
+<p>5.刷写oem分区(运营商配置文件，和运营商配置有关)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastboot flash oem oem.img</span><br></pre></td></tr></table></figure>
+<h3 id="清空指令-erase"><a href="#清空指令-erase" class="headerlink" title="清空指令(erase)"></a>清空指令(erase)</h3><p>顺便送个指令<br>手机资料全部清空</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastboot -w</span><br></pre></td></tr></table></figure>
+<p>等同于系统中的“恢复出厂设置”，或Recovery模式的“清空所有数据”操作。</p>
+<p>支持刷入的分区名可通过fastboot getvar all查询</p>
+<p>erase使用的格式<br>fastboot erase &lt;要清空的分区名&gt;</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastboot erase </span><br></pre></td></tr></table></figure>
+<h3 id="解锁相关-bootloader简称BL"><a href="#解锁相关-bootloader简称BL" class="headerlink" title="解锁相关(bootloader简称BL)"></a>解锁相关(bootloader简称BL)</h3><p>查看是否上锁<br>方法1</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastboot oem device-info</span><br></pre></td></tr></table></figure>
+<p>方法2</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastboot oem lks</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Z</category>
+        <category>指令</category>
+        <category>常用</category>
+      </categories>
+      <tags>
+        <tag>指令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker</title>
+    <url>/posts/40991/</url>
+    <content><![CDATA[<h1 id="Docker使用"><a href="#Docker使用" class="headerlink" title="Docker使用"></a>Docker使用</h1><h2 id="Portainer-可视化容器管理工具"><a href="#Portainer-可视化容器管理工具" class="headerlink" title="Portainer(可视化容器管理工具)"></a>Portainer(可视化容器管理工具)</h2><p>安装好Docker后输入这个<br>1).</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker volume create portainer_data</span><br></pre></td></tr></table></figure>
+<p>2).启动(端口9000，前一个是访问的端口9000)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest</span><br></pre></td></tr></table></figure>
+<h3 id="本地浏览器访问Portainer"><a href="#本地浏览器访问Portainer" class="headerlink" title="本地浏览器访问Portainer"></a>本地浏览器访问Portainer</h3><p>http:&#x2F;&#x2F;服务器ip地址:9000</p>
+<p>首次访问需要设置admin密码</p>
+<h2 id="novnc-网页图形界面"><a href="#novnc-网页图形界面" class="headerlink" title="novnc(网页图形界面)"></a>novnc(网页图形界面)</h2><p>HTTP_PASSWORD&#x3D;12345678  默认密码是12345678，这里可以自定义，1440，x720是分辨率，这里同样可以改成自己想要的分辨率，访问端口是6080</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d -p 6080:80 -v <span class="variable">$PWD</span>:/workspace:rw -e HTTP_PASSWORD=12345678 -e RESOLUTION=1440x720 --name ubuntu-novnc1 fredblgr/ubuntu-novnc:20.04</span><br></pre></td></tr></table></figure>
+<p>安装好后我们可以用http:&#x2F;&#x2F;服务器ip地址:6080<br>默认用户名：root</p>
+<p>默认密码：12345678（别忘了改成自己的）</p>
+<h1 id="Linux篇"><a href="#Linux篇" class="headerlink" title="Linux篇"></a>Linux篇</h1><h2 id="系统更新"><a href="#系统更新" class="headerlink" title="系统更新"></a>系统更新</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update -y &amp;&amp; sudo apt-get upgrade -y</span><br></pre></td></tr></table></figure>
+<h2 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install docker.io -y &amp;&amp; sudo apt install docker-compose</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>D</category>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>English</title>
+    <url>/posts/4288/</url>
+    <content><![CDATA[<h2 id="2024-2-22"><a href="#2024-2-22" class="headerlink" title="2024-2-22"></a>2024-2-22</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-22/1708597913u781347483.mp4?20240222" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
+height: 80%; left: 0; top: 0;"> </iframe></div>
+
+<p><a href="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-22/1708597913u781347483.mp4?20240222">视频链接</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-22/1708597913u781347483.mp4?20240222</span><br></pre></td></tr></table></figure>
+
+<h2 id="2024-2-20"><a href="#2024-2-20" class="headerlink" title="2024-2-20"></a>2024-2-20</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-20/1708425075u781347482.mp4?20240220" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
+height: 80%; left: 0; top: 0;"> </iframe></div>
+
+<p><a href="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-20/1708425075u781347482.mp4?20240220">视频链接</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-20/1708425075u781347482.mp4?20240220</span><br></pre></td></tr></table></figure>
+
+<h2 id="2024-2-18"><a href="#2024-2-18" class="headerlink" title="2024-2-18"></a>2024-2-18</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-18/1708261465u781347486.mp4?20240218" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
+height: 80%; left: 0; top: 0;"> </iframe></div>
+
+<p><a href="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-18/1708261465u781347486.mp4?20240218">视频链接</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-18/1708261465u781347486.mp4?20240218</span><br></pre></td></tr></table></figure>
+
+<h2 id="2024-2-16"><a href="#2024-2-16" class="headerlink" title="2024-2-16"></a>2024-2-16</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-16/1708083404u781347482.mp4?20240216" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
+height: 80%; left: 0; top: 0;"> </iframe></div>
+
+<p><a href="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-16/1708083404u781347482.mp4?20240216">视频链接</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-16/1708083404u781347482.mp4?20240216</span><br></pre></td></tr></table></figure>
+
+<h2 id="2024-2-14"><a href="#2024-2-14" class="headerlink" title="2024-2-14"></a>2024-2-14</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-14/1707906185u781347482.mp4?20240214" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
+height: 80%; left: 0; top: 0;"> </iframe></div>
+
+<p><a href="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-14/1707906185u781347482.mp4?20240214">视频链接</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-14/1707906185u781347482.mp4?20240214</span><br></pre></td></tr></table></figure>
+
+<h2 id="2024-2-12"><a href="#2024-2-12" class="headerlink" title="2024-2-12"></a>2024-2-12</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-12/1707740104u781347480.mp4?20240212" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
+height: 80%; left: 0; top: 0;"> </iframe></div>
+
+<p><a href="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-12/1707740104u781347480.mp4?20240212">视频链接</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-12/1707740104u781347480.mp4?20240212</span><br></pre></td></tr></table></figure>
+
+<h2 id="2024-2-10"><a href="#2024-2-10" class="headerlink" title="2024-2-10"></a>2024-2-10</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-10/1707567699u781347485.mp4?20240210" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
+height: 80%; left: 0; top: 0;"> </iframe></div>
+
+<p><a href="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-10/1707567699u781347485.mp4?20240210">视频链接</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-10/1707567699u781347485.mp4?20240210</span><br></pre></td></tr></table></figure>
+
+<h2 id="2024-2-8"><a href="#2024-2-8" class="headerlink" title="2024-2-8"></a>2024-2-8</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-08/1707397733u781347485.mp4?20240208" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
+height: 80%; left: 0; top: 0;"> </iframe></div>
+
+<p><a href="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-08/1707397733u781347485.mp4?20240208">视频链接</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-08/1707397733u781347485.mp4?20240208</span><br></pre></td></tr></table></figure>
+
+<h2 id="2024-2-6"><a href="#2024-2-6" class="headerlink" title="2024-2-6"></a>2024-2-6</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-09/1707481539u781347489.mp4?20240206" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
+height: 80%; left: 0; top: 0;"> </iframe></div>
+
+<p><a href="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-09/1707481539u781347489.mp4?20240206">视频链接</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-09/1707481539u781347489.mp4?20240206</span><br></pre></td></tr></table></figure>
+
+<h2 id="2024-2-4"><a href="#2024-2-4" class="headerlink" title="2024-2-4"></a>2024-2-4</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-04/1707051809u781347489.mp4?20240204" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
+height: 80%; left: 0; top: 0;"> </iframe></div>
+
+<p><a href="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-04/1707051809u781347489.mp4?20240204">视频链接</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-04/1707051809u781347489.mp4?20240204</span><br></pre></td></tr></table></figure>
+
+<h2 id="2024-2-2"><a href="#2024-2-2" class="headerlink" title="2024-2-2"></a>2024-2-2</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-02/1706879585u781347486.mp4?20240202" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
+height: 80%; left: 0; top: 0;"> </iframe></div>
+
+<p><a href="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-02/1706879585u781347486.mp4?20240202">视频链接</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-02/1706879585u781347486.mp4?20240202</span><br></pre></td></tr></table></figure>
+
+<h2 id="2023-11-26"><a href="#2023-11-26" class="headerlink" title="2023-11-26"></a>2023-11-26</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2023-11-26/1700970903u781347487.mp4?20230121112" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
+height: 80%; left: 0; top: 0;"> </iframe></div>
+
+<p><a href="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2023-11-26/1700970903u781347487.mp4?20230121112">视频链接</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2023-11-26/1700970903u781347487.mp4?20230121112</span><br></pre></td></tr></table></figure>
+
+<p>录了一天了，发布后才发现声音小了，但是它把我草稿删了。就这样吧。</p>
+<p>原视频</p>
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://3026320471.qnqcdn.net:22443/qn-c0FRw9iNhKSZLNhoiFj4uMVYtWjsUJSk2XG0aLw4.pycdn.qupeiyin.cn/2017-03-28/1490690407466mdamt.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
+height: 80%; left: 0; top: 0;"> </iframe></div>
+
+<p><a href="https://3026320471.qnqcdn.net:22443/qn-c0FRw9iNhKSZLNhoiFj4uMVYtWjsUJSk2XG0aLw4.pycdn.qupeiyin.cn/2017-03-28/1490690407466mdamt.mp4">原视频链接</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://3026320471.qnqcdn.net:22443/qn-c0FRw9iNhKSZLNhoiFj4uMVYtWjsUJSk2XG0aLw4.pycdn.qupeiyin.cn/2017-03-28/1490690407466mdamt.mp4</span><br></pre></td></tr></table></figure>
+<h2 id="视频直接播放方法"><a href="#视频直接播放方法" class="headerlink" title="视频直接播放方法"></a>视频直接播放方法</h2><p>需要下载第三方工具</p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><code>IDM下载工具</code><br><a href="https://www.123pan.com/s/wkn6Vv-rkfiH.html">点击前往下载</a></p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><h3 id="视频教程"><a href="#视频教程" class="headerlink" title="视频教程:"></a>视频教程:</h3><div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"hotkey":true,"preload":"metadata","video":{"url":"/posts/4288/sp.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+<p>这个可能在这里播放不了请点击下方访问<br><a href="https://lswi6983.github.io/2023/11/26/English/sp.mp4">点击前往</a></p>
+<p>或者点<a href="https://gitee.com/tiepi04/tiepi04/raw/master/2023/11/26/English/sp.mp4">此处</a>下载</p>
+<h3 id="图文教程"><a href="#图文教程" class="headerlink" title="图文教程:"></a>图文教程:</h3><h4 id="所需应用"><a href="#所需应用" class="headerlink" title="所需应用"></a>所需应用</h4><p><img src="/posts/4288/main.jpg" alt="所需应用"></p>
+<h4 id="获得视频分享链接"><a href="#获得视频分享链接" class="headerlink" title="获得视频分享链接"></a>获得视频分享链接</h4><li style="margin-left: 40px;font-size: 15px">进入“英语趣配音”</li>
+
+<p><ins>在底部点“我”</ins></p>
+<p><img src="/posts/4288/yy_1.jpg" alt="1"></p>
+<li style="margin-left: 40px;font-size: 15px">点击“我的配音”</li>
+
+<p><img src="/posts/4288/yy_2.jpg" alt="2"></p>
+<li style="margin-left: 40px;font-size: 15px">获取分享链接</li>
+
+<p><img src="/posts/4288/yy_3.jpg" alt="3"></p>
+<h4 id="获取视频直链或下载视频"><a href="#获取视频直链或下载视频" class="headerlink" title="获取视频直链或下载视频"></a>获取视频直链或下载视频</h4><li style="margin-left: 40px;font-size: 15px">打开IDM下载器</li>
+
+<p><img src="/posts/4288/main2.jpg" alt="IDM下载器"></p>
+<li style="margin-left: 40px;font-size: 15px">设置语言</li>
+
+<p><img src="/posts/4288/idm_1.jpg" alt="idm_languages"></p>
+<li style="margin-left: 40px;font-size: 15px">设置存储权限</li>
+
+<p><img src="/posts/4288/idm_2.jpg" alt="idm_2"></p>
+<li style="margin-left: 40px;font-size: 15px">选择下载存储位置</li>
+
+<p><img src="/posts/4288/idm_3.jpg" alt="idm_3"></p>
+<p><code>一直点空白处</code></p>
+<p style="color: #FF0000;">不创建idm浏览器</p>
+
+
+<li style="margin-left: 40px;font-size: 15px">进入idm浏览器</li>
+
+<p><img src="/posts/4288/idm_4.jpg" alt="idm_4"></p>
+<li style="margin-left: 40px;font-size: 15px">在搜索框中输入链接</li>
+
+<p><code>记得按回车进入网站</code></p>
+<p><img src="/posts/4288/idm_5.jpg" alt="idm_5"></p>
+<li style="margin-left: 40px;font-size: 15px">点击下载图标</li>
+
+<p><img src="/posts/4288/idm_6.jpg" alt="idm_6"></p>
+<li style="margin-left: 40px;font-size: 15px">获取视频直链</li>
+
+<p><img src="/posts/4288/idm_7.jpg" alt="idm_7"></p>
+<p><code>然后选择预览(也可以直接下载)</code></p>
+<p><img src="/posts/4288/idm_8.jpg" alt="idm_8"></p>
+<p><code>点击预览后进行这一步</code></p>
+<p><img src="/posts/4288/idm_9.jpg" alt="idm_9"></p>
+<p><code>复制链接</code></p>
+<p><img src="/posts/4288/idm_10.jpg" alt="idm_10"></p>
+<p><code>最后把这个链接分享给其他人就行了</code></p>
+<p><code>其他人都可以通过这个链接直接播放视频</code></p>
+<p style="color: #00FF00;">优点:</p>播放便捷
+
+<p style="color: #FF0000;">缺点:</p>有效期一年,一年后需要重新打开在趣配音里分享的链接激活一下.]]></content>
+      <categories>
+        <category>X</category>
+        <category>学习</category>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux的常用的指令</title>
+    <url>/posts/6866/</url>
+    <content><![CDATA[<p>这篇关于Linux常用的关于关于存储和管理密码 ，WiFi等的命令。</p>
+<h2 id="一-内存"><a href="#一-内存" class="headerlink" title="一.内存"></a>一.内存</h2><h3 id="查看剩余内存-1"><a href="#查看剩余内存-1" class="headerlink" title="查看剩余内存-1"></a>查看剩余内存-1</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">df</span> -h</span><br></pre></td></tr></table></figure>
+<h3 id="查看剩余寿命-固态-2"><a href="#查看剩余寿命-固态-2" class="headerlink" title="查看剩余寿命(固态)-2"></a>查看剩余寿命(固态)-2</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> /sys/class/mmc_host/mmc0/mmc0:0001/life_time</span><br></pre></td></tr></table></figure>
+<p>0X04 用了40%的寿命<br>0X08 用了80%的寿命<br>0X00 看不到寿命<br>·如图<br><img src="/posts/6866/EMMC.png" alt="EMMC寿命对照表"><br>所以你已经懂它的格式了吧<br>不懂我就给你看两张照片对比一下<br>看不到寿命或满血的情况<br><img src="/posts/6866/1.jpg" alt="看不到寿命的情况"><br>能看到寿命的情况<br><img src="/posts/6866/2.jpg" alt="能看到寿命的情况"></p>
+<h2 id="二-网络"><a href="#二-网络" class="headerlink" title="二.网络"></a>二.网络</h2><h3 id="设置网络-WiFi或USB网络设置-1"><a href="#设置网络-WiFi或USB网络设置-1" class="headerlink" title="设置网络(WiFi或USB网络设置)-1"></a>设置网络(WiFi或USB网络设置)-1</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nmtui</span><br></pre></td></tr></table></figure>
+<p>设置后最好再reboot重启一下</p>
+<h3 id="查看ip-2"><a href="#查看ip-2" class="headerlink" title="查看ip-2"></a>查看ip-2</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ifconfig</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看端口占用-3"><a href="#查看端口占用-3" class="headerlink" title="查看端口占用-3"></a>查看端口占用-3</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat/ss -antulp | grep :端口号</span><br></pre></td></tr></table></figure>
+<p>详细的查看PID</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps -aux | grep 进程PID</span><br></pre></td></tr></table></figure>
+<p>查看该PID所处目录(末尾加&#x2F;会显示进程路径的内容，不加显示进程具体路径)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ll /proc/进程PID/cwd</span><br></pre></td></tr></table></figure>
+<h2 id="三-用户"><a href="#三-用户" class="headerlink" title="三.用户"></a>三.用户</h2><h3 id="改密码-1"><a href="#改密码-1" class="headerlink" title="改密码-1"></a>改密码-1</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">passwd</span><br></pre></td></tr></table></figure>
+<h2 id="四-杀死进程-kill-pkill-killall"><a href="#四-杀死进程-kill-pkill-killall" class="headerlink" title="四.杀死进程(kill,pkill,killall)"></a>四.杀死进程(kill,pkill,killall)</h2><h3 id="kill-1"><a href="#kill-1" class="headerlink" title="kill -1"></a>kill -1</h3><p>kill PID<br>强制下线<br>kill -9 PID<br>批量精准操作(-9为强制操作，非必须)<br>kill -9 PID</p>
+<h3 id="pkill-2"><a href="#pkill-2" class="headerlink" title="pkill -2"></a>pkill -2</h3><p>pkill 进程名<br>也可以加上-9<br>通过pkill -h获取帮助</p>
+<h3 id="killall-3"><a href="#killall-3" class="headerlink" title="killall -3"></a>killall -3</h3><p>killall和pkill差不多(好像-9前面不需要空格)<br>killall -h获得帮助</p>
+]]></content>
+      <categories>
+        <category>Z</category>
+        <category>指令</category>
+        <category>Linux指令</category>
+        <category>L</category>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Root</title>
+    <url>/posts/29197/</url>
+    <content><![CDATA[<h1 id="检测工具"><a href="#检测工具" class="headerlink" title="检测工具"></a>检测工具</h1><p>1.”momo”环境检测4.4.1版<br><a href="https://www.123pan.com/s/wkn6Vv-eipiH.html">123云盘下载_版本4.4.1</a><br><a href="https://wwp.lanzoup.com/iC9SP1dug0qh">蓝奏云下载_版本4.4.1</a>提取码：2r5d</p>
+]]></content>
+      <categories>
+        <category>G</category>
+        <category>搞机</category>
+        <category>Root</category>
+      </categories>
+      <tags>
+        <tag>搞机</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>adb</title>
+    <url>/posts/63482/</url>
+    <content><![CDATA[<h3 id="设置屏幕息屏时间-1"><a href="#设置屏幕息屏时间-1" class="headerlink" title="设置屏幕息屏时间-1"></a>设置屏幕息屏时间-1</h3><p>永不息屏</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">settings put system screen_off_timeout 2147483647</span><br></pre></td></tr></table></figure>
+<p>查看息屏时间</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">settings put system screen_off_timeout</span><br></pre></td></tr></table></figure>
+<h3 id="设置电池假装充电状态-2"><a href="#设置电池假装充电状态-2" class="headerlink" title="设置电池假装充电状态-2"></a>设置电池假装充电状态-2</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dumpsys battery <span class="built_in">set</span> status 2</span><br></pre></td></tr></table></figure>
+<h3 id="激活应用-3"><a href="#激活应用-3" class="headerlink" title="激活应用-3"></a>激活应用-3</h3><p>键鼠映射软件:Panda Mouse pro</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh /storage/emulated/0/.chaozhuo.gameassistant2/inject.sh</span><br></pre></td></tr></table></figure>
+<p>下载<br><a href="https://www.123pan.com/s/wkn6Vv-ttpiH.html">123云盘下载_版本1.5.0</a><br><a href="https://wwp.lanzoup.com/iQ62S1dug35e">蓝奏云下载_版本1.5.0</a>提取码：38ev</p>
+<h3 id="adb-pull命令使用"><a href="#adb-pull命令使用" class="headerlink" title="adb pull命令使用"></a>adb pull命令使用</h3><p>把手机&#x2F;sdcard&#x2F;1里的文件下载到电脑D:\1文件夹里(&#x2F;sdcard&#x2F;1&#x2F;文件名也行)<br>adb pull &#x2F;sdcard&#x2F;1 D:\1</p>
+<p>主题<a href="https://theme-next.org/">https://theme-next.org/</a><br>彩色字<a href="https://benpaodewoniu.github.io/2020/01/27/hexo12/">https://benpaodewoniu.github.io/2020/01/27/hexo12/</a></p>
+]]></content>
+      <categories>
+        <category>G</category>
+        <category>搞机</category>
+        <category>adb</category>
+      </categories>
+      <tags>
+        <tag>搞机</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>实用软件</title>
+    <url>/posts/26616/</url>
+    <content><![CDATA[<h1 id="实用"><a href="#实用" class="headerlink" title="实用"></a>实用</h1><h2 id="Rotation-屏幕强制旋转"><a href="#Rotation-屏幕强制旋转" class="headerlink" title="Rotation(屏幕强制旋转)"></a>Rotation(屏幕强制旋转)</h2><p><a href="https://www.123pan.com/s/wkn6Vv-QVpiH.html">123云盘下载_版本25.0.2</a>提取码：WfSp</p>
+<h2 id="IP摄像头"><a href="#IP摄像头" class="headerlink" title="IP摄像头"></a>IP摄像头</h2><li style="margin-left: 40px;font-size: 15px">下载</li>
+[123云盘下载](https://www.123pan.com/s/wkn6Vv-vgfiH.html)提取码：Mwqm
+
+<li style="margin-left: 40px;font-size: 15px">条码制作器(辅助软件)</li>
+扫分享的二维码用的
+[123云盘下载](https://www.123pan.com/s/wkn6Vv-TgfiH.html)提取码：uckj
+
+<h1 id="视频-音频播放器"><a href="#视频-音频播放器" class="headerlink" title="视频&#x2F;音频播放器"></a>视频&#x2F;音频播放器</h1><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//s4oyai2k2.hn-bkt.clouddn.com/VIDEO_11260213182047.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
+height: 80%; left: 0; top: 0;"> </iframe></div>
+
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://3026320471.qnqcdn.net:22443/qn-v8wGeHUAvKSZLNhoiFj4uMVYtWjsUJSk2XG0aLw4.pycdn.qupeiyin.cn/dubbing/2016-01-07/1452156944316mdamt454nwz.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
+height: 78%; left: 0; top: 0;"> </iframe></div>
+
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//player.bilibili.com/player.html?aid=39807850&cid=69927212&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
+height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
+      <categories>
+        <category>Y</category>
+        <category>应用</category>
+        <category>安卓应用</category>
+      </categories>
+      <tags>
+        <tag>应用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>生态瓶</title>
+    <url>/posts/63466/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>X</category>
+        <category>学习</category>
+        <category>生物</category>
+        <category>生态系统</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何使用filebrowser</title>
+    <url>/posts/29696/</url>
+    <content><![CDATA[<h2 id="Linux下的使用教程"><a href="#Linux下的使用教程" class="headerlink" title="Linux下的使用教程"></a>Linux下的使用教程</h2><p>filebrowser是一个独立的文件管理工具，它使用go语言，不需要依赖直接.&#x2F;filebrowser即可运行，为了方便使用该篇文章叫你如何开机启动它。</p>
+<h3 id="查看架构-1"><a href="#查看架构-1" class="headerlink" title="查看架构-1"></a>查看架构-1</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">arch</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="下载filebrowser-2"><a href="#下载filebrowser-2" class="headerlink" title="下载filebrowser-2"></a>下载filebrowser-2</h3><p>github官网地址</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/filebrowser/filebrowser</span><br></pre></td></tr></table></figure>
+<h3 id="下载-3"><a href="#下载-3" class="headerlink" title="下载-3"></a>下载-3</h3><p>在Releases中找到合适的安装包</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /</span><br><span class="line"><span class="built_in">mkdir</span> filebrowser</span><br><span class="line"><span class="built_in">cd</span> filebrowser</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget 下载地址</span><br></pre></td></tr></table></figure>
+<h3 id="解压-4"><a href="#解压-4" class="headerlink" title="解压-4"></a>解压-4</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -zxvf 文件名</span><br></pre></td></tr></table></figure>
+<p>删除(可选)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf 文件名</span><br></pre></td></tr></table></figure>
+<h3 id="安装-5"><a href="#安装-5" class="headerlink" title="安装-5"></a>安装-5</h3><p>设置权限(chmod),端口号(port),账号密码(已设置为root)<br>这段无需更改</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 777 filebrowser</span><br><span class="line">./filebrowser -d filebrowser.db config init</span><br><span class="line">./filebrowser -d filebrowser.db config <span class="built_in">set</span> --address 0.0.0.0</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>设置端口号</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./filebrowser -d filebrowser.db config <span class="built_in">set</span> --port 10000</span><br></pre></td></tr></table></figure>
+<p>设置账号</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./filebrowser -d filebrowser.db <span class="built_in">users</span> add root root --perm.admin</span><br></pre></td></tr></table></figure>
+<p>设置挂载点</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./filebrowser -d filebrowser.db config <span class="built_in">set</span> --root /</span><br></pre></td></tr></table></figure>
+<h3 id="启动-6"><a href="#启动-6" class="headerlink" title="启动-6"></a>启动-6</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/filebrowser/filebrowser -d /filebrowser/filebrowser.db --disable-preview-resize --disable-type-detection-by-header --cache-dir /filebrowser/cache</span><br></pre></td></tr></table></figure>
+<h3 id="添加开机启动-7"><a href="#添加开机启动-7" class="headerlink" title="添加开机启动-7"></a>添加开机启动-7</h3><p>编辑rc.local</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/rc.local</span><br></pre></td></tr></table></figure>
+<p>添加这段命令(建议添加在中间，其他我没试过)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/filebrowser/filebrowser -d /filebrowser/filebrowser.db --disable-preview-resize --disable-type-detection-by-header --cache-dir /filebrowser/cache&amp;</span><br></pre></td></tr></table></figure>
+<p>重启</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
+<h3 id="实际测试-8"><a href="#实际测试-8" class="headerlink" title="实际测试-8"></a>实际测试-8</h3><p>访问网址: <a href="https://localhost:10000/">localhost:10000</a><br>账号和密码<br>$ root<br>$ root</p>
+]]></content>
+      <categories>
+        <category>W</category>
+        <category>文件管理</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>修手机</title>
+    <url>/posts/33558/</url>
+    <content><![CDATA[<h1 id="小米"><a href="#小米" class="headerlink" title="小米"></a>小米</h1><li style="margin-left: 40px;font-size: 15px">一键锁屏</li>
+
+<p>在添加小部件里可能找不到<b>一键锁屏</b>，你只需要<code>断开网络</code>然后在添加小部件最下方就会多出一个选项，在那里应该就能找到<b>一键锁屏</b>了。</p>
+<p style="color: #FF0000;">注:</p>
+仅在MIUI12.5测试过]]></content>
+      <categories>
+        <category>X</category>
+        <category>修理</category>
+        <category>手机</category>
+      </categories>
+      <tags>
+        <tag>修理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>adb-scrcpy</title>
+    <url>/posts/1394/</url>
+    <content><![CDATA[<blockquote>
+<p>使用前先用adb连接上设备</p>
+</blockquote>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>默认</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">scrcpy</span><br></pre></td></tr></table></figure>
+
+<p>推荐使用这条</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">scrcpy -m 1024 -b 2M --max-fps 30</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>快捷键</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>切换全屏模式</td>
+<td>MOD+f</td>
+</tr>
+<tr>
+<td>向左旋转显示</td>
+<td>MOD+←（向左）</td>
+</tr>
+<tr>
+<td>向右旋转显示</td>
+<td>MOD+→（右）</td>
+</tr>
+<tr>
+<td>将窗口大小调整为 1:1（像素完美）</td>
+<td>MOD+g</td>
+</tr>
+<tr>
+<td>调整窗口大小以去除黑边</td>
+<td>MOD+w | 双击左键</td>
+</tr>
+<tr>
+<td>点击 HOME</td>
+<td>MOD+h | 中键单击</td>
+</tr>
+<tr>
+<td>点击返回</td>
+<td>MOD+b | 右键单击</td>
+</tr>
+<tr>
+<td>点击APP_SWITCH</td>
+<td>MOD+s  | 第四次点击</td>
+</tr>
+<tr>
+<td>点击MENU（解锁屏幕）</td>
+<td>MOD+m</td>
+</tr>
+<tr>
+<td>点击VOLUME_UP</td>
+<td>MOD+↑（向上）</td>
+</tr>
+<tr>
+<td>点击VOLUME_DOWN</td>
+<td>MOD+↓（向下）</td>
+</tr>
+<tr>
+<td>点击 POWER</td>
+<td>MOD+p</td>
+</tr>
+<tr>
+<td>开机</td>
+<td>右击</td>
+</tr>
+<tr>
+<td>关闭设备屏幕（保持镜像）</td>
+<td>MOD+o</td>
+</tr>
+<tr>
+<td>打开设备屏幕</td>
+<td>MOD+Shift+o</td>
+</tr>
+<tr>
+<td>旋转设备屏幕</td>
+<td>MOD+r</td>
+</tr>
+<tr>
+<td>展开通知面板</td>
+<td>MOD+n | 第 5 次点击</td>
+</tr>
+<tr>
+<td>展开设置面板</td>
+<td>MOD+n+n | 双击 5 次点击</td>
+</tr>
+<tr>
+<td>折叠面板</td>
+<td>MOD+Shift+n</td>
+</tr>
+<tr>
+<td>复制到剪贴板</td>
+<td>MOD+c</td>
+</tr>
+<tr>
+<td>剪切到剪贴板</td>
+<td>MOD+x</td>
+</tr>
+<tr>
+<td>同步剪贴板和粘贴</td>
+<td>MOD+v</td>
+</tr>
+<tr>
+<td>注入电脑剪贴板文本</td>
+<td>MOD+Shift+v</td>
+</tr>
+<tr>
+<td>启用&#x2F;禁用 FPS 计数器（在标准输出上）</td>
+<td>MOD+i</td>
+</tr>
+<tr>
+<td>双指缩放</td>
+<td>Ctrl+单击并移动</td>
+</tr>
+</tbody></table>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://blog.csdn.net/DDJ_TEST/article/details/120287342">scrcpy投屏教程、scrcpy无线投屏、scrcpy命令大全-CSDN博客</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>git</title>
+    <url>/posts/43167/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Hexo的基本使用</title>
+    <url>/posts/52120/</url>
+    <content><![CDATA[<p>这个页面主要用来测试功能</p>
+<h2 id="1-粗体"><a href="#1-粗体" class="headerlink" title="1.粗体"></a>1.粗体</h2><p>这个字体更粗<b>粗体</b></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;b&gt;粗体&lt;/b&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="2-变颜色"><a href="#2-变颜色" class="headerlink" title="2.变颜色"></a>2.变颜色</h2><p style="color: #FF0000;">红色</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;p style=<span class="string">&quot;color: #FF0000;&quot;</span>&gt;红色&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+下面是搜集的颜色列表:
+
+<p><img src="/posts/52120/colour.png" alt="颜色表"></p>
+<h2 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h2><p><i>斜体</i></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;i&gt;斜体&lt;/i&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除体"><a href="#删除体" class="headerlink" title="删除体"></a>删除体</h2><p><del>删除体</del></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;del&gt;删除体&lt;/del&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="插入字"><a href="#插入字" class="headerlink" title="插入字"></a>插入字</h2><p><ins>插入字</ins></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;ins&gt;插入字&lt;/ins&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="上标字"><a href="#上标字" class="headerlink" title="上标字"></a>上标字</h2><p><sup>上标字</sup>123</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;sup&gt;上标字&lt;/sup&gt;123</span><br></pre></td></tr></table></figure>
+
+<h2 id="下标字"><a href="#下标字" class="headerlink" title="下标字"></a>下标字</h2><p>123<sub>下标字</sub></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">123&lt;sub&gt;下标字&lt;/sub&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="强调字体"><a href="#强调字体" class="headerlink" title="强调字体"></a>强调字体</h2><p><code>redis</code> 是非常重要的。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">`redis` 是非常重要的。</span><br></pre></td></tr></table></figure>
+
+<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><h3 id="数字标签"><a href="#数字标签" class="headerlink" title="数字标签"></a>数字标签</h3><ol>
+<li><p>这是一个标签</p>
+</li>
+<li><p>这是第二个标签<br> 数字 + . + 空格<br>上面的标签用法是：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1. 这是一个标签</span><br><span class="line"></span><br><span class="line">2. 这是第二个标签</span><br><span class="line">    数字 + . + 空格</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="符号标签"><a href="#符号标签" class="headerlink" title="符号标签"></a>符号标签</h3><li style="margin-left: 40px;font-size: 15px">123</li>
+上面的使用这个实现的
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;li style=<span class="string">&quot;margin-left: 40px;font-size: 15px&quot;</span>&gt;123&lt;/li&gt;</span><br></pre></td></tr></table></figure>
+我们的 li 标签要放在一行中，不然，每一个 li 标签，会被添加
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;li style=<span class="string">&quot;margin-left: 40px;font-size: 15px&quot;</span>&gt;123&lt;/li&gt;&lt;li style=<span class="string">&quot;margin-left: 40px;font-size: 15px&quot;</span>&gt;123&lt;/li&gt;&lt;li style=<span class="string">&quot;margin-left: 40px;font-size: 15px&quot;</span>&gt;123&lt;/li&gt;</span><br></pre></td></tr></table></figure>
+如果不放在一行会出现
+
+<li style="margin-left: 40px;font-size: 15px">123</li>
+<li style="margin-left: 40px;font-size: 15px">123</li>
+<li style="margin-left: 40px;font-size: 15px">123</li>
+
+<p>很难看</p>
+<h2 id="好看的排列"><a href="#好看的排列" class="headerlink" title="好看的排列"></a>好看的排列</h2><p>当我们只用 # 这个标签的时候，最好添加</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;br/&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># ***</span></span><br><span class="line"></span><br><span class="line">&lt;br/&gt;</span><br></pre></td></tr></table></figure>
+<p>就会像这样<br><br></p>
+<h1 id><a href="#" class="headerlink" title="***"></a>***</h1><br>
+
+<p>这样整体排列很好看。</p>
+<h2 id="图形标签"><a href="#图形标签" class="headerlink" title="图形标签"></a>图形标签</h2><p>一个非常偶然的机会发现官方的图形标签。</p>
+<ul>
+<li>1<ul>
+<li>1<ul>
+<li>1<ul>
+<li>1</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>2</li>
+<li>3</li>
+</ul>
+<p>其上面的表示方式如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1</span><br><span class="line">    - 1</span><br><span class="line">        - 1</span><br><span class="line">            - 1</span><br><span class="line">- 2</span><br><span class="line">- 3</span><br></pre></td></tr></table></figure>
+
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table>
+<thead>
+<tr>
+<th>表格</th>
+<th>属性</th>
+<th>样式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>一</td>
+<td>二</td>
+<td>三</td>
+</tr>
+<tr>
+<td>其代码如下：</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">|表格|属性|样式|</span><br><span class="line">|---|---|---|</span><br><span class="line">|一|二|三|</span><br></pre></td></tr></table></figure>
+
+<p>假设有一个单元格的内容太多了，想要换行，可以</p>
+<table>
+<thead>
+<tr>
+<th>表格</th>
+<th>属性</th>
+<th>样式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>一</td>
+<td>二</td>
+<td>我们过了江，进了车站。我买票，他忙着照看行李。行李太多，得向脚夫11行些小费才可过去。<br>他便又忙着和他们讲价钱。我那时真是聪明过分，总觉他说话不大漂亮，非自己插嘴不可，但他终于讲定了价钱；</td>
+</tr>
+</tbody></table>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">|表格|属性|样式|</span><br><span class="line">|---|---|---|</span><br><span class="line">|一|二|我们过了江，进了车站。我买票，他忙着照看行李。行李太多，得向脚夫11行些小费才可过去。&lt;br/&gt;他便又忙着和他们讲价钱。我那时真是聪明过分，总觉他说话不大漂亮，非自己插嘴不可，但他终于讲定了价钱；|</span><br></pre></td></tr></table></figure>
+
+<p>但是如果想要合并单元格，就需要借助 html 元件了。</p>
+<table>
+    <tr>
+        <td>最初价格</td>
+        <td>买卖价格</td>
+        <td>合约方向</td>
+        <td>交割价格</td>
+        <td>计算公式</td>
+        <td>盈亏情况</td>
+    </tr>
+    <tr>
+        <td rowspan="4">1000U</td>
+        <td rowspan="2">800U</td>
+        <td rowspan="2">看空</td>
+        <td>1200U</td>
+        <td rowspan="2">合约张数 * 合约乘数 * （1/平仓价格 - 1/开仓价格）</td>
+        <td>1 * 1 * (1/1200 - 1/800) =<br> -(1/2400)BTC</td>
+    </tr>
+    <tr>
+        <td>700U</td>
+        <td>1 * 1 * (1/700 - 1/800) =<br> 1/5600 BTC</td>
+    </tr>
+    <tr>
+        <td rowspan="2">1200U</td>
+        <td rowspan="2">看涨</td>
+        <td>1400U</td>
+        <td rowspan="2">合约张数 * 合约乘数 * （1/开仓价格 - 1/平仓价格）</td>
+        <td>1 * 1 * (1/1200 - 1/1400) =<br> 1/9800 BTC</td>
+    </tr>
+    <tr>
+        <td>800U</td>
+        <td>1 * 1 * (1/1400 - 1/1200) =<br> -1/6400 BTC</td>
+    </tr>
+</table>
+
+<p>代码如下</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;table&gt;</span><br><span class="line">    &lt;<span class="built_in">tr</span>&gt;</span><br><span class="line">    	&lt;td&gt;最初价格&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;买卖价格&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;合约方向&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;交割价格&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;计算公式&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;盈亏情况&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">    &lt;<span class="built_in">tr</span>&gt;</span><br><span class="line">    	&lt;td rowspan=<span class="string">&quot;4&quot;</span>&gt;1000U&lt;/td&gt;</span><br><span class="line">        &lt;td rowspan=<span class="string">&quot;2&quot;</span>&gt;800U&lt;/td&gt;</span><br><span class="line">        &lt;td rowspan=<span class="string">&quot;2&quot;</span>&gt;看空&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;1200U&lt;/td&gt;</span><br><span class="line">        &lt;td rowspan=<span class="string">&quot;2&quot;</span>&gt;合约张数 * 合约乘数 * （1/平仓价格 - 1/开仓价格）&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;1 * 1 * (1/1200 - 1/800) =&lt;br/&gt; -(1/2400)BTC&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">    &lt;<span class="built_in">tr</span>&gt;</span><br><span class="line">        &lt;td&gt;700U&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;1 * 1 * (1/700 - 1/800) =&lt;br/&gt; 1/5600 BTC&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">    &lt;<span class="built_in">tr</span>&gt;</span><br><span class="line">        &lt;td rowspan=<span class="string">&quot;2&quot;</span>&gt;1200U&lt;/td&gt;</span><br><span class="line">        &lt;td rowspan=<span class="string">&quot;2&quot;</span>&gt;看涨&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;1400U&lt;/td&gt;</span><br><span class="line">        &lt;td rowspan=<span class="string">&quot;2&quot;</span>&gt;合约张数 * 合约乘数 * （1/开仓价格 - 1/平仓价格）&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;1 * 1 * (1/1200 - 1/1400) =&lt;br/&gt; 1/9800 BTC&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">    &lt;<span class="built_in">tr</span>&gt;</span><br><span class="line">        &lt;td&gt;800U&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;1 * 1 * (1/1400 - 1/1200) =&lt;br/&gt; -1/6400 BTC&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">&lt;/table&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改图片大小"><a href="#修改图片大小" class="headerlink" title="修改图片大小"></a>修改图片大小</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;div style=<span class="string">&quot;width: 50%;padding-left: 25%&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">![](/images/software/5_0.jpg)</span><br><span class="line"></span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>另外剧中的话使用 text-align:center; 不管用，需要使用上面的代码。</p>
+<p>中间要有隔行，不然可能会出问题。</p>
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//player.bilibili.com/player.html?aid=39807850&cid=69927212&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
+height: 100%; left: 0; top: 0;"> </iframe></div>
+
+<h2 id="添加多分类"><a href="#添加多分类" class="headerlink" title="添加多分类"></a>添加多分类</h2><p>categories 后面这样写就行了</p>
+<p>分级分类<br>前一个的等级高<br>标签1&gt;标签2&gt;标签3</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">categories: [标签1,标签2,标签3]</span><br></pre></td></tr></table></figure>
+
+<p>同级分类(可以包含分级分类)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">categories:</span><br><span class="line">    - [Diary, PlayStation]</span><br><span class="line">    - [Diary, Games]</span><br><span class="line">    - [Life]</span><br></pre></td></tr></table></figure>
+<p>此时这篇文章同时包括三个分类：<br>PlayStation 和 Games 分别都是父分类 Diary 的子分类<br>同时 Life 是一个没有子分类的分类。</p>
+<h2 id="添加多个标签"><a href="#添加多个标签" class="headerlink" title="添加多个标签"></a>添加多个标签</h2><p>标签好像不存在分级<br>tags 后面这样写就行了</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tags: [标签1,标签2,标签3]</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>H</category>
+        <category>hexo</category>
+        <category>基本使用</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo常用写作命令</title>
+    <url>/posts/32196/</url>
+    <content><![CDATA[<h1 id="复制框"><a href="#复制框" class="headerlink" title="复制框"></a>复制框</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">``` bash```</span><br></pre></td></tr></table></figure>
+
+<h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1>]]></content>
+      <categories>
+        <category>H</category>
+        <category>hexo</category>
+        <category>写作命令</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Termux上搭建hexo</title>
+    <url>/posts/2891/</url>
+    <content><![CDATA[<p>sed -i ‘s@^(deb.*stable main)$@#\1\ndeb <a href="https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24">https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24</a> stable main@’ $PREFIX&#x2F;etc&#x2F;apt&#x2F;sources.list</p>
+<p>pkg update</p>
+<p>pkg install nodejs-lts<br>pkg install git<br>pkg install vim</p>
+<p>mkdir hexo<br>chmod 777 hexo<br>cd hexo</p>
+<p>npm install hexo-cli -g<br>hexo init</p>
+<p>hexo g<br>hexo s </p>
+<p>主题<br>git clone -b master <a href="https://github.com/jerryc127/hexo-theme-butterfly.git">https://github.com/jerryc127/hexo-theme-butterfly.git</a> themes&#x2F;butterfly</p>
+<p>vim themes&#x2F;butterfly&#x2F;_config.yml</p>
+<p>vim编辑器:<br>输入i才能编辑<br>按下esc 再输入:wq保存退出npm install hexo-renderer-pug hexo-renderer-stylus –save</p>
+]]></content>
+      <categories>
+        <category>H</category>
+        <category>hexo</category>
+        <category>termux</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>termux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo的安装</title>
+    <url>/posts/4752/</url>
+    <content><![CDATA[<p>hexo g 创建静态文件<br>hexo s 启动<br>hexo clean 清除缓存<br>hexo d 推送文件<br>hexo new “My New Post” 创建新文章</p>
+<h1 id="安装nodejs和git"><a href="#安装nodejs和git" class="headerlink" title="安装nodejs和git"></a>安装nodejs和git</h1><p>安装nodejs</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#Linux安装nodejs</span></span><br><span class="line">curl -sL https://deb.nodesource.com/setup_10.x|sudo -E bash -</span><br><span class="line">sudo apt install nodejs</span><br></pre></td></tr></table></figure>
+<p>检测安装</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#检测nodejs和npm</span></span><br><span class="line">nodejs -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+<p>安装git</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装git</span></span><br><span class="line">sudo apt install git -y</span><br></pre></td></tr></table></figure>
+
+<p>npm换源</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#npm换淘宝源</span></span><br><span class="line">sudo npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<h1 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h1 id="配置hexo"><a href="#配置hexo" class="headerlink" title="配置hexo"></a>配置hexo</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /</span><br><span class="line"><span class="built_in">mkdir</span> hexo</span><br><span class="line"><span class="built_in">chmod</span> 7777 hexo</span><br><span class="line"><span class="built_in">cd</span> hexo</span><br><span class="line"><span class="comment">#初始化</span></span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<h1 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h1><h2 id="找主题"><a href="#找主题" class="headerlink" title="找主题"></a>找主题</h2><p><a href="http://hexo.io/themes">hexo主题官网</a><br>尽量选择移动端和电脑端都有的主题</p>
+<p>点进去后底部右下方有它的github官网</p>
+<p>进入后点”Clone with HTTPS”,复制那个https链接</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#hexo换成你自己的hexo目录</span></span><br><span class="line"><span class="built_in">cd</span> /hexo</span><br><span class="line"><span class="comment">#添加&quot;themes/主题名&quot;方便管理</span></span><br><span class="line">git <span class="built_in">clone</span> 网址 themes/主题名</span><br></pre></td></tr></table></figure>
+<h2 id="改配置文件"><a href="#改配置文件" class="headerlink" title="改配置文件"></a>改配置文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /hexo</span><br><span class="line">vim _config.yml</span><br></pre></td></tr></table></figure>
+<p>输入”&#x2F;“打开查找模式后输入themes，后车</p>
+<p>输入”i”启动输入模式</p>
+<p>把”themes: “后边的改成”你的主题名”，如”landscape”</p>
+<p>输入”ALT+:wq”保存并退出</p>
+<h1 id="推送-hexo-d"><a href="#推送-hexo-d" class="headerlink" title="推送(hexo d)"></a>推送(hexo d)</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#清理缓存</span></span><br><span class="line">hexo clean</span><br><span class="line"><span class="comment">#生成静态文件</span></span><br><span class="line">hexo g</span><br><span class="line"><span class="comment">#测试一下</span></span><br><span class="line">hexo s</span><br><span class="line"><span class="comment">#安装推送插件</span></span><br><span class="line">cnpm install hexo-deployer-git --save</span><br><span class="line"><span class="comment">#发布到远程仓库</span></span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>在配置文件最后设置需要同步的仓库，可以设置多个</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    <span class="built_in">type</span>: git</span><br><span class="line">    repo: </span><br><span class="line">        github: your github repo url</span><br><span class="line">        gitee: your gitee repo url</span><br><span class="line">        coding: your coding repo url</span><br></pre></td></tr></table></figure>
+<h2 id="添加ssh公钥-推送方便"><a href="#添加ssh公钥-推送方便" class="headerlink" title="添加ssh公钥(推送方便)"></a>添加ssh公钥(推送方便)</h2><p>获取方法</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#不一定要用你的邮箱(为了方便用邮箱)</span></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">&#x27;你的邮箱&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>位置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span></span><br><span class="line"><span class="built_in">cd</span> .ssh</span><br><span class="line"><span class="comment">#id.rsa.pub就是公钥(把里面内容复制下来)</span></span><br><span class="line"><span class="built_in">ls</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>例：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: https://github.com/用户名/用户名.github.io</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
+
+<h1 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h1><h2 id="引用文章"><a href="#引用文章" class="headerlink" title="引用文章"></a>引用文章</h2><p>正常使用链接文章在<a href></a>写&#x2F;年&#x2F;月&#x2F;日&#x2F;文章名<br>也就是写生成后的静态页面的地址。<br>这要是改以下年月日不就GG了。</p>
+<p>所以可以使用相对链接来解决问题</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;% post_link 文章文件名（不要后缀） 文章标题（可选） %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;% post_link Hello-World %&#125;</span><br><span class="line">&#123;% post_link Hello-World 你好世界 %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>不理解的话实际操作一下就明白了。</p>
+]]></content>
+      <categories>
+        <category>H</category>
+        <category>hexo</category>
+        <category>安装</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux</title>
+    <url>/posts/15691/</url>
+    <content><![CDATA[<h2 id="ssh连接工具"><a href="#ssh连接工具" class="headerlink" title="ssh连接工具"></a>ssh连接工具</h2><p>1.finalshell<br>仅有电脑版，但功能强大<br><a href="https://www.123pan.com/s/A6cA-2rHJh">点击前往123pan下载</a><br>2.Juicessh<br>安卓上比较好用的</p>
+<h1 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h1><h2 id="检查某端口是否开启"><a href="#检查某端口是否开启" class="headerlink" title="检查某端口是否开启"></a>检查某端口是否开启</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --query-port=25/tcp --zone=public  <span class="comment">#查询25端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=80/tcp --zone=public  <span class="comment">#查询80端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=888/tcp --zone=public  <span class="comment">#查询888端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=8888/tcp --zone=public  <span class="comment">#查询8888端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=8889/tcp --zone=public  <span class="comment">#查询8889端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=443/tcp --zone=public  <span class="comment">#查询443端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=20/tcp --zone=public  <span class="comment">#查询20端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=21/tcp --zone=public  <span class="comment">#查询21端口是否开启,自行修改端口号</span></span><br></pre></td></tr></table></figure>
+<p>返回no即未开启，显示yes为已开启。</p>
+<h2 id="开启某端口代码"><a href="#开启某端口代码" class="headerlink" title="开启某端口代码"></a>开启某端口代码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=25/tcp --permanent <span class="comment">#添加25端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --add-port=888/tcp --permanent <span class="comment">#添加888端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --add-port=8888/tcp --permanent <span class="comment">#添加8888端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --add-port=443/tcp --permanent <span class="comment">#添加443端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --add-port=20/tcp --permanent <span class="comment">#添加20端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --add-port=21/tcp --permanent <span class="comment">#添加21端口，如需添加其他端口，自行修改端口号</span></span><br></pre></td></tr></table></figure>
+<h2 id="关闭某端口代码"><a href="#关闭某端口代码" class="headerlink" title="关闭某端口代码"></a>关闭某端口代码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --remove-port=25/tcp --permanent <span class="comment">#关闭25端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --remove-port=888/tcp --permanent <span class="comment">#关闭888端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --remove-port=8888/tcp --permanent <span class="comment">#关闭8888端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --remove-port=443/tcp --permanent <span class="comment">#关闭443端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --remove-port=20/tcp --permanent <span class="comment">#关闭20端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --remove-port=21/tcp --permanent <span class="comment">#关闭21端口，如需添加其他端口，自行修改端口号</span></span><br></pre></td></tr></table></figure>
+<p>修改完成后需要重启服务器才能生效</p>
+<h2 id="看端口占用情况命令"><a href="#看端口占用情况命令" class="headerlink" title="看端口占用情况命令"></a>看端口占用情况命令</h2><p>(比如查看80端口占用情况使用如下命令）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsof -i tcp:80</span><br></pre></td></tr></table></figure>
+<h1 id="查看防火墙状态"><a href="#查看防火墙状态" class="headerlink" title="查看防火墙状态"></a>查看防火墙状态</h1><h2 id="CentOS系统"><a href="#CentOS系统" class="headerlink" title="CentOS系统:"></a>CentOS系统:</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure>
+<p>有如下提示(running)表示开启</p>
+<p>Active: active (running)</p>
+<h3 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl stop firewalld</span><br></pre></td></tr></table></figure>
+<p>有如下提示表示已经关闭</p>
+<p>Active: inactive (dead)</p>
+<h3 id="开启防火墙，没有任何提示即开启成功"><a href="#开启防火墙，没有任何提示即开启成功" class="headerlink" title="开启防火墙，没有任何提示即开启成功"></a>开启防火墙，没有任何提示即开启成功</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start firewalld</span><br></pre></td></tr></table></figure>
+<p>再次查看防火墙状态</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure>
+<p>有如下提示(running)表示开启</p>
+<p>Active: active (running)</p>
+<h2 id="Debian-Ubuntu系统："><a href="#Debian-Ubuntu系统：" class="headerlink" title="Debian&#x2F;Ubuntu系统："></a>Debian&#x2F;Ubuntu系统：</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">iptables -P INPUT ACCEPT</span><br><span class="line">iptables -P FORWARD ACCEPT</span><br><span class="line">iptables -P OUTPUT ACCEPT</span><br><span class="line">iptables -Fapt-get purge netfilter-persistent</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+<h1 id="安全检查"><a href="#安全检查" class="headerlink" title="安全检查"></a>安全检查</h1><p>#主机自动记录所有登陆事件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /var/log/secure</span><br></pre></td></tr></table></figure>
+<p>#所有登陆失败记录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lastb</span><br></pre></td></tr></table></figure>
+<p>#所有登陆成功事件记录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">last</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>L</category>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>feelings</title>
+    <url>/posts/27709/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>minecraft服务器</title>
+    <url>/posts/58654/</url>
+    <content><![CDATA[<h1 id="基岩版服务器搭建"><a href="#基岩版服务器搭建" class="headerlink" title="基岩版服务器搭建"></a>基岩版服务器搭建</h1><h2 id="下载服务器文件"><a href="#下载服务器文件" class="headerlink" title="下载服务器文件"></a>下载服务器文件</h2><p><a href="https://www.minecraft.net/zh-hans/download/server/bedrock">服务器包下载链接</a></p>
+<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><p>1.找一个文件夹把下载的压缩包解压<br>(解压路径不能有中文)<br>    kr-se-cncn-1.openfrp.top:19100<br><a href="http://www.openfrp.net/">www.openfrp.net</a></p>
+<div id="dplayer1" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><p>no url specified, no dplayer _(:3」∠)_</p>
+<p>例：</p>
+<div id="dplayer2" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer2"),"autoplay":true,"hotkey":true,"preload":"metadata","video":{"url":"//gitee.com/tiepi04/tiepi04.gitee.io/raw/master/2023/11/26/English/sp.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script> 
+
+
+]]></content>
+      <categories>
+        <category>Y</category>
+        <category>游戏</category>
+        <category>minecraft</category>
+        <category>服务器</category>
+      </categories>
+      <tags>
+        <tag>游戏</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>minecraft</title>
+    <url>/posts/51733/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Y</category>
+        <category>游戏</category>
+        <category>minecraft</category>
+      </categories>
+      <tags>
+        <tag>游戏</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>OpenVPN</title>
+    <url>/posts/12473/</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/zhangshenghang/article/details/135292267">https://blog.csdn.net/zhangshenghang/article/details/135292267</a>)</p>
+<h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull kylemanna/openvpn:2.4</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建配置文件"><a href="#创建配置文件" class="headerlink" title="创建配置文件"></a>创建配置文件</h3><p>ip换成服务器的ip(网址)再加端口(如:udp:&#x2F;&#x2F;x.x.x.x:port)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -v /opt/openvpn:/etc/openvpn --<span class="built_in">rm</span> kylemanna/openvpn:2.4 ovpn_genconfig -u tcp://ip[:port]</span><br></pre></td></tr></table></figure>
+
+<h3 id="生成密钥文件"><a href="#生成密钥文件" class="headerlink" title="生成密钥文件"></a>生成密钥文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -v /opt/openvpn:/etc/openvpn --<span class="built_in">rm</span> -it kylemanna/openvpn:2.4 ovpn_initpki</span><br></pre></td></tr></table></figure>
+
+<h4 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 设置密码</span><br><span class="line">Enter New CA Key Passphrase: </span><br><span class="line">Re-Enter New CA Key Passphrase: </span><br><span class="line"># 默认回车</span><br><span class="line">Common Name (eg: your user, host, or server name) [Easy-RSA CA]:</span><br><span class="line"># 输入刚刚设置的密码</span><br><span class="line">Enter pass phrase for /etc/openvpn/pki/private/ca.key:</span><br><span class="line">Enter pass phrase for /etc/openvpn/pki/private/ca.key:</span><br></pre></td></tr></table></figure>
+
+<p>完整执行步骤日志</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@bigdata-101 ~]# docker run -v /opt/openvpn:/etc/openvpn --rm -it kylemanna/openvpn:2.4 ovpn_initpki</span><br><span class="line"></span><br><span class="line">init-pki complete; you may now create a CA or requests.</span><br><span class="line">Your newly created PKI dir is: /etc/openvpn/pki</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Using SSL: openssl OpenSSL 1.1.1g  21 Apr 2020</span><br><span class="line"></span><br><span class="line">Enter New CA Key Passphrase: </span><br><span class="line">Re-Enter New CA Key Passphrase: </span><br><span class="line">Generating RSA private key, 2048 bit long modulus (2 primes)</span><br><span class="line">.............................................................................................................................................................................+++++</span><br><span class="line">.................................+++++</span><br><span class="line">e is 65537 (0x010001)</span><br><span class="line">You are about to be asked to enter information that will be incorporated</span><br><span class="line">into your certificate request.</span><br><span class="line">What you are about to enter is what is called a Distinguished Name or a DN.</span><br><span class="line">There are quite a few fields but you can leave some blank</span><br><span class="line">For some fields there will be a default value,</span><br><span class="line">If you enter &#x27;.&#x27;, the field will be left blank.</span><br><span class="line">-----</span><br><span class="line">Common Name (eg: your user, host, or server name) [Easy-RSA CA]:</span><br><span class="line"></span><br><span class="line">CA creation complete and you may now import and sign cert requests.</span><br><span class="line">Your new CA certificate file for publishing is at:</span><br><span class="line">/etc/openvpn/pki/ca.crt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Using SSL: openssl OpenSSL 1.1.1g  21 Apr 2020</span><br><span class="line">Generating DH parameters, 2048 bit long safe prime, generator 2</span><br><span class="line">This is going to take a long time</span><br><span class="line">.................................................................+....+....................+.........................................................................................................+....+.......................................................................................................................................................................+.....................................+...................+.......................+.....................................................................................................................................................................................................................................+............................................................................+...................................................................................................................+.....+.......................................................................................................................................................................................................................................+..................................................................................................................................................................................................+........+.............................................................................................................................+..............................+....................................................+..............................................................................................................................................................................+......................................................................................................+....................................................................................+.......................++*++*++*++*</span><br><span class="line"></span><br><span class="line">DH parameters of size 2048 created at /etc/openvpn/pki/dh.pem</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Using SSL: openssl OpenSSL 1.1.1g  21 Apr 2020</span><br><span class="line">Generating a RSA private key</span><br><span class="line">.............................................+++++</span><br><span class="line">.....................+++++</span><br><span class="line">writing new private key to &#x27;/etc/openvpn/pki/easy-rsa-73.bBJIMn/tmp.PBbHDh&#x27;</span><br><span class="line">-----</span><br><span class="line">Using configuration from /etc/openvpn/pki/easy-rsa-73.bBJIMn/tmp.lDdIgp</span><br><span class="line">Enter pass phrase for /etc/openvpn/pki/private/ca.key:</span><br><span class="line">Check that the request matches the signature</span><br><span class="line">Signature ok</span><br><span class="line">The Subject&#x27;s Distinguished Name is as follows</span><br><span class="line">commonName            :ASN.1 12:&#x27;公网IP&#x27;</span><br><span class="line">Certificate is to be certified until Apr  2 07:03:45 2026 GMT (825 days)</span><br><span class="line"></span><br><span class="line">Write out database with 1 new entries</span><br><span class="line">Data Base Updated</span><br><span class="line"></span><br><span class="line">Using SSL: openssl OpenSSL 1.1.1g  21 Apr 2020</span><br><span class="line">Using configuration from /etc/openvpn/pki/easy-rsa-148.JkjcgL/tmp.Ahiido</span><br><span class="line">Enter pass phrase for /etc/openvpn/pki/private/ca.key:</span><br><span class="line"></span><br><span class="line">An updated CRL has been created.</span><br><span class="line">CRL file: /etc/openvpn/pki/crl.pem</span><br></pre></td></tr></table></figure>
+
+<h3 id="生成客户端证书"><a href="#生成客户端证书" class="headerlink" title="生成客户端证书"></a>生成客户端证书</h3><p>生成无密码的客户端</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -v /opt/openvpn:/etc/openvpn --<span class="built_in">rm</span> -it kylemanna/openvpn:2.4 easyrsa build-client-full jast nopass</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>jast 为客户端用户</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@bigdata-101 ~]# docker run -v /opt/openvpn:/etc/openvpn --rm -it kylemanna/openvpn:2.4 easyrsa build-client-full jast nopass</span><br><span class="line">Using SSL: openssl OpenSSL 1.1.1g  21 Apr 2020</span><br><span class="line">Generating a RSA private key</span><br><span class="line">.+++++</span><br><span class="line">...................+++++</span><br><span class="line">writing new private key to &#x27;/etc/openvpn/pki/easy-rsa-1.npkoBm/tmp.GjbIiO&#x27;</span><br><span class="line">-----</span><br><span class="line">Using configuration from /etc/openvpn/pki/easy-rsa-1.npkoBm/tmp.GAAMkb</span><br><span class="line"></span><br><span class="line">Enter pass phrase for /etc/openvpn/pki/private/ca.key: # 输入刚刚创建的密码</span><br><span class="line">Check that the request matches the signature</span><br><span class="line">Signature ok</span><br><span class="line">The Subject&#x27;s Distinguished Name is as follows</span><br><span class="line">commonName            :ASN.1 12:&#x27;jast&#x27;</span><br><span class="line">Certificate is to be certified until Apr  2 07:06:25 2026 GMT (825 days)</span><br><span class="line"></span><br><span class="line">Write out database with 1 new entries</span><br><span class="line">Data Base Updated</span><br></pre></td></tr></table></figure>
+
+<h4 id="生成有密码的客户端"><a href="#生成有密码的客户端" class="headerlink" title="生成有密码的客户端"></a>生成有密码的客户端</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Using SSL: openssl OpenSSL 1.1.1g  21 Apr 2020</span><br><span class="line">Generating a RSA private key</span><br><span class="line">.........................................+++++</span><br><span class="line">...............................................+++++</span><br><span class="line">writing new private key to &#x27;/etc/openvpn/pki/easy-rsa-1.MEMpOp/tmp.gLiNaP&#x27;</span><br><span class="line">Enter PEM pass phrase:  # 输入要设置的客户端的密码</span><br><span class="line">Verifying - Enter PEM pass phrase:</span><br><span class="line">-----</span><br><span class="line">Using configuration from /etc/openvpn/pki/easy-rsa-1.MEMpOp/tmp.gCiMLA</span><br><span class="line">Enter pass phrase for /etc/openvpn/pki/private/ca.key:  # 输入之前设置的证书密码</span><br><span class="line">Check that the request matches the signature</span><br><span class="line">Signature ok</span><br><span class="line">The Subject&#x27;s Distinguished Name is as follows</span><br><span class="line">commonName            :ASN.1 12:&#x27;jast3&#x27;</span><br><span class="line">Certificate is to be certified until Apr  2 07:24:36 2026 GMT (825 days)</span><br><span class="line"></span><br><span class="line">Write out database with 1 new entries</span><br><span class="line">Data Base Updated</span><br></pre></td></tr></table></figure>
+
+<h3 id="导出证书"><a href="#导出证书" class="headerlink" title="导出证书"></a>导出证书</h3><p>导出客户端认证文件到本地</p>
+<blockquote>
+<p>jast 为客户端名称</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -v /opt/openvpn:/etc/openvpn --<span class="built_in">rm</span> kylemanna/openvpn:2.4 ovpn_getclient jast &gt; /opt/jast.ovpn</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="启动VPN"><a href="#启动VPN" class="headerlink" title="启动VPN"></a>启动VPN</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run --name ov --restart=always --privileged=true -v /opt/openvpn:/etc/openvpn -d -p 1194:1194/tcp --cap-add=NET_ADMIN kylemanna/openvpn:2.4</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果公网访问VPN，公网的IP地址和端口要映射到当前容器所在服务器的1194端口</p>
+</blockquote>
+<h3 id="配置哪些流量走VPN"><a href="#配置哪些流量走VPN" class="headerlink" title="配置哪些流量走VPN"></a>配置哪些流量走VPN</h3><p>修改客户端文件<code>jast.ovpn</code>，在配置文件中添加</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 表示不接受服务器对于修改路由表的推送，而可以按照我们之后指定的规则去修改</span><br><span class="line">route-nopull</span><br><span class="line"># 这个参数设置了路由的度量值（metric），用于确定路由的优先级。路由的度量值越小，优先级越高。在有多个路由规则匹配的情况下，系统会选择度量值最小的路由。</span><br><span class="line">route-metric 150</span><br><span class="line"># 远程主机（remote_host）的流量通过本地网关（net_gateway）发送</span><br><span class="line">route remote_host 255.255.255.255 net_gateway</span><br><span class="line"># 172.19.0.0/16网段的流量通过本地网关发送</span><br><span class="line">route 172.19.0.0 255.255.0.0 net_gateway</span><br><span class="line"># 192.168.1.0/16网段的流量通过VPN网关（vpn_gateway）发送</span><br><span class="line">route 192.168.1.0 255.255.0.0 vpn_gateway</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>注释掉这一行</p>
+<blockquote>
+<p><code>redirect-gateway def1</code>作用是将默认网关重定向到 VPN 服务器上，所以要注释掉。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># edirect-gateway def1</span><br></pre></td></tr></table></figure>
+
+<p>客户端下载地址<br>Mac:<a href="https://tunnelblick.net/">https://tunnelblick.net/</a></p>
+<p>Win7:<a href="https://swupdate.openvpn.org/community/releases/openvpn-install-2.4.8-I602-Win7.exe">https://swupdate.openvpn.org/community/releases/openvpn-install-2.4.8-I602-Win7.exe</a></p>
+<p>Win10:<a href="https://swupdate.openvpn.org/community/releases/openvpn-install-2.4.8-I602-Win10.exe">https://swupdate.openvpn.org/community/releases/openvpn-install-2.4.8-I602-Win10.exe</a></p>
+<p>参考<br><a href="https://kui.li/675.html">https://kui.li/675.html</a></p>
+<p><a href="https://kyo86.com/2022/10/08/openvpn/">https://kyo86.com/2022/10/08/openvpn/</a></p>
+<p><a href="https://blog.csdn.net/weizhen330/article/details/132244496">https://blog.csdn.net/weizhen330/article/details/132244496</a></p>
+<p><a href="https://blog.csdn.net/qq_42761569/article/details/106538056">https://blog.csdn.net/qq_42761569/article/details/106538056</a></p>
+<p><a href="https://blog.csdn.net/zhangshenghang/article/details/135292267">https://blog.csdn.net/zhangshenghang/article/details/135292267</a></p>
+]]></content>
+      <categories>
+        <category>O</category>
+        <category>OpenVPN</category>
+      </categories>
+      <tags>
+        <tag>VPN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>password</title>
+    <url>/posts/51319/</url>
+    <content><![CDATA[<p style="color: #FF0000;">无效：</p>
+75908，09066，09060，09069，77995，15902，77599，08526，09063，08652，07598，06980，05280，]]></content>
+  </entry>
+  <entry>
+    <title>电脑软件</title>
+    <url>/posts/2118/</url>
+    <content><![CDATA[<h1 id="实用"><a href="#实用" class="headerlink" title="实用"></a>实用</h1>]]></content>
+      <categories>
+        <category>Y</category>
+        <category>应用</category>
+        <category>电脑应用</category>
+      </categories>
+      <tags>
+        <tag>应用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>termux</title>
+    <url>/posts/44010/</url>
+    <content><![CDATA[<h1 id="一-准备"><a href="#一-准备" class="headerlink" title="一.准备"></a>一.准备</h1><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><a href="https://www.123pan.com/s/wkn6Vv-AVpiH.html">123云盘下载_版本0.118.0</a>提取码：7qQk<br><a href="https://wwp.lanzoup.com/iDBWX1dugbpc">蓝奏云下载_版本0.118.0</a>提取码：acmx</p>
+<h3 id="换源"><a href="#换源" class="headerlink" title="换源"></a>换源</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">termux-change-repo <span class="keyword">in</span> turmux-tools</span><br></pre></td></tr></table></figure>
+<p>然后更新一下</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pkg update &amp;&amp; pkg upgrade</span><br></pre></td></tr></table></figure>
+
+<h3 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h3><p>提供存储权限(为了访问&#x2F;storage&#x2F;emulated&#x2F;0&#x2F;)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">termux-setup-storage</span><br></pre></td></tr></table></figure>
+<p>运行后再运行一次<br>输入y后空格<br>重启<br>访问测试</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/storage/emulated/0/</span><br></pre></td></tr></table></figure>
+<h3 id="安装ssh方便远程管理"><a href="#安装ssh方便远程管理" class="headerlink" title="安装ssh方便远程管理"></a>安装ssh方便远程管理</h3><p>1.安装</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pkg install openssh</span><br></pre></td></tr></table></figure>
+<p>2.查看用户名</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">whoami</span></span><br></pre></td></tr></table></figure>
+<p>3.设置密码(输入的时候看不见，输好后回车就行)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">passwd</span><br></pre></td></tr></table></figure>
+<p>4.查看ip</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ip a</span><br></pre></td></tr></table></figure>
+<p>5.连接</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh 用户名@你查看的ip -p 8022 </span><br></pre></td></tr></table></figure>
+<p>6.启动</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sshd</span><br></pre></td></tr></table></figure>
+<h1 id="二-比较常用的需要termux-api"><a href="#二-比较常用的需要termux-api" class="headerlink" title="二.比较常用的需要termux:api"></a>二.比较常用的需要termux:api</h1><p>api包安装(可选)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pkg install termux-api</span><br></pre></td></tr></table></figure>
+<p>1.获取有关音频功能的信息</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">termux-audio-info</span><br></pre></td></tr></table></figure>
+<p>2.获取电池状态</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">termux-battery-status</span><br></pre></td></tr></table></figure>
+<h1 id="三-安装Linux"><a href="#三-安装Linux" class="headerlink" title="三.安装Linux"></a>三.安装Linux</h1><p>脚步输入后按提示走就行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bash -c <span class="string">&quot;<span class="subst">$(curl -L https://gitee.com//mo2/linux/raw//2/2)</span>&quot;</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>T</category>
+        <category>termux</category>
+      </categories>
+      <tags>
+        <tag>termux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>web</title>
+    <url>/posts/41754/</url>
+    <content><![CDATA[<h1 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h1><p>只能搭建静态网站</p>
+<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p>1.default</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/nginx/sites-enabled/default</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li></li>
+</ol>
+<h1 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h1><p>增加网站的互动性</p>
+<h1 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a>Mysql</h1><p>数据库</p>
+]]></content>
+      <categories>
+        <category>W</category>
+        <category>网站</category>
+      </categories>
+      <tags>
+        <tag>网站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>视频制作</title>
+    <url>/posts/12501/</url>
+    <content><![CDATA[<h1 id="视频录制工具"><a href="#视频录制工具" class="headerlink" title="视频录制工具"></a>视频录制工具</h1><h2 id="AZ-Screen-Recorder"><a href="#AZ-Screen-Recorder" class="headerlink" title="AZ Screen Recorder"></a>AZ Screen Recorder</h2><p>1.介绍<br>支持画笔<br>支持最高1080p 12Mpbs 120FPS<br>应用图片(放不下就看看吧)<br><img src="/posts/12501/1.jpg" alt="图一"><br><img src="/posts/12501/2.jpg" alt="图二"><br>2.下载链接<br><a href="https://www.123pan.com/s/wkn6Vv-3VpiH.html">123云盘下载_版本5.10.6</a>提取码：eqMd<br><a href="https://wwp.lanzoup.com/iM4H51dug88h">蓝奏云下载_版本5.10.6</a>提取码：8c5h</p>
+<h1 id="视频剪辑工具"><a href="#视频剪辑工具" class="headerlink" title="视频剪辑工具"></a>视频剪辑工具</h1><h2 id="VN"><a href="#VN" class="headerlink" title="VN"></a>VN</h2><p>免登录可用<br>应用商店下载就行</p>
+<h1 id="视频播放器"><a href="#视频播放器" class="headerlink" title="视频播放器"></a>视频播放器</h1><h2 id="XPlayer-已破解"><a href="#XPlayer-已破解" class="headerlink" title="XPlayer(已破解)"></a>XPlayer(已破解)</h2><p>视频,音乐都能播放，功能强大<br><a href="https://www.123pan.com/s/wkn6Vv-hVpiH.html">123云盘下载_版本2.2.1.2</a>提取码：XWsx<br><a href="https://wwp.lanzoup.com/iW26T1dug49e">蓝奏云下载_版本2.2.1.2</a>提取码：apj4</p>
+]]></content>
+      <categories>
+        <category>X</category>
+        <category>学习</category>
+        <category>视频</category>
+      </categories>
+      <tags>
+        <tag>做视频</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>me</title>
+    <url>/posts/48108/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>win10-ftpserver</title>
+    <url>/posts/7417/</url>
+    <content><![CDATA[<p><a href="https://cloud.tencent.com/developer/article/1935592">win10系统下搭建FTP服务器(完成文件上传与下载)-腾讯云开发者社区-腾讯云 (tencent.com)</a></p>
+]]></content>
+  </entry>
+</search>
