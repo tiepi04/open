@@ -305,101 +305,6 @@ height: 80%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
-    <title>实用软件</title>
-    <url>/posts/26616/</url>
-    <content><![CDATA[<h1 id="实用"><a href="#实用" class="headerlink" title="实用"></a>实用</h1><h2 id="Rotation-屏幕强制旋转"><a href="#Rotation-屏幕强制旋转" class="headerlink" title="Rotation(屏幕强制旋转)"></a>Rotation(屏幕强制旋转)</h2><p><a href="https://www.123pan.com/s/wkn6Vv-QVpiH.html">123云盘下载_版本25.0.2</a>提取码：WfSp</p>
-<h2 id="IP摄像头"><a href="#IP摄像头" class="headerlink" title="IP摄像头"></a>IP摄像头</h2><li style="margin-left: 40px;font-size: 15px">下载</li>
-[123云盘下载](https://www.123pan.com/s/wkn6Vv-vgfiH.html)提取码：Mwqm
-
-<li style="margin-left: 40px;font-size: 15px">条码制作器(辅助软件)</li>
-扫分享的二维码用的
-[123云盘下载](https://www.123pan.com/s/wkn6Vv-TgfiH.html)提取码：uckj
-
-<h1 id="视频-音频播放器"><a href="#视频-音频播放器" class="headerlink" title="视频&#x2F;音频播放器"></a>视频&#x2F;音频播放器</h1><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//s4oyai2k2.hn-bkt.clouddn.com/VIDEO_11260213182047.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
-height: 80%; left: 0; top: 0;"> </iframe></div>
-
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://3026320471.qnqcdn.net:22443/qn-v8wGeHUAvKSZLNhoiFj4uMVYtWjsUJSk2XG0aLw4.pycdn.qupeiyin.cn/dubbing/2016-01-07/1452156944316mdamt454nwz.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
-height: 78%; left: 0; top: 0;"> </iframe></div>
-
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//player.bilibili.com/player.html?aid=39807850&cid=69927212&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
-height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
-      <categories>
-        <category>Y</category>
-        <category>应用</category>
-        <category>安卓应用</category>
-      </categories>
-      <tags>
-        <tag>应用</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>生态瓶</title>
-    <url>/posts/63466/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>X</category>
-        <category>学习</category>
-        <category>生物</category>
-        <category>生态系统</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何使用filebrowser</title>
-    <url>/posts/29696/</url>
-    <content><![CDATA[<h2 id="Linux下的使用教程"><a href="#Linux下的使用教程" class="headerlink" title="Linux下的使用教程"></a>Linux下的使用教程</h2><p>filebrowser是一个独立的文件管理工具，它使用go语言，不需要依赖直接.&#x2F;filebrowser即可运行，为了方便使用该篇文章叫你如何开机启动它。</p>
-<h3 id="查看架构-1"><a href="#查看架构-1" class="headerlink" title="查看架构-1"></a>查看架构-1</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">arch</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="下载filebrowser-2"><a href="#下载filebrowser-2" class="headerlink" title="下载filebrowser-2"></a>下载filebrowser-2</h3><p>github官网地址</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/filebrowser/filebrowser</span><br></pre></td></tr></table></figure>
-<h3 id="下载-3"><a href="#下载-3" class="headerlink" title="下载-3"></a>下载-3</h3><p>在Releases中找到合适的安装包</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /</span><br><span class="line"><span class="built_in">mkdir</span> filebrowser</span><br><span class="line"><span class="built_in">cd</span> filebrowser</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget 下载地址</span><br></pre></td></tr></table></figure>
-<h3 id="解压-4"><a href="#解压-4" class="headerlink" title="解压-4"></a>解压-4</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -zxvf 文件名</span><br></pre></td></tr></table></figure>
-<p>删除(可选)</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf 文件名</span><br></pre></td></tr></table></figure>
-<h3 id="安装-5"><a href="#安装-5" class="headerlink" title="安装-5"></a>安装-5</h3><p>设置权限(chmod),端口号(port),账号密码(已设置为root)<br>这段无需更改</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 777 filebrowser</span><br><span class="line">./filebrowser -d filebrowser.db config init</span><br><span class="line">./filebrowser -d filebrowser.db config <span class="built_in">set</span> --address 0.0.0.0</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>设置端口号</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./filebrowser -d filebrowser.db config <span class="built_in">set</span> --port 10000</span><br></pre></td></tr></table></figure>
-<p>设置账号</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./filebrowser -d filebrowser.db <span class="built_in">users</span> add root root --perm.admin</span><br></pre></td></tr></table></figure>
-<p>设置挂载点</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./filebrowser -d filebrowser.db config <span class="built_in">set</span> --root /</span><br></pre></td></tr></table></figure>
-<h3 id="启动-6"><a href="#启动-6" class="headerlink" title="启动-6"></a>启动-6</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/filebrowser/filebrowser -d /filebrowser/filebrowser.db --disable-preview-resize --disable-type-detection-by-header --cache-dir /filebrowser/cache</span><br></pre></td></tr></table></figure>
-<h3 id="添加开机启动-7"><a href="#添加开机启动-7" class="headerlink" title="添加开机启动-7"></a>添加开机启动-7</h3><p>编辑rc.local</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/rc.local</span><br></pre></td></tr></table></figure>
-<p>添加这段命令(建议添加在中间，其他我没试过)</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/filebrowser/filebrowser -d /filebrowser/filebrowser.db --disable-preview-resize --disable-type-detection-by-header --cache-dir /filebrowser/cache&amp;</span><br></pre></td></tr></table></figure>
-<p>重启</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
-<h3 id="实际测试-8"><a href="#实际测试-8" class="headerlink" title="实际测试-8"></a>实际测试-8</h3><p>访问网址: <a href="https://localhost:10000/">localhost:10000</a><br>账号和密码<br>$ root<br>$ root</p>
-]]></content>
-      <categories>
-        <category>W</category>
-        <category>文件管理</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>修手机</title>
-    <url>/posts/33558/</url>
-    <content><![CDATA[<h1 id="小米"><a href="#小米" class="headerlink" title="小米"></a>小米</h1><li style="margin-left: 40px;font-size: 15px">一键锁屏</li>
-
-<p>在添加小部件里可能找不到<b>一键锁屏</b>，你只需要<code>断开网络</code>然后在添加小部件最下方就会多出一个选项，在那里应该就能找到<b>一键锁屏</b>了。</p>
-<p style="color: #FF0000;">注:</p>
-仅在MIUI12.5测试过]]></content>
-      <categories>
-        <category>X</category>
-        <category>修理</category>
-        <category>手机</category>
-      </categories>
-      <tags>
-        <tag>修理</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>adb-scrcpy</title>
     <url>/posts/1394/</url>
     <content><![CDATA[<blockquote>
@@ -523,6 +428,241 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
 ]]></content>
   </entry>
   <entry>
+    <title>实用软件</title>
+    <url>/posts/26616/</url>
+    <content><![CDATA[<h1 id="实用"><a href="#实用" class="headerlink" title="实用"></a>实用</h1><h2 id="Rotation-屏幕强制旋转"><a href="#Rotation-屏幕强制旋转" class="headerlink" title="Rotation(屏幕强制旋转)"></a>Rotation(屏幕强制旋转)</h2><p><a href="https://www.123pan.com/s/wkn6Vv-QVpiH.html">123云盘下载_版本25.0.2</a>提取码：WfSp</p>
+<h2 id="IP摄像头"><a href="#IP摄像头" class="headerlink" title="IP摄像头"></a>IP摄像头</h2><li style="margin-left: 40px;font-size: 15px">下载</li>
+[123云盘下载](https://www.123pan.com/s/wkn6Vv-vgfiH.html)提取码：Mwqm
+
+<li style="margin-left: 40px;font-size: 15px">条码制作器(辅助软件)</li>
+扫分享的二维码用的
+[123云盘下载](https://www.123pan.com/s/wkn6Vv-TgfiH.html)提取码：uckj
+
+<h1 id="视频-音频播放器"><a href="#视频-音频播放器" class="headerlink" title="视频&#x2F;音频播放器"></a>视频&#x2F;音频播放器</h1><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//s4oyai2k2.hn-bkt.clouddn.com/VIDEO_11260213182047.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
+height: 80%; left: 0; top: 0;"> </iframe></div>
+
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://3026320471.qnqcdn.net:22443/qn-v8wGeHUAvKSZLNhoiFj4uMVYtWjsUJSk2XG0aLw4.pycdn.qupeiyin.cn/dubbing/2016-01-07/1452156944316mdamt454nwz.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
+height: 78%; left: 0; top: 0;"> </iframe></div>
+
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//player.bilibili.com/player.html?aid=39807850&cid=69927212&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
+height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
+      <categories>
+        <category>Y</category>
+        <category>应用</category>
+        <category>安卓应用</category>
+      </categories>
+      <tags>
+        <tag>应用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>狗</title>
+    <url>/posts/e5f05850/</url>
+    <content><![CDATA[<p>狗子叫<b>毛毛</b></p>
+<h1 id="照片集"><a href="#照片集" class="headerlink" title="照片集"></a>照片集</h1><table>
+<thead>
+<tr>
+<th><img src="/posts/e5f05850/ (1).jpg" alt=" (1)" style="zoom:15%;"></th>
+<th><img src="/posts/e5f05850/ (2).jpg" alt=" (2)" style="zoom:15%;"></th>
+<th><img src="/posts/e5f05850/ (3).jpg" alt=" (3)" style="zoom:15%;"></th>
+<th><img src="/posts/e5f05850/ (4).jpg" alt=" (4)" style="zoom:15%;"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="/posts/e5f05850/ (5).jpg" alt=" (5)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (6).jpg" alt=" (6)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (7).jpg" alt=" (7)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (8).jpg" alt=" (8)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/posts/e5f05850/ (9).jpg" alt=" (9)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (10).jpg" alt=" (10)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (11).jpg" alt=" (11)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (12).jpg" alt=" (12)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/posts/e5f05850/ (13).jpg" alt=" (13)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (14).jpg" alt=" (14)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (15).jpg" alt=" (15)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (16).jpg" alt=" (16)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/posts/e5f05850/ (17).jpg" alt=" (17)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (18).jpg" alt=" (18)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (19).jpg" alt=" (19)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (20).jpg" alt=" (20)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/posts/e5f05850/ (21).jpg" alt=" (21)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (22).jpg" alt=" (22)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (23).jpg" alt=" (23)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (24).jpg" alt=" (24)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/posts/e5f05850/ (25).jpg" alt=" (25)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (26).jpg" alt=" (26)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (27).jpg" alt=" (27)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (28).jpg" alt=" (28)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/posts/e5f05850/ (29).jpg" alt=" (29)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (30).jpg" alt=" (30)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (31).jpg" alt=" (31)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (32).jpg" alt=" (32)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/posts/e5f05850/ (33).jpg" alt=" (33)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (34).jpg" alt=" (34)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (35).jpg" alt=" (35)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (36).jpg" alt=" (36)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/posts/e5f05850/ (37).jpg" alt=" (37)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (38).jpg" alt=" (38)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (39).jpg" alt=" (39)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (40).jpg" alt=" (40)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/posts/e5f05850/ (41).jpg" alt=" (41)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (42).jpg" alt=" (42)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (43).jpg" alt=" (43)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (44).jpg" alt=" (44)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/posts/e5f05850/ (45).jpg" alt=" (45)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (46).jpg" alt=" (46)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (47).jpg" alt=" (47)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (48).jpg" alt=" (48)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/posts/e5f05850/ (49).jpg" alt=" (49)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (50).jpg" alt=" (50)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (51).jpg" alt=" (51)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (52).jpg" alt=" (52)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/posts/e5f05850/ (53).jpg" alt=" (53)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (54).jpg" alt=" (54)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (55).jpg" alt=" (55)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (56).jpg" alt=" (56)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/posts/e5f05850/ (57).jpg" alt=" (57)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (58).jpg" alt=" (58)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (59).jpg" alt=" (59)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (60).jpg" alt=" (60)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/posts/e5f05850/ (61).jpg" alt=" (61)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (62).jpg" alt=" (62)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (63).jpg" alt=" (63)" style="zoom:15%;"></td>
+<td><img src="/posts/e5f05850/ (64).jpg" alt=" (64)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/posts/e5f05850/ (65).jpg" alt=" (65)" style="zoom:15%;"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id="视频集"><a href="#视频集" class="headerlink" title="视频集"></a>视频集</h1><table>
+<thead>
+<tr>
+<th><video src="dog/Pxl 20240309 184245149.mp4"></video></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+</table>
+]]></content>
+      <categories>
+        <category>D</category>
+        <category>狗子</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>生态瓶</title>
+    <url>/posts/63466/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>X</category>
+        <category>学习</category>
+        <category>生物</category>
+        <category>生态系统</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>feelings</title>
+    <url>/posts/27709/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>如何使用filebrowser</title>
+    <url>/posts/29696/</url>
+    <content><![CDATA[<h2 id="Linux下的使用教程"><a href="#Linux下的使用教程" class="headerlink" title="Linux下的使用教程"></a>Linux下的使用教程</h2><p>filebrowser是一个独立的文件管理工具，它使用go语言，不需要依赖直接.&#x2F;filebrowser即可运行，为了方便使用该篇文章叫你如何开机启动它。</p>
+<h3 id="查看架构-1"><a href="#查看架构-1" class="headerlink" title="查看架构-1"></a>查看架构-1</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">arch</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="下载filebrowser-2"><a href="#下载filebrowser-2" class="headerlink" title="下载filebrowser-2"></a>下载filebrowser-2</h3><p>github官网地址</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/filebrowser/filebrowser</span><br></pre></td></tr></table></figure>
+<h3 id="下载-3"><a href="#下载-3" class="headerlink" title="下载-3"></a>下载-3</h3><p>在Releases中找到合适的安装包</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /</span><br><span class="line"><span class="built_in">mkdir</span> filebrowser</span><br><span class="line"><span class="built_in">cd</span> filebrowser</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget 下载地址</span><br></pre></td></tr></table></figure>
+<h3 id="解压-4"><a href="#解压-4" class="headerlink" title="解压-4"></a>解压-4</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -zxvf 文件名</span><br></pre></td></tr></table></figure>
+<p>删除(可选)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf 文件名</span><br></pre></td></tr></table></figure>
+<h3 id="安装-5"><a href="#安装-5" class="headerlink" title="安装-5"></a>安装-5</h3><p>设置权限(chmod),端口号(port),账号密码(已设置为root)<br>这段无需更改</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 777 filebrowser</span><br><span class="line">./filebrowser -d filebrowser.db config init</span><br><span class="line">./filebrowser -d filebrowser.db config <span class="built_in">set</span> --address 0.0.0.0</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>设置端口号</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./filebrowser -d filebrowser.db config <span class="built_in">set</span> --port 10000</span><br></pre></td></tr></table></figure>
+<p>设置账号</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./filebrowser -d filebrowser.db <span class="built_in">users</span> add root root --perm.admin</span><br></pre></td></tr></table></figure>
+<p>设置挂载点</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./filebrowser -d filebrowser.db config <span class="built_in">set</span> --root /</span><br></pre></td></tr></table></figure>
+<h3 id="启动-6"><a href="#启动-6" class="headerlink" title="启动-6"></a>启动-6</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/filebrowser/filebrowser -d /filebrowser/filebrowser.db --disable-preview-resize --disable-type-detection-by-header --cache-dir /filebrowser/cache</span><br></pre></td></tr></table></figure>
+<h3 id="添加开机启动-7"><a href="#添加开机启动-7" class="headerlink" title="添加开机启动-7"></a>添加开机启动-7</h3><p>编辑rc.local</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/rc.local</span><br></pre></td></tr></table></figure>
+<p>添加这段命令(建议添加在中间，其他我没试过)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/filebrowser/filebrowser -d /filebrowser/filebrowser.db --disable-preview-resize --disable-type-detection-by-header --cache-dir /filebrowser/cache&amp;</span><br></pre></td></tr></table></figure>
+<p>重启</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
+<h3 id="实际测试-8"><a href="#实际测试-8" class="headerlink" title="实际测试-8"></a>实际测试-8</h3><p>访问网址: <a href="https://localhost:10000/">localhost:10000</a><br>账号和密码<br>$ root<br>$ root</p>
+]]></content>
+      <categories>
+        <category>W</category>
+        <category>文件管理</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>修手机</title>
+    <url>/posts/33558/</url>
+    <content><![CDATA[<h1 id="小米"><a href="#小米" class="headerlink" title="小米"></a>小米</h1><li style="margin-left: 40px;font-size: 15px">一键锁屏</li>
+
+<p>在添加小部件里可能找不到<b>一键锁屏</b>，你只需要<code>断开网络</code>然后在添加小部件最下方就会多出一个选项，在那里应该就能找到<b>一键锁屏</b>了。</p>
+<p style="color: #FF0000;">注:</p>
+仅在MIUI12.5测试过]]></content>
+      <categories>
+        <category>X</category>
+        <category>修理</category>
+        <category>手机</category>
+      </categories>
+      <tags>
+        <tag>修理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>git</title>
     <url>/posts/43167/</url>
     <content><![CDATA[]]></content>
@@ -559,7 +699,7 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
 <h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><h3 id="数字标签"><a href="#数字标签" class="headerlink" title="数字标签"></a>数字标签</h3><ol>
 <li><p>这是一个标签</p>
 </li>
-<li><p>这是第二个标签<br> 数字 + . + 空格<br>上面的标签用法是：</p>
+<li><p>这是第二个标签<br> 数字 + . + 空格<br> 上面的标签用法是：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1. 这是一个标签</span><br><span class="line"></span><br><span class="line">2. 这是第二个标签</span><br><span class="line">    数字 + . + 空格</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="符号标签"><a href="#符号标签" class="headerlink" title="符号标签"></a>符号标签</h3><li style="margin-left: 40px;font-size: 15px">123</li>
@@ -680,6 +820,9 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//player.bilibili.com/player.html?aid=39807850&cid=69927212&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
 height: 100%; left: 0; top: 0;"> </iframe></div>
 
+<h2 id="图片并排插入"><a href="#图片并排插入" class="headerlink" title="图片并排插入"></a>图片并排插入</h2><p>很简单，其实是表格+插入图片的语法，相比固定图片尺寸的写法，这个写起来比较方便。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">| ![xxx](\images\xxx.jpg) | ![xxx](\images\xxx.jpg) | ![xxx](\images\xxx.jpg) |</span><br><span class="line">| --- | ---| --- |</span><br></pre></td></tr></table></figure>
+
 <h2 id="添加多分类"><a href="#添加多分类" class="headerlink" title="添加多分类"></a>添加多分类</h2><p>categories 后面这样写就行了</p>
 <p>分级分类<br>前一个的等级高<br>标签1&gt;标签2&gt;标签3</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">categories: [标签1,标签2,标签3]</span><br></pre></td></tr></table></figure>
@@ -689,6 +832,15 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
 <p>此时这篇文章同时包括三个分类：<br>PlayStation 和 Games 分别都是父分类 Diary 的子分类<br>同时 Life 是一个没有子分类的分类。</p>
 <h2 id="添加多个标签"><a href="#添加多个标签" class="headerlink" title="添加多个标签"></a>添加多个标签</h2><p>标签好像不存在分级<br>tags 后面这样写就行了</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tags: [标签1,标签2,标签3]</span><br></pre></td></tr></table></figure>
+
+<h1 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h1><h2 id="引用文章"><a href="#引用文章" class="headerlink" title="引用文章"></a>引用文章</h2><p>正常使用链接文章在<a href></a>写&#x2F;年&#x2F;月&#x2F;日&#x2F;文章名<br>也就是写生成后的静态页面的地址。<br>这要是改以下年月日不就GG了。</p>
+<p>所以可以使用相对链接来解决问题</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;% post_link 文章文件名（不要后缀） 文章标题（可选） %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;% post_link Hello-World %&#125;</span><br><span class="line">&#123;% post_link Hello-World 你好世界 %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>不理解的话实际操作一下就明白了。</p>
 ]]></content>
       <categories>
         <category>H</category>
@@ -773,14 +925,6 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
 <p>例：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: https://github.com/用户名/用户名.github.io</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
 
-<h1 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h1><h2 id="引用文章"><a href="#引用文章" class="headerlink" title="引用文章"></a>引用文章</h2><p>正常使用链接文章在<a href></a>写&#x2F;年&#x2F;月&#x2F;日&#x2F;文章名<br>也就是写生成后的静态页面的地址。<br>这要是改以下年月日不就GG了。</p>
-<p>所以可以使用相对链接来解决问题</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;% post_link 文章文件名（不要后缀） 文章标题（可选） %&#125;</span><br></pre></td></tr></table></figure>
-
-<p>如：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;% post_link Hello-World %&#125;</span><br><span class="line">&#123;% post_link Hello-World 你好世界 %&#125;</span><br></pre></td></tr></table></figure>
-
-<p>不理解的话实际操作一下就明白了。</p>
 ]]></content>
       <categories>
         <category>H</category>
@@ -831,8 +975,8 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
-    <title>feelings</title>
-    <url>/posts/27709/</url>
+    <title>me</title>
+    <url>/posts/48108/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -952,6 +1096,43 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
+    <title>泡菜</title>
+    <url>/posts/313c8f6b/</url>
+    <content><![CDATA[<p>泡个菜来尝尝，虽然也只是一时兴起。</p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><li style="margin-left: 40px;font-size: 15px">材料：</li>
+
+<p>泡菜坛子x1,</p>
+<h2 id="泡菜坛子开箱"><a href="#泡菜坛子开箱" class="headerlink" title="泡菜坛子开箱"></a>泡菜坛子开箱</h2><li style="margin-left: 40px;font-size: 15px">24-2-7在拼多多上买了个看着不错的玻璃坛子</li>
+
+<p><img src="/posts/313c8f6b/IMG_20240310_102430_1.jpg" alt="购买"></p>
+<li style="margin-left: 40px;font-size: 15px">24-2-8到货</li>
+
+<p><img src="/posts/313c8f6b/PXL_20240308_235248686.jpg" alt="到货"></p>
+<li style="margin-left: 40px;font-size: 15px">24-2-9洗好晾干</li>
+
+<p><img src="/posts/313c8f6b/PXL_20240309_194255595.jpg" alt="晾干"></p>
+<li style="margin-left: 40px;font-size: 15px">24-2-10发现瑕疵</li>
+
+<p><img src="/posts/313c8f6b/PXL_20240310_101338597.jpg" alt="24-3-10晾好"></p>
+<p>本来以为是水没干没想到是自带的，不过倒也无所谓，不影响使用就行。</p>
+<p><img src="/posts/313c8f6b/PXL_20240310_101413839.jpg" alt="PXL_20240310_101413839"></p>
+<li style="margin-left: 40px;font-size: 15px">商家发的说明书</li>
+
+<p><img src="/posts/313c8f6b/PXL_20240309_194439866.jpg" alt="泡菜"></p>
+<p><img src="/posts/313c8f6b/PXL_20240309_194445788.jpg" alt="泡制鸡爪"></p>
+<p><img src="/posts/313c8f6b/PXL_20240309_194454899.jpg" alt="腌制糖蒜"></p>
+<p><img src="/posts/313c8f6b/PXL_20240309_194501714.jpg" alt="注意事项"></p>
+]]></content>
+      <categories>
+        <category>P</category>
+        <category>泡菜</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>termux</title>
     <url>/posts/44010/</url>
     <content><![CDATA[<h1 id="一-准备"><a href="#一-准备" class="headerlink" title="一.准备"></a>一.准备</h1><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><a href="https://www.123pan.com/s/wkn6Vv-AVpiH.html">123云盘下载_版本0.118.0</a>提取码：7qQk<br><a href="https://wwp.lanzoup.com/iDBWX1dugbpc">蓝奏云下载_版本0.118.0</a>提取码：acmx</p>
@@ -992,6 +1173,22 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
+    <title>视频制作</title>
+    <url>/posts/12501/</url>
+    <content><![CDATA[<h1 id="视频录制工具"><a href="#视频录制工具" class="headerlink" title="视频录制工具"></a>视频录制工具</h1><h2 id="AZ-Screen-Recorder"><a href="#AZ-Screen-Recorder" class="headerlink" title="AZ Screen Recorder"></a>AZ Screen Recorder</h2><p>1.介绍<br>支持画笔<br>支持最高1080p 12Mpbs 120FPS<br>应用图片(放不下就看看吧)<br><img src="/posts/12501/1.jpg" alt="图一"><br><img src="/posts/12501/2.jpg" alt="图二"><br>2.下载链接<br><a href="https://www.123pan.com/s/wkn6Vv-3VpiH.html">123云盘下载_版本5.10.6</a>提取码：eqMd<br><a href="https://wwp.lanzoup.com/iM4H51dug88h">蓝奏云下载_版本5.10.6</a>提取码：8c5h</p>
+<h1 id="视频剪辑工具"><a href="#视频剪辑工具" class="headerlink" title="视频剪辑工具"></a>视频剪辑工具</h1><h2 id="VN"><a href="#VN" class="headerlink" title="VN"></a>VN</h2><p>免登录可用<br>应用商店下载就行</p>
+<h1 id="视频播放器"><a href="#视频播放器" class="headerlink" title="视频播放器"></a>视频播放器</h1><h2 id="XPlayer-已破解"><a href="#XPlayer-已破解" class="headerlink" title="XPlayer(已破解)"></a>XPlayer(已破解)</h2><p>视频,音乐都能播放，功能强大<br><a href="https://www.123pan.com/s/wkn6Vv-hVpiH.html">123云盘下载_版本2.2.1.2</a>提取码：XWsx<br><a href="https://wwp.lanzoup.com/iW26T1dug49e">蓝奏云下载_版本2.2.1.2</a>提取码：apj4</p>
+]]></content>
+      <categories>
+        <category>X</category>
+        <category>学习</category>
+        <category>视频</category>
+      </categories>
+      <tags>
+        <tag>做视频</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>web</title>
     <url>/posts/41754/</url>
     <content><![CDATA[<h1 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h1><p>只能搭建静态网站</p>
@@ -1010,27 +1207,6 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       <tags>
         <tag>网站</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>视频制作</title>
-    <url>/posts/12501/</url>
-    <content><![CDATA[<h1 id="视频录制工具"><a href="#视频录制工具" class="headerlink" title="视频录制工具"></a>视频录制工具</h1><h2 id="AZ-Screen-Recorder"><a href="#AZ-Screen-Recorder" class="headerlink" title="AZ Screen Recorder"></a>AZ Screen Recorder</h2><p>1.介绍<br>支持画笔<br>支持最高1080p 12Mpbs 120FPS<br>应用图片(放不下就看看吧)<br><img src="/posts/12501/1.jpg" alt="图一"><br><img src="/posts/12501/2.jpg" alt="图二"><br>2.下载链接<br><a href="https://www.123pan.com/s/wkn6Vv-3VpiH.html">123云盘下载_版本5.10.6</a>提取码：eqMd<br><a href="https://wwp.lanzoup.com/iM4H51dug88h">蓝奏云下载_版本5.10.6</a>提取码：8c5h</p>
-<h1 id="视频剪辑工具"><a href="#视频剪辑工具" class="headerlink" title="视频剪辑工具"></a>视频剪辑工具</h1><h2 id="VN"><a href="#VN" class="headerlink" title="VN"></a>VN</h2><p>免登录可用<br>应用商店下载就行</p>
-<h1 id="视频播放器"><a href="#视频播放器" class="headerlink" title="视频播放器"></a>视频播放器</h1><h2 id="XPlayer-已破解"><a href="#XPlayer-已破解" class="headerlink" title="XPlayer(已破解)"></a>XPlayer(已破解)</h2><p>视频,音乐都能播放，功能强大<br><a href="https://www.123pan.com/s/wkn6Vv-hVpiH.html">123云盘下载_版本2.2.1.2</a>提取码：XWsx<br><a href="https://wwp.lanzoup.com/iW26T1dug49e">蓝奏云下载_版本2.2.1.2</a>提取码：apj4</p>
-]]></content>
-      <categories>
-        <category>X</category>
-        <category>学习</category>
-        <category>视频</category>
-      </categories>
-      <tags>
-        <tag>做视频</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>me</title>
-    <url>/posts/48108/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>win10-ftpserver</title>
