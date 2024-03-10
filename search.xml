@@ -282,29 +282,6 @@ height: 80%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
-    <title>adb</title>
-    <url>/posts/63482/</url>
-    <content><![CDATA[<h3 id="设置屏幕息屏时间-1"><a href="#设置屏幕息屏时间-1" class="headerlink" title="设置屏幕息屏时间-1"></a>设置屏幕息屏时间-1</h3><p>永不息屏</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">settings put system screen_off_timeout 2147483647</span><br></pre></td></tr></table></figure>
-<p>查看息屏时间</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">settings put system screen_off_timeout</span><br></pre></td></tr></table></figure>
-<h3 id="设置电池假装充电状态-2"><a href="#设置电池假装充电状态-2" class="headerlink" title="设置电池假装充电状态-2"></a>设置电池假装充电状态-2</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dumpsys battery <span class="built_in">set</span> status 2</span><br></pre></td></tr></table></figure>
-<h3 id="激活应用-3"><a href="#激活应用-3" class="headerlink" title="激活应用-3"></a>激活应用-3</h3><p>键鼠映射软件:Panda Mouse pro</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh /storage/emulated/0/.chaozhuo.gameassistant2/inject.sh</span><br></pre></td></tr></table></figure>
-<p>下载<br><a href="https://www.123pan.com/s/wkn6Vv-ttpiH.html">123云盘下载_版本1.5.0</a><br><a href="https://wwp.lanzoup.com/iQ62S1dug35e">蓝奏云下载_版本1.5.0</a>提取码：38ev</p>
-<h3 id="adb-pull命令使用"><a href="#adb-pull命令使用" class="headerlink" title="adb pull命令使用"></a>adb pull命令使用</h3><p>把手机&#x2F;sdcard&#x2F;1里的文件下载到电脑D:\1文件夹里(&#x2F;sdcard&#x2F;1&#x2F;文件名也行)<br>adb pull &#x2F;sdcard&#x2F;1 D:\1</p>
-<p>主题<a href="https://theme-next.org/">https://theme-next.org/</a><br>彩色字<a href="https://benpaodewoniu.github.io/2020/01/27/hexo12/">https://benpaodewoniu.github.io/2020/01/27/hexo12/</a></p>
-]]></content>
-      <categories>
-        <category>G</category>
-        <category>搞机</category>
-        <category>adb</category>
-      </categories>
-      <tags>
-        <tag>搞机</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>adb-scrcpy</title>
     <url>/posts/1394/</url>
     <content><![CDATA[<blockquote>
@@ -426,6 +403,29 @@ height: 80%; left: 0; top: 0;"> </iframe></div>
 </tbody></table>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://blog.csdn.net/DDJ_TEST/article/details/120287342">scrcpy投屏教程、scrcpy无线投屏、scrcpy命令大全-CSDN博客</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>adb</title>
+    <url>/posts/63482/</url>
+    <content><![CDATA[<h3 id="设置屏幕息屏时间-1"><a href="#设置屏幕息屏时间-1" class="headerlink" title="设置屏幕息屏时间-1"></a>设置屏幕息屏时间-1</h3><p>永不息屏</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">settings put system screen_off_timeout 2147483647</span><br></pre></td></tr></table></figure>
+<p>查看息屏时间</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">settings put system screen_off_timeout</span><br></pre></td></tr></table></figure>
+<h3 id="设置电池假装充电状态-2"><a href="#设置电池假装充电状态-2" class="headerlink" title="设置电池假装充电状态-2"></a>设置电池假装充电状态-2</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dumpsys battery <span class="built_in">set</span> status 2</span><br></pre></td></tr></table></figure>
+<h3 id="激活应用-3"><a href="#激活应用-3" class="headerlink" title="激活应用-3"></a>激活应用-3</h3><p>键鼠映射软件:Panda Mouse pro</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh /storage/emulated/0/.chaozhuo.gameassistant2/inject.sh</span><br></pre></td></tr></table></figure>
+<p>下载<br><a href="https://www.123pan.com/s/wkn6Vv-ttpiH.html">123云盘下载_版本1.5.0</a><br><a href="https://wwp.lanzoup.com/iQ62S1dug35e">蓝奏云下载_版本1.5.0</a>提取码：38ev</p>
+<h3 id="adb-pull命令使用"><a href="#adb-pull命令使用" class="headerlink" title="adb pull命令使用"></a>adb pull命令使用</h3><p>把手机&#x2F;sdcard&#x2F;1里的文件下载到电脑D:\1文件夹里(&#x2F;sdcard&#x2F;1&#x2F;文件名也行)<br>adb pull &#x2F;sdcard&#x2F;1 D:\1</p>
+<p>主题<a href="https://theme-next.org/">https://theme-next.org/</a><br>彩色字<a href="https://benpaodewoniu.github.io/2020/01/27/hexo12/">https://benpaodewoniu.github.io/2020/01/27/hexo12/</a></p>
+]]></content>
+      <categories>
+        <category>G</category>
+        <category>搞机</category>
+        <category>adb</category>
+      </categories>
+      <tags>
+        <tag>搞机</tag>
+      </tags>
   </entry>
   <entry>
     <title>实用软件</title>
@@ -591,6 +591,11 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
       </tags>
   </entry>
   <entry>
+    <title>feelings</title>
+    <url>/posts/27709/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>生态瓶</title>
     <url>/posts/63466/</url>
     <content><![CDATA[]]></content>
@@ -603,11 +608,6 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
       <tags>
         <tag>学习</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>feelings</title>
-    <url>/posts/27709/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>如何使用filebrowser</title>
