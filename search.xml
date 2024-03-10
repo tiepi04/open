@@ -605,11 +605,6 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
       </tags>
   </entry>
   <entry>
-    <title>feelings</title>
-    <url>/posts/27709/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>如何使用filebrowser</title>
     <url>/posts/29696/</url>
     <content><![CDATA[<h2 id="Linux下的使用教程"><a href="#Linux下的使用教程" class="headerlink" title="Linux下的使用教程"></a>Linux下的使用教程</h2><p>filebrowser是一个独立的文件管理工具，它使用go语言，不需要依赖直接.&#x2F;filebrowser即可运行，为了方便使用该篇文章叫你如何开机启动它。</p>
@@ -644,6 +639,11 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
         <category>W</category>
         <category>文件管理</category>
       </categories>
+  </entry>
+  <entry>
+    <title>feelings</title>
+    <url>/posts/27709/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>修手机</title>
@@ -890,45 +890,6 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
-    <title>Linux</title>
-    <url>/posts/15691/</url>
-    <content><![CDATA[<h2 id="ssh连接工具"><a href="#ssh连接工具" class="headerlink" title="ssh连接工具"></a>ssh连接工具</h2><p>1.finalshell<br>仅有电脑版，但功能强大<br><a href="https://www.123pan.com/s/A6cA-2rHJh">点击前往123pan下载</a><br>2.Juicessh<br>安卓上比较好用的</p>
-<h1 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h1><h2 id="检查某端口是否开启"><a href="#检查某端口是否开启" class="headerlink" title="检查某端口是否开启"></a>检查某端口是否开启</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --query-port=25/tcp --zone=public  <span class="comment">#查询25端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=80/tcp --zone=public  <span class="comment">#查询80端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=888/tcp --zone=public  <span class="comment">#查询888端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=8888/tcp --zone=public  <span class="comment">#查询8888端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=8889/tcp --zone=public  <span class="comment">#查询8889端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=443/tcp --zone=public  <span class="comment">#查询443端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=20/tcp --zone=public  <span class="comment">#查询20端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=21/tcp --zone=public  <span class="comment">#查询21端口是否开启,自行修改端口号</span></span><br></pre></td></tr></table></figure>
-<p>返回no即未开启，显示yes为已开启。</p>
-<h2 id="开启某端口代码"><a href="#开启某端口代码" class="headerlink" title="开启某端口代码"></a>开启某端口代码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=25/tcp --permanent <span class="comment">#添加25端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --add-port=888/tcp --permanent <span class="comment">#添加888端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --add-port=8888/tcp --permanent <span class="comment">#添加8888端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --add-port=443/tcp --permanent <span class="comment">#添加443端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --add-port=20/tcp --permanent <span class="comment">#添加20端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --add-port=21/tcp --permanent <span class="comment">#添加21端口，如需添加其他端口，自行修改端口号</span></span><br></pre></td></tr></table></figure>
-<h2 id="关闭某端口代码"><a href="#关闭某端口代码" class="headerlink" title="关闭某端口代码"></a>关闭某端口代码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --remove-port=25/tcp --permanent <span class="comment">#关闭25端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --remove-port=888/tcp --permanent <span class="comment">#关闭888端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --remove-port=8888/tcp --permanent <span class="comment">#关闭8888端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --remove-port=443/tcp --permanent <span class="comment">#关闭443端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --remove-port=20/tcp --permanent <span class="comment">#关闭20端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --remove-port=21/tcp --permanent <span class="comment">#关闭21端口，如需添加其他端口，自行修改端口号</span></span><br></pre></td></tr></table></figure>
-<p>修改完成后需要重启服务器才能生效</p>
-<h2 id="看端口占用情况命令"><a href="#看端口占用情况命令" class="headerlink" title="看端口占用情况命令"></a>看端口占用情况命令</h2><p>(比如查看80端口占用情况使用如下命令）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsof -i tcp:80</span><br></pre></td></tr></table></figure>
-<h1 id="查看防火墙状态"><a href="#查看防火墙状态" class="headerlink" title="查看防火墙状态"></a>查看防火墙状态</h1><h2 id="CentOS系统"><a href="#CentOS系统" class="headerlink" title="CentOS系统:"></a>CentOS系统:</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure>
-<p>有如下提示(running)表示开启</p>
-<p>Active: active (running)</p>
-<h3 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl stop firewalld</span><br></pre></td></tr></table></figure>
-<p>有如下提示表示已经关闭</p>
-<p>Active: inactive (dead)</p>
-<h3 id="开启防火墙，没有任何提示即开启成功"><a href="#开启防火墙，没有任何提示即开启成功" class="headerlink" title="开启防火墙，没有任何提示即开启成功"></a>开启防火墙，没有任何提示即开启成功</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start firewalld</span><br></pre></td></tr></table></figure>
-<p>再次查看防火墙状态</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure>
-<p>有如下提示(running)表示开启</p>
-<p>Active: active (running)</p>
-<h2 id="Debian-Ubuntu系统："><a href="#Debian-Ubuntu系统：" class="headerlink" title="Debian&#x2F;Ubuntu系统："></a>Debian&#x2F;Ubuntu系统：</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">iptables -P INPUT ACCEPT</span><br><span class="line">iptables -P FORWARD ACCEPT</span><br><span class="line">iptables -P OUTPUT ACCEPT</span><br><span class="line">iptables -Fapt-get purge netfilter-persistent</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
-<h1 id="安全检查"><a href="#安全检查" class="headerlink" title="安全检查"></a>安全检查</h1><p>#主机自动记录所有登陆事件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /var/log/secure</span><br></pre></td></tr></table></figure>
-<p>#所有登陆失败记录</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lastb</span><br></pre></td></tr></table></figure>
-<p>#所有登陆成功事件记录</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">last</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>L</category>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo的安装</title>
     <url>/posts/4752/</url>
     <content><![CDATA[<p>hexo g 创建静态文件<br>hexo s 启动<br>hexo clean 清除缓存<br>hexo d 推送文件<br>hexo new “My New Post” 创建新文章</p>
@@ -972,6 +933,45 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </categories>
       <tags>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux</title>
+    <url>/posts/15691/</url>
+    <content><![CDATA[<h2 id="ssh连接工具"><a href="#ssh连接工具" class="headerlink" title="ssh连接工具"></a>ssh连接工具</h2><p>1.finalshell<br>仅有电脑版，但功能强大<br><a href="https://www.123pan.com/s/A6cA-2rHJh">点击前往123pan下载</a><br>2.Juicessh<br>安卓上比较好用的</p>
+<h1 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h1><h2 id="检查某端口是否开启"><a href="#检查某端口是否开启" class="headerlink" title="检查某端口是否开启"></a>检查某端口是否开启</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --query-port=25/tcp --zone=public  <span class="comment">#查询25端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=80/tcp --zone=public  <span class="comment">#查询80端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=888/tcp --zone=public  <span class="comment">#查询888端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=8888/tcp --zone=public  <span class="comment">#查询8888端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=8889/tcp --zone=public  <span class="comment">#查询8889端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=443/tcp --zone=public  <span class="comment">#查询443端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=20/tcp --zone=public  <span class="comment">#查询20端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=21/tcp --zone=public  <span class="comment">#查询21端口是否开启,自行修改端口号</span></span><br></pre></td></tr></table></figure>
+<p>返回no即未开启，显示yes为已开启。</p>
+<h2 id="开启某端口代码"><a href="#开启某端口代码" class="headerlink" title="开启某端口代码"></a>开启某端口代码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=25/tcp --permanent <span class="comment">#添加25端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --add-port=888/tcp --permanent <span class="comment">#添加888端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --add-port=8888/tcp --permanent <span class="comment">#添加8888端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --add-port=443/tcp --permanent <span class="comment">#添加443端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --add-port=20/tcp --permanent <span class="comment">#添加20端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --add-port=21/tcp --permanent <span class="comment">#添加21端口，如需添加其他端口，自行修改端口号</span></span><br></pre></td></tr></table></figure>
+<h2 id="关闭某端口代码"><a href="#关闭某端口代码" class="headerlink" title="关闭某端口代码"></a>关闭某端口代码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --remove-port=25/tcp --permanent <span class="comment">#关闭25端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --remove-port=888/tcp --permanent <span class="comment">#关闭888端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --remove-port=8888/tcp --permanent <span class="comment">#关闭8888端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --remove-port=443/tcp --permanent <span class="comment">#关闭443端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --remove-port=20/tcp --permanent <span class="comment">#关闭20端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --remove-port=21/tcp --permanent <span class="comment">#关闭21端口，如需添加其他端口，自行修改端口号</span></span><br></pre></td></tr></table></figure>
+<p>修改完成后需要重启服务器才能生效</p>
+<h2 id="看端口占用情况命令"><a href="#看端口占用情况命令" class="headerlink" title="看端口占用情况命令"></a>看端口占用情况命令</h2><p>(比如查看80端口占用情况使用如下命令）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsof -i tcp:80</span><br></pre></td></tr></table></figure>
+<h1 id="查看防火墙状态"><a href="#查看防火墙状态" class="headerlink" title="查看防火墙状态"></a>查看防火墙状态</h1><h2 id="CentOS系统"><a href="#CentOS系统" class="headerlink" title="CentOS系统:"></a>CentOS系统:</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure>
+<p>有如下提示(running)表示开启</p>
+<p>Active: active (running)</p>
+<h3 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl stop firewalld</span><br></pre></td></tr></table></figure>
+<p>有如下提示表示已经关闭</p>
+<p>Active: inactive (dead)</p>
+<h3 id="开启防火墙，没有任何提示即开启成功"><a href="#开启防火墙，没有任何提示即开启成功" class="headerlink" title="开启防火墙，没有任何提示即开启成功"></a>开启防火墙，没有任何提示即开启成功</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start firewalld</span><br></pre></td></tr></table></figure>
+<p>再次查看防火墙状态</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure>
+<p>有如下提示(running)表示开启</p>
+<p>Active: active (running)</p>
+<h2 id="Debian-Ubuntu系统："><a href="#Debian-Ubuntu系统：" class="headerlink" title="Debian&#x2F;Ubuntu系统："></a>Debian&#x2F;Ubuntu系统：</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">iptables -P INPUT ACCEPT</span><br><span class="line">iptables -P FORWARD ACCEPT</span><br><span class="line">iptables -P OUTPUT ACCEPT</span><br><span class="line">iptables -Fapt-get purge netfilter-persistent</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+<h1 id="安全检查"><a href="#安全检查" class="headerlink" title="安全检查"></a>安全检查</h1><p>#主机自动记录所有登陆事件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /var/log/secure</span><br></pre></td></tr></table></figure>
+<p>#所有登陆失败记录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lastb</span><br></pre></td></tr></table></figure>
+<p>#所有登陆成功事件记录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">last</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>L</category>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -1173,6 +1173,22 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
+    <title>视频制作</title>
+    <url>/posts/12501/</url>
+    <content><![CDATA[<h1 id="视频录制工具"><a href="#视频录制工具" class="headerlink" title="视频录制工具"></a>视频录制工具</h1><h2 id="AZ-Screen-Recorder"><a href="#AZ-Screen-Recorder" class="headerlink" title="AZ Screen Recorder"></a>AZ Screen Recorder</h2><p>1.介绍<br>支持画笔<br>支持最高1080p 12Mpbs 120FPS<br>应用图片(放不下就看看吧)<br><img src="/posts/12501/1.jpg" alt="图一"><br><img src="/posts/12501/2.jpg" alt="图二"><br>2.下载链接<br><a href="https://www.123pan.com/s/wkn6Vv-3VpiH.html">123云盘下载_版本5.10.6</a>提取码：eqMd<br><a href="https://wwp.lanzoup.com/iM4H51dug88h">蓝奏云下载_版本5.10.6</a>提取码：8c5h</p>
+<h1 id="视频剪辑工具"><a href="#视频剪辑工具" class="headerlink" title="视频剪辑工具"></a>视频剪辑工具</h1><h2 id="VN"><a href="#VN" class="headerlink" title="VN"></a>VN</h2><p>免登录可用<br>应用商店下载就行</p>
+<h1 id="视频播放器"><a href="#视频播放器" class="headerlink" title="视频播放器"></a>视频播放器</h1><h2 id="XPlayer-已破解"><a href="#XPlayer-已破解" class="headerlink" title="XPlayer(已破解)"></a>XPlayer(已破解)</h2><p>视频,音乐都能播放，功能强大<br><a href="https://www.123pan.com/s/wkn6Vv-hVpiH.html">123云盘下载_版本2.2.1.2</a>提取码：XWsx<br><a href="https://wwp.lanzoup.com/iW26T1dug49e">蓝奏云下载_版本2.2.1.2</a>提取码：apj4</p>
+]]></content>
+      <categories>
+        <category>X</category>
+        <category>学习</category>
+        <category>视频</category>
+      </categories>
+      <tags>
+        <tag>做视频</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>web</title>
     <url>/posts/41754/</url>
     <content><![CDATA[<h1 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h1><p>只能搭建静态网站</p>
@@ -1197,21 +1213,5 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
     <url>/posts/7417/</url>
     <content><![CDATA[<p><a href="https://cloud.tencent.com/developer/article/1935592">win10系统下搭建FTP服务器(完成文件上传与下载)-腾讯云开发者社区-腾讯云 (tencent.com)</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>视频制作</title>
-    <url>/posts/12501/</url>
-    <content><![CDATA[<h1 id="视频录制工具"><a href="#视频录制工具" class="headerlink" title="视频录制工具"></a>视频录制工具</h1><h2 id="AZ-Screen-Recorder"><a href="#AZ-Screen-Recorder" class="headerlink" title="AZ Screen Recorder"></a>AZ Screen Recorder</h2><p>1.介绍<br>支持画笔<br>支持最高1080p 12Mpbs 120FPS<br>应用图片(放不下就看看吧)<br><img src="/posts/12501/1.jpg" alt="图一"><br><img src="/posts/12501/2.jpg" alt="图二"><br>2.下载链接<br><a href="https://www.123pan.com/s/wkn6Vv-3VpiH.html">123云盘下载_版本5.10.6</a>提取码：eqMd<br><a href="https://wwp.lanzoup.com/iM4H51dug88h">蓝奏云下载_版本5.10.6</a>提取码：8c5h</p>
-<h1 id="视频剪辑工具"><a href="#视频剪辑工具" class="headerlink" title="视频剪辑工具"></a>视频剪辑工具</h1><h2 id="VN"><a href="#VN" class="headerlink" title="VN"></a>VN</h2><p>免登录可用<br>应用商店下载就行</p>
-<h1 id="视频播放器"><a href="#视频播放器" class="headerlink" title="视频播放器"></a>视频播放器</h1><h2 id="XPlayer-已破解"><a href="#XPlayer-已破解" class="headerlink" title="XPlayer(已破解)"></a>XPlayer(已破解)</h2><p>视频,音乐都能播放，功能强大<br><a href="https://www.123pan.com/s/wkn6Vv-hVpiH.html">123云盘下载_版本2.2.1.2</a>提取码：XWsx<br><a href="https://wwp.lanzoup.com/iW26T1dug49e">蓝奏云下载_版本2.2.1.2</a>提取码：apj4</p>
-]]></content>
-      <categories>
-        <category>X</category>
-        <category>学习</category>
-        <category>视频</category>
-      </categories>
-      <tags>
-        <tag>做视频</tag>
-      </tags>
   </entry>
 </search>
