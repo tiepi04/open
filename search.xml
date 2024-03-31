@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>常用指令</title>
-    <url>/posts/7590/</url>
+    <url>/2023/10/09/Common-instruction/</url>
     <content><![CDATA[<h2 id="文件管理指令"><a href="#文件管理指令" class="headerlink" title="文件管理指令"></a>文件管理指令</h2><p>1.nano(系统自带的短小美)</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nano </span><br></pre></td></tr></table></figure>
 <p>2.vim(比较常用的)</p>
@@ -65,7 +65,7 @@
   </entry>
   <entry>
     <title>Docker</title>
-    <url>/posts/40991/</url>
+    <url>/2023/11/23/Docker/</url>
     <content><![CDATA[<h1 id="Docker使用"><a href="#Docker使用" class="headerlink" title="Docker使用"></a>Docker使用</h1><h2 id="Portainer-可视化容器管理工具"><a href="#Portainer-可视化容器管理工具" class="headerlink" title="Portainer(可视化容器管理工具)"></a>Portainer(可视化容器管理工具)</h2><p>安装好Docker后输入这个<br>1).</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker volume create portainer_data</span><br></pre></td></tr></table></figure>
 <p>2).启动(端口9000，前一个是访问的端口9000)</p>
@@ -89,138 +89,150 @@
   </entry>
   <entry>
     <title>English</title>
-    <url>/posts/4288/</url>
+    <url>/2023/11/26/English/</url>
     <content><![CDATA[<h2 id="2024-2-22"><a href="#2024-2-22" class="headerlink" title="2024-2-22"></a>2024-2-22</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-22/1708597913u781347483.mp4?20240222" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
 height: 80%; left: 0; top: 0;"> </iframe></div>
+[视频链接](https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-22/1708597913u781347483.mp4?20240222)
 
-<p><a href="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-22/1708597913u781347483.mp4?20240222">视频链接</a></p>
+<p><a href="https://moive2.qupeiyin.com/home/show/share?id=MDAwMDAwMDAwMLGtomaBsa7br6d4rw&share_from=&hid=2">原分享链接</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-22/1708597913u781347483.mp4?20240222</span><br></pre></td></tr></table></figure>
 
 <h2 id="2024-2-20"><a href="#2024-2-20" class="headerlink" title="2024-2-20"></a>2024-2-20</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-20/1708425075u781347482.mp4?20240220" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
 height: 80%; left: 0; top: 0;"> </iframe></div>
+[视频链接](https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-20/1708425075u781347482.mp4?20240220)
 
-<p><a href="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-20/1708425075u781347482.mp4?20240220">视频链接</a></p>
+<p><a href="https://moive2.qupeiyin.com/home/show/share?id=MDAwMDAwMDAwMLGtomaAi76Wr7eMrA&share_from=&hid=2">原分享链接</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-20/1708425075u781347482.mp4?20240220</span><br></pre></td></tr></table></figure>
 
 <h2 id="2024-2-18"><a href="#2024-2-18" class="headerlink" title="2024-2-18"></a>2024-2-18</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-18/1708261465u781347486.mp4?20240218" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
 height: 80%; left: 0; top: 0;"> </iframe></div>
+[视频链接](https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-18/1708261465u781347486.mp4?20240218)
 
-<p><a href="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-18/1708261465u781347486.mp4?20240218">视频链接</a></p>
+<p><a href="https://moive3.qupeiyin.com/home/show/share?id=MDAwMDAwMDAwMLGtomWBociXsLd4aQ&share_from=&hid=2">原分享链接</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-18/1708261465u781347486.mp4?20240218</span><br></pre></td></tr></table></figure>
 
 <h2 id="2024-2-16"><a href="#2024-2-16" class="headerlink" title="2024-2-16"></a>2024-2-16</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-16/1708083404u781347482.mp4?20240216" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
 height: 80%; left: 0; top: 0;"> </iframe></div>
+[视频链接](https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-16/1708083404u781347482.mp4?20240216)
 
-<p><a href="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-16/1708083404u781347482.mp4?20240216">视频链接</a></p>
+<p><a href="https://moive2.qupeiyin.com/home/show/share?id=MDAwMDAwMDAwMLGtomWAi6rdr6eEaA&share_from=&hid=2">原分享链接</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-16/1708083404u781347482.mp4?20240216</span><br></pre></td></tr></table></figure>
 
 <h2 id="2024-2-14"><a href="#2024-2-14" class="headerlink" title="2024-2-14"></a>2024-2-14</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-14/1707906185u781347482.mp4?20240214" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
 height: 80%; left: 0; top: 0;"> </iframe></div>
+[视频链接](https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-14/1707906185u781347482.mp4?20240214)
 
-<p><a href="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-14/1707906185u781347482.mp4?20240214">视频链接</a></p>
+<p><a href="https://moive2.qupeiyin.com/home/show/share?id=MDAwMDAwMDAwMLGtomSBobrbr82AZw&share_from=&hid=2">原分享链接</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-14/1707906185u781347482.mp4?20240214</span><br></pre></td></tr></table></figure>
 
 <h2 id="2024-2-12"><a href="#2024-2-12" class="headerlink" title="2024-2-12"></a>2024-2-12</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-12/1707740104u781347480.mp4?20240212" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
 height: 80%; left: 0; top: 0;"> </iframe></div>
+[视频链接](https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-12/1707740104u781347480.mp4?20240212)
 
-<p><a href="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-12/1707740104u781347480.mp4?20240212">视频链接</a></p>
+<p><a href="https://moive2.qupeiyin.com/home/show/share?id=MDAwMDAwMDAwMLGtomSAsaqXr914Zw&share_from=&hid=2">原分享链接</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-12/1707740104u781347480.mp4?20240212</span><br></pre></td></tr></table></figure>
 
 <h2 id="2024-2-10"><a href="#2024-2-10" class="headerlink" title="2024-2-10"></a>2024-2-10</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-10/1707567699u781347485.mp4?20240210" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
 height: 80%; left: 0; top: 0;"> </iframe></div>
+[视频链接](https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-10/1707567699u781347485.mp4?20240210)
 
-<p><a href="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-10/1707567699u781347485.mp4?20240210">视频链接</a></p>
+<p><a href="https://moive2.qupeiyin.com/home/show/share?id=MDAwMDAwMDAwMLGtomSAe7KZr82irQ&share_from=&hid=2">原分享链接</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-10/1707567699u781347485.mp4?20240210</span><br></pre></td></tr></table></figure>
 
 <h2 id="2024-2-8"><a href="#2024-2-8" class="headerlink" title="2024-2-8"></a>2024-2-8</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-08/1707397733u781347485.mp4?20240208" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
 height: 80%; left: 0; top: 0;"> </iframe></div>
+[视频链接](https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-08/1707397733u781347485.mp4?20240208)
 
-<p><a href="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-08/1707397733u781347485.mp4?20240208">视频链接</a></p>
+<p><a href="https://moive2.qupeiyin.com/home/show/share?id=MDAwMDAwMDAwMLGtomOBscjdsN14aA&share_from=&hid=2">原分享链接</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-08/1707397733u781347485.mp4?20240208</span><br></pre></td></tr></table></figure>
 
 <h2 id="2024-2-6"><a href="#2024-2-6" class="headerlink" title="2024-2-6"></a>2024-2-6</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-09/1707481539u781347489.mp4?20240206" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
 height: 80%; left: 0; top: 0;"> </iframe></div>
+[视频链接](https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-09/1707481539u781347489.mp4?20240206)
 
-<p><a href="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-09/1707481539u781347489.mp4?20240206">视频链接</a></p>
+<p><a href="https://moive2.qupeiyin.com/home/show/share?id=MDAwMDAwMDAwMLGtomOAobqWsad4rw&share_from=&hid=2">原分享链接</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-09/1707481539u781347489.mp4?20240206</span><br></pre></td></tr></table></figure>
 
 <h2 id="2024-2-4"><a href="#2024-2-4" class="headerlink" title="2024-2-4"></a>2024-2-4</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-04/1707051809u781347489.mp4?20240204" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
 height: 80%; left: 0; top: 0;"> </iframe></div>
+[视频链接](https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-04/1707051809u781347489.mp4?20240204)
 
-<p><a href="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-04/1707051809u781347489.mp4?20240204">视频链接</a></p>
+<p><a href="https://moive2.qupeiyin.com/home/show/share?id=MDAwMDAwMDAwMLGtomKBsbKZsM2erQ&share_from=&hid=2">原分享链接</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-04/1707051809u781347489.mp4?20240204</span><br></pre></td></tr></table></figure>
 
 <h2 id="2024-2-2"><a href="#2024-2-2" class="headerlink" title="2024-2-2"></a>2024-2-2</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-02/1706879585u781347486.mp4?20240202" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
 height: 80%; left: 0; top: 0;"> </iframe></div>
+[视频链接](https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-02/1706879585u781347486.mp4?20240202)
 
-<p><a href="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-02/1706879585u781347486.mp4?20240202">视频链接</a></p>
+<p><a href="https://moive3.qupeiyin.com/home/show/share?id=MDAwMDAwMDAwMLGtomKAoaaVr92irg&share_from=&hid=2">原分享链接链接</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-02/1706879585u781347486.mp4?20240202</span><br></pre></td></tr></table></figure>
 
 <h2 id="2023-11-26"><a href="#2023-11-26" class="headerlink" title="2023-11-26"></a>2023-11-26</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2023-11-26/1700970903u781347487.mp4?20230121112" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
 height: 80%; left: 0; top: 0;"> </iframe></div>
+[视频链接](https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2023-11-26/1700970903u781347487.mp4?20230121112)
 
-<p><a href="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2023-11-26/1700970903u781347487.mp4?20230121112">视频链接</a></p>
+<p><a href="https://moive3.qupeiyin.com/home/show/share?id=MDAwMDAwMDAwMLGdzGKAsabcsM2IZg&share_from=&hid=2">原分享链接</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2023-11-26/1700970903u781347487.mp4?20230121112</span><br></pre></td></tr></table></figure>
 
 <p>录了一天了，发布后才发现声音小了，但是它把我草稿删了。就这样吧。</p>
 <p>原视频</p>
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://3026320471.qnqcdn.net:22443/qn-c0FRw9iNhKSZLNhoiFj4uMVYtWjsUJSk2XG0aLw4.pycdn.qupeiyin.cn/2017-03-28/1490690407466mdamt.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
 height: 80%; left: 0; top: 0;"> </iframe></div>
+[原视频链接](https://3026320471.qnqcdn.net:22443/qn-c0FRw9iNhKSZLNhoiFj4uMVYtWjsUJSk2XG0aLw4.pycdn.qupeiyin.cn/2017-03-28/1490690407466mdamt.mp4)
 
-<p><a href="https://3026320471.qnqcdn.net:22443/qn-c0FRw9iNhKSZLNhoiFj4uMVYtWjsUJSk2XG0aLw4.pycdn.qupeiyin.cn/2017-03-28/1490690407466mdamt.mp4">原视频链接</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://3026320471.qnqcdn.net:22443/qn-c0FRw9iNhKSZLNhoiFj4uMVYtWjsUJSk2XG0aLw4.pycdn.qupeiyin.cn/2017-03-28/1490690407466mdamt.mp4</span><br></pre></td></tr></table></figure>
 <h2 id="视频直接播放方法"><a href="#视频直接播放方法" class="headerlink" title="视频直接播放方法"></a>视频直接播放方法</h2><p>需要下载第三方工具</p>
 <h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><code>IDM下载工具</code><br><a href="https://www.123pan.com/s/wkn6Vv-rkfiH.html">点击前往下载</a></p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><h3 id="视频教程"><a href="#视频教程" class="headerlink" title="视频教程:"></a>视频教程:</h3><div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"hotkey":true,"preload":"metadata","video":{"url":"/posts/4288/sp.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><h3 id="视频教程"><a href="#视频教程" class="headerlink" title="视频教程:"></a>视频教程:</h3><div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"hotkey":true,"preload":"metadata","video":{"url":"/2023/11/26/English/sp.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 
 <p>这个可能在这里播放不了请点击下方访问<br><a href="https://lswi6983.github.io/2023/11/26/English/sp.mp4">点击前往</a></p>
 <p>或者点<a href="https://gitee.com/tiepi04/tiepi04/raw/master/2023/11/26/English/sp.mp4">此处</a>下载</p>
-<h3 id="图文教程"><a href="#图文教程" class="headerlink" title="图文教程:"></a>图文教程:</h3><h4 id="所需应用"><a href="#所需应用" class="headerlink" title="所需应用"></a>所需应用</h4><p><img src="/posts/4288/main.jpg" alt="所需应用"></p>
+<h3 id="图文教程"><a href="#图文教程" class="headerlink" title="图文教程:"></a>图文教程:</h3><h4 id="所需应用"><a href="#所需应用" class="headerlink" title="所需应用"></a>所需应用</h4><p><img src="/2023/11/26/English/main.jpg" alt="所需应用"></p>
 <h4 id="获得视频分享链接"><a href="#获得视频分享链接" class="headerlink" title="获得视频分享链接"></a>获得视频分享链接</h4><li style="margin-left: 40px;font-size: 15px">进入“英语趣配音”</li>
 
 <p><ins>在底部点“我”</ins></p>
-<p><img src="/posts/4288/yy_1.jpg" alt="1"></p>
+<p><img src="/2023/11/26/English/yy_1.jpg" alt="1"></p>
 <li style="margin-left: 40px;font-size: 15px">点击“我的配音”</li>
 
-<p><img src="/posts/4288/yy_2.jpg" alt="2"></p>
+<p><img src="/2023/11/26/English/yy_2.jpg" alt="2"></p>
 <li style="margin-left: 40px;font-size: 15px">获取分享链接</li>
 
-<p><img src="/posts/4288/yy_3.jpg" alt="3"></p>
+<p><img src="/2023/11/26/English/yy_3.jpg" alt="3"></p>
 <h4 id="获取视频直链或下载视频"><a href="#获取视频直链或下载视频" class="headerlink" title="获取视频直链或下载视频"></a>获取视频直链或下载视频</h4><li style="margin-left: 40px;font-size: 15px">打开IDM下载器</li>
 
-<p><img src="/posts/4288/main2.jpg" alt="IDM下载器"></p>
+<p><img src="/2023/11/26/English/main2.jpg" alt="IDM下载器"></p>
 <li style="margin-left: 40px;font-size: 15px">设置语言</li>
 
-<p><img src="/posts/4288/idm_1.jpg" alt="idm_languages"></p>
+<p><img src="/2023/11/26/English/idm_1.jpg" alt="idm_languages"></p>
 <li style="margin-left: 40px;font-size: 15px">设置存储权限</li>
 
-<p><img src="/posts/4288/idm_2.jpg" alt="idm_2"></p>
+<p><img src="/2023/11/26/English/idm_2.jpg" alt="idm_2"></p>
 <li style="margin-left: 40px;font-size: 15px">选择下载存储位置</li>
 
-<p><img src="/posts/4288/idm_3.jpg" alt="idm_3"></p>
+<p><img src="/2023/11/26/English/idm_3.jpg" alt="idm_3"></p>
 <p><code>一直点空白处</code></p>
 <p style="color: #FF0000;">不创建idm浏览器</p>
 
 
 <li style="margin-left: 40px;font-size: 15px">进入idm浏览器</li>
 
-<p><img src="/posts/4288/idm_4.jpg" alt="idm_4"></p>
+<p><img src="/2023/11/26/English/idm_4.jpg" alt="idm_4"></p>
 <li style="margin-left: 40px;font-size: 15px">在搜索框中输入链接</li>
 
 <p><code>记得按回车进入网站</code></p>
-<p><img src="/posts/4288/idm_5.jpg" alt="idm_5"></p>
+<p><img src="/2023/11/26/English/idm_5.jpg" alt="idm_5"></p>
 <li style="margin-left: 40px;font-size: 15px">点击下载图标</li>
 
-<p><img src="/posts/4288/idm_6.jpg" alt="idm_6"></p>
+<p><img src="/2023/11/26/English/idm_6.jpg" alt="idm_6"></p>
 <li style="margin-left: 40px;font-size: 15px">获取视频直链</li>
 
-<p><img src="/posts/4288/idm_7.jpg" alt="idm_7"></p>
+<p><img src="/2023/11/26/English/idm_7.jpg" alt="idm_7"></p>
 <p><code>然后选择预览(也可以直接下载)</code></p>
-<p><img src="/posts/4288/idm_8.jpg" alt="idm_8"></p>
+<p><img src="/2023/11/26/English/idm_8.jpg" alt="idm_8"></p>
 <p><code>点击预览后进行这一步</code></p>
-<p><img src="/posts/4288/idm_9.jpg" alt="idm_9"></p>
+<p><img src="/2023/11/26/English/idm_9.jpg" alt="idm_9"></p>
 <p><code>复制链接</code></p>
-<p><img src="/posts/4288/idm_10.jpg" alt="idm_10"></p>
+<p><img src="/2023/11/26/English/idm_10.jpg" alt="idm_10"></p>
 <p><code>最后把这个链接分享给其他人就行了</code></p>
 <p><code>其他人都可以通过这个链接直接播放视频</code></p>
 <p style="color: #00FF00;">优点:</p>播放便捷
@@ -237,11 +249,11 @@ height: 80%; left: 0; top: 0;"> </iframe></div>
   </entry>
   <entry>
     <title>Linux的常用的指令</title>
-    <url>/posts/6866/</url>
+    <url>/2023/10/03/Linux-1/</url>
     <content><![CDATA[<p>这篇关于Linux常用的关于关于存储和管理密码 ，WiFi等的命令。</p>
 <h2 id="一-内存"><a href="#一-内存" class="headerlink" title="一.内存"></a>一.内存</h2><h3 id="查看剩余内存-1"><a href="#查看剩余内存-1" class="headerlink" title="查看剩余内存-1"></a>查看剩余内存-1</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">df</span> -h</span><br></pre></td></tr></table></figure>
 <h3 id="查看剩余寿命-固态-2"><a href="#查看剩余寿命-固态-2" class="headerlink" title="查看剩余寿命(固态)-2"></a>查看剩余寿命(固态)-2</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> /sys/class/mmc_host/mmc0/mmc0:0001/life_time</span><br></pre></td></tr></table></figure>
-<p>0X04 用了40%的寿命<br>0X08 用了80%的寿命<br>0X00 看不到寿命<br>·如图<br><img src="/posts/6866/EMMC.png" alt="EMMC寿命对照表"><br>所以你已经懂它的格式了吧<br>不懂我就给你看两张照片对比一下<br>看不到寿命或满血的情况<br><img src="/posts/6866/1.jpg" alt="看不到寿命的情况"><br>能看到寿命的情况<br><img src="/posts/6866/2.jpg" alt="能看到寿命的情况"></p>
+<p>0X04 用了40%的寿命<br>0X08 用了80%的寿命<br>0X00 看不到寿命<br>·如图<br><img src="/2023/10/03/Linux-1/EMMC.png" alt="EMMC寿命对照表"><br>所以你已经懂它的格式了吧<br>不懂我就给你看两张照片对比一下<br>看不到寿命或满血的情况<br><img src="/2023/10/03/Linux-1/1.jpg" alt="看不到寿命的情况"><br>能看到寿命的情况<br><img src="/2023/10/03/Linux-1/2.jpg" alt="能看到寿命的情况"></p>
 <h2 id="二-网络"><a href="#二-网络" class="headerlink" title="二.网络"></a>二.网络</h2><h3 id="设置网络-WiFi或USB网络设置-1"><a href="#设置网络-WiFi或USB网络设置-1" class="headerlink" title="设置网络(WiFi或USB网络设置)-1"></a>设置网络(WiFi或USB网络设置)-1</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nmtui</span><br></pre></td></tr></table></figure>
 <p>设置后最好再reboot重启一下</p>
 <h3 id="查看ip-2"><a href="#查看ip-2" class="headerlink" title="查看ip-2"></a>查看ip-2</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ifconfig</span><br></pre></td></tr></table></figure>
@@ -269,7 +281,7 @@ height: 80%; left: 0; top: 0;"> </iframe></div>
   </entry>
   <entry>
     <title>Root</title>
-    <url>/posts/29197/</url>
+    <url>/2023/10/19/Root/</url>
     <content><![CDATA[<h1 id="检测工具"><a href="#检测工具" class="headerlink" title="检测工具"></a>检测工具</h1><p>1.”momo”环境检测4.4.1版<br><a href="https://www.123pan.com/s/wkn6Vv-eipiH.html">123云盘下载_版本4.4.1</a><br><a href="https://wwp.lanzoup.com/iC9SP1dug0qh">蓝奏云下载_版本4.4.1</a>提取码：2r5d</p>
 ]]></content>
       <categories>
@@ -283,7 +295,7 @@ height: 80%; left: 0; top: 0;"> </iframe></div>
   </entry>
   <entry>
     <title>adb-scrcpy</title>
-    <url>/posts/1394/</url>
+    <url>/2024/01/30/adb-scrcpy/</url>
     <content><![CDATA[<blockquote>
 <p>使用前先用adb连接上设备</p>
 </blockquote>
@@ -406,7 +418,7 @@ height: 80%; left: 0; top: 0;"> </iframe></div>
   </entry>
   <entry>
     <title>adb</title>
-    <url>/posts/63482/</url>
+    <url>/2023/10/19/adb/</url>
     <content><![CDATA[<h3 id="设置屏幕息屏时间-1"><a href="#设置屏幕息屏时间-1" class="headerlink" title="设置屏幕息屏时间-1"></a>设置屏幕息屏时间-1</h3><p>永不息屏</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">settings put system screen_off_timeout 2147483647</span><br></pre></td></tr></table></figure>
 <p>查看息屏时间</p>
@@ -429,7 +441,7 @@ height: 80%; left: 0; top: 0;"> </iframe></div>
   </entry>
   <entry>
     <title>实用软件</title>
-    <url>/posts/26616/</url>
+    <url>/2023/11/05/app/</url>
     <content><![CDATA[<h1 id="实用"><a href="#实用" class="headerlink" title="实用"></a>实用</h1><h2 id="Rotation-屏幕强制旋转"><a href="#Rotation-屏幕强制旋转" class="headerlink" title="Rotation(屏幕强制旋转)"></a>Rotation(屏幕强制旋转)</h2><p><a href="https://www.123pan.com/s/wkn6Vv-QVpiH.html">123云盘下载_版本25.0.2</a>提取码：WfSp</p>
 <h2 id="IP摄像头"><a href="#IP摄像头" class="headerlink" title="IP摄像头"></a>IP摄像头</h2><li style="margin-left: 40px;font-size: 15px">下载</li>
 [123云盘下载](https://www.123pan.com/s/wkn6Vv-vgfiH.html)提取码：Mwqm
@@ -457,109 +469,109 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
   </entry>
   <entry>
     <title>狗</title>
-    <url>/posts/e5f05850/</url>
+    <url>/2024/03/10/dog/</url>
     <content><![CDATA[<p>狗子叫<b>毛毛</b></p>
 <h1 id="照片集"><a href="#照片集" class="headerlink" title="照片集"></a>照片集</h1><table>
 <thead>
 <tr>
-<th><img src="/posts/e5f05850/ (1).jpg" alt=" (1)" style="zoom:15%;"></th>
-<th><img src="/posts/e5f05850/ (2).jpg" alt=" (2)" style="zoom:15%;"></th>
-<th><img src="/posts/e5f05850/ (3).jpg" alt=" (3)" style="zoom:15%;"></th>
-<th><img src="/posts/e5f05850/ (4).jpg" alt=" (4)" style="zoom:15%;"></th>
+<th><img src="/2024/03/10/dog/ (1).jpg" alt=" (1)" style="zoom:15%;"></th>
+<th><img src="/2024/03/10/dog/ (2).jpg" alt=" (2)" style="zoom:15%;"></th>
+<th><img src="/2024/03/10/dog/ (3).jpg" alt=" (3)" style="zoom:15%;"></th>
+<th><img src="/2024/03/10/dog/ (4).jpg" alt=" (4)" style="zoom:15%;"></th>
 </tr>
 </thead>
 <tbody><tr>
-<td><img src="/posts/e5f05850/ (5).jpg" alt=" (5)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (6).jpg" alt=" (6)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (7).jpg" alt=" (7)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (8).jpg" alt=" (8)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (5).jpg" alt=" (5)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (6).jpg" alt=" (6)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (7).jpg" alt=" (7)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (8).jpg" alt=" (8)" style="zoom:15%;"></td>
 </tr>
 <tr>
-<td><img src="/posts/e5f05850/ (9).jpg" alt=" (9)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (10).jpg" alt=" (10)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (11).jpg" alt=" (11)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (12).jpg" alt=" (12)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (9).jpg" alt=" (9)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (10).jpg" alt=" (10)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (11).jpg" alt=" (11)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (12).jpg" alt=" (12)" style="zoom:15%;"></td>
 </tr>
 <tr>
-<td><img src="/posts/e5f05850/ (13).jpg" alt=" (13)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (14).jpg" alt=" (14)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (15).jpg" alt=" (15)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (16).jpg" alt=" (16)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (13).jpg" alt=" (13)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (14).jpg" alt=" (14)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (15).jpg" alt=" (15)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (16).jpg" alt=" (16)" style="zoom:15%;"></td>
 </tr>
 <tr>
-<td><img src="/posts/e5f05850/ (17).jpg" alt=" (17)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (18).jpg" alt=" (18)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (19).jpg" alt=" (19)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (20).jpg" alt=" (20)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (17).jpg" alt=" (17)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (18).jpg" alt=" (18)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (19).jpg" alt=" (19)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (20).jpg" alt=" (20)" style="zoom:15%;"></td>
 </tr>
 <tr>
-<td><img src="/posts/e5f05850/ (21).jpg" alt=" (21)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (22).jpg" alt=" (22)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (23).jpg" alt=" (23)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (24).jpg" alt=" (24)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (21).jpg" alt=" (21)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (22).jpg" alt=" (22)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (23).jpg" alt=" (23)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (24).jpg" alt=" (24)" style="zoom:15%;"></td>
 </tr>
 <tr>
-<td><img src="/posts/e5f05850/ (25).jpg" alt=" (25)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (26).jpg" alt=" (26)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (27).jpg" alt=" (27)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (28).jpg" alt=" (28)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (25).jpg" alt=" (25)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (26).jpg" alt=" (26)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (27).jpg" alt=" (27)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (28).jpg" alt=" (28)" style="zoom:15%;"></td>
 </tr>
 <tr>
-<td><img src="/posts/e5f05850/ (29).jpg" alt=" (29)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (30).jpg" alt=" (30)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (31).jpg" alt=" (31)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (32).jpg" alt=" (32)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (29).jpg" alt=" (29)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (30).jpg" alt=" (30)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (31).jpg" alt=" (31)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (32).jpg" alt=" (32)" style="zoom:15%;"></td>
 </tr>
 <tr>
-<td><img src="/posts/e5f05850/ (33).jpg" alt=" (33)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (34).jpg" alt=" (34)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (35).jpg" alt=" (35)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (36).jpg" alt=" (36)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (33).jpg" alt=" (33)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (34).jpg" alt=" (34)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (35).jpg" alt=" (35)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (36).jpg" alt=" (36)" style="zoom:15%;"></td>
 </tr>
 <tr>
-<td><img src="/posts/e5f05850/ (37).jpg" alt=" (37)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (38).jpg" alt=" (38)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (39).jpg" alt=" (39)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (40).jpg" alt=" (40)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (37).jpg" alt=" (37)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (38).jpg" alt=" (38)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (39).jpg" alt=" (39)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (40).jpg" alt=" (40)" style="zoom:15%;"></td>
 </tr>
 <tr>
-<td><img src="/posts/e5f05850/ (41).jpg" alt=" (41)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (42).jpg" alt=" (42)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (43).jpg" alt=" (43)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (44).jpg" alt=" (44)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (41).jpg" alt=" (41)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (42).jpg" alt=" (42)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (43).jpg" alt=" (43)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (44).jpg" alt=" (44)" style="zoom:15%;"></td>
 </tr>
 <tr>
-<td><img src="/posts/e5f05850/ (45).jpg" alt=" (45)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (46).jpg" alt=" (46)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (47).jpg" alt=" (47)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (48).jpg" alt=" (48)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (45).jpg" alt=" (45)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (46).jpg" alt=" (46)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (47).jpg" alt=" (47)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (48).jpg" alt=" (48)" style="zoom:15%;"></td>
 </tr>
 <tr>
-<td><img src="/posts/e5f05850/ (49).jpg" alt=" (49)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (50).jpg" alt=" (50)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (51).jpg" alt=" (51)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (52).jpg" alt=" (52)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (49).jpg" alt=" (49)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (50).jpg" alt=" (50)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (51).jpg" alt=" (51)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (52).jpg" alt=" (52)" style="zoom:15%;"></td>
 </tr>
 <tr>
-<td><img src="/posts/e5f05850/ (53).jpg" alt=" (53)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (54).jpg" alt=" (54)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (55).jpg" alt=" (55)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (56).jpg" alt=" (56)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (53).jpg" alt=" (53)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (54).jpg" alt=" (54)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (55).jpg" alt=" (55)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (56).jpg" alt=" (56)" style="zoom:15%;"></td>
 </tr>
 <tr>
-<td><img src="/posts/e5f05850/ (57).jpg" alt=" (57)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (58).jpg" alt=" (58)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (59).jpg" alt=" (59)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (60).jpg" alt=" (60)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (57).jpg" alt=" (57)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (58).jpg" alt=" (58)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (59).jpg" alt=" (59)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (60).jpg" alt=" (60)" style="zoom:15%;"></td>
 </tr>
 <tr>
-<td><img src="/posts/e5f05850/ (61).jpg" alt=" (61)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (62).jpg" alt=" (62)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (63).jpg" alt=" (63)" style="zoom:15%;"></td>
-<td><img src="/posts/e5f05850/ (64).jpg" alt=" (64)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (61).jpg" alt=" (61)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (62).jpg" alt=" (62)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (63).jpg" alt=" (63)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (64).jpg" alt=" (64)" style="zoom:15%;"></td>
 </tr>
 <tr>
-<td><img src="/posts/e5f05850/ (65).jpg" alt=" (65)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (65).jpg" alt=" (65)" style="zoom:15%;"></td>
 <td></td>
 <td></td>
 <td></td>
@@ -591,13 +603,8 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
       </tags>
   </entry>
   <entry>
-    <title>feelings</title>
-    <url>/posts/27709/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>生态瓶</title>
-    <url>/posts/63466/</url>
+    <url>/2023/12/22/ecosystem/</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>X</category>
@@ -610,8 +617,17 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
       </tags>
   </entry>
   <entry>
+    <title>心得</title>
+    <url>/2024/03/01/feelings/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>S</category>
+        <category>生活</category>
+      </categories>
+  </entry>
+  <entry>
     <title>如何使用filebrowser</title>
-    <url>/posts/29696/</url>
+    <url>/2023/10/02/filebrowser/</url>
     <content><![CDATA[<h2 id="Linux下的使用教程"><a href="#Linux下的使用教程" class="headerlink" title="Linux下的使用教程"></a>Linux下的使用教程</h2><p>filebrowser是一个独立的文件管理工具，它使用go语言，不需要依赖直接.&#x2F;filebrowser即可运行，为了方便使用该篇文章叫你如何开机启动它。</p>
 <h3 id="查看架构-1"><a href="#查看架构-1" class="headerlink" title="查看架构-1"></a>查看架构-1</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">arch</span></span><br></pre></td></tr></table></figure>
 
@@ -647,7 +663,7 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
   </entry>
   <entry>
     <title>修手机</title>
-    <url>/posts/33558/</url>
+    <url>/2023/12/17/fix-phone/</url>
     <content><![CDATA[<h1 id="小米"><a href="#小米" class="headerlink" title="小米"></a>小米</h1><li style="margin-left: 40px;font-size: 15px">一键锁屏</li>
 
 <p>在添加小部件里可能找不到<b>一键锁屏</b>，你只需要<code>断开网络</code>然后在添加小部件最下方就会多出一个选项，在那里应该就能找到<b>一键锁屏</b>了。</p>
@@ -664,12 +680,12 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
   </entry>
   <entry>
     <title>git</title>
-    <url>/posts/43167/</url>
+    <url>/2023/12/03/git/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Hexo的基本使用</title>
-    <url>/posts/52120/</url>
+    <url>/2023/11/24/hexo-2/</url>
     <content><![CDATA[<p>这个页面主要用来测试功能</p>
 <h2 id="1-粗体"><a href="#1-粗体" class="headerlink" title="1.粗体"></a>1.粗体</h2><p>这个字体更粗<b>粗体</b></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;b&gt;粗体&lt;/b&gt;</span><br></pre></td></tr></table></figure>
@@ -677,7 +693,8 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;p style=<span class="string">&quot;color: #FF0000;&quot;</span>&gt;红色&lt;/p&gt;</span><br></pre></td></tr></table></figure>
 下面是搜集的颜色列表:
 
-<p><img src="/posts/52120/colour.png" alt="颜色表"></p>
+<img src="/2023/11/24/hexo-2/colour.png" alt="颜色表" style="zoom:67%;">
+
 <h2 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h2><p><i>斜体</i></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;i&gt;斜体&lt;/i&gt;</span><br></pre></td></tr></table></figure>
 
@@ -852,11 +869,9 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
-    <title>hexo常用写作命令</title>
-    <url>/posts/32196/</url>
-    <content><![CDATA[<h1 id="复制框"><a href="#复制框" class="headerlink" title="复制框"></a>复制框</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">``` bash```</span><br></pre></td></tr></table></figure>
-
-<h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1>]]></content>
+    <title>hexo常用写作技巧</title>
+    <url>/2023/12/24/hexo-3/</url>
+    <content><![CDATA[]]></content>
       <categories>
         <category>H</category>
         <category>hexo</category>
@@ -867,8 +882,21 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
+    <title>Hexo的个性化</title>
+    <url>/2024/03/31/hexo-4/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>H</category>
+        <category>hexo</category>
+        <category>个性化</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Termux上搭建hexo</title>
-    <url>/posts/2891/</url>
+    <url>/2023/11/25/hexo-termux/</url>
     <content><![CDATA[<p>sed -i ‘s@^(deb.*stable main)$@#\1\ndeb <a href="https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24">https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24</a> stable main@’ $PREFIX&#x2F;etc&#x2F;apt&#x2F;sources.list</p>
 <p>pkg update</p>
 <p>pkg install nodejs-lts<br>pkg install git<br>pkg install vim</p>
@@ -891,7 +919,7 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
   </entry>
   <entry>
     <title>Hexo的安装</title>
-    <url>/posts/4752/</url>
+    <url>/2023/11/24/hexo/</url>
     <content><![CDATA[<p>hexo g 创建静态文件<br>hexo s 启动<br>hexo clean 清除缓存<br>hexo d 推送文件<br>hexo new “My New Post” 创建新文章</p>
 <h1 id="安装nodejs和git"><a href="#安装nodejs和git" class="headerlink" title="安装nodejs和git"></a>安装nodejs和git</h1><p>安装nodejs</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#Linux安装nodejs</span></span><br><span class="line">curl -sL https://deb.nodesource.com/setup_10.x|sudo -E bash -</span><br><span class="line">sudo apt install nodejs</span><br></pre></td></tr></table></figure>
@@ -937,7 +965,7 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
   </entry>
   <entry>
     <title>Linux</title>
-    <url>/posts/15691/</url>
+    <url>/2023/11/23/linux/</url>
     <content><![CDATA[<h2 id="ssh连接工具"><a href="#ssh连接工具" class="headerlink" title="ssh连接工具"></a>ssh连接工具</h2><p>1.finalshell<br>仅有电脑版，但功能强大<br><a href="https://www.123pan.com/s/A6cA-2rHJh">点击前往123pan下载</a><br>2.Juicessh<br>安卓上比较好用的</p>
 <h1 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h1><h2 id="检查某端口是否开启"><a href="#检查某端口是否开启" class="headerlink" title="检查某端口是否开启"></a>检查某端口是否开启</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --query-port=25/tcp --zone=public  <span class="comment">#查询25端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=80/tcp --zone=public  <span class="comment">#查询80端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=888/tcp --zone=public  <span class="comment">#查询888端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=8888/tcp --zone=public  <span class="comment">#查询8888端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=8889/tcp --zone=public  <span class="comment">#查询8889端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=443/tcp --zone=public  <span class="comment">#查询443端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=20/tcp --zone=public  <span class="comment">#查询20端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=21/tcp --zone=public  <span class="comment">#查询21端口是否开启,自行修改端口号</span></span><br></pre></td></tr></table></figure>
 <p>返回no即未开启，显示yes为已开启。</p>
@@ -975,26 +1003,13 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
-    <title>me</title>
-    <url>/posts/48108/</url>
+    <title>我</title>
+    <url>/2024/03/01/me/</url>
     <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>minecraft</title>
-    <url>/posts/51733/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Y</category>
-        <category>游戏</category>
-        <category>minecraft</category>
-      </categories>
-      <tags>
-        <tag>游戏</tag>
-      </tags>
   </entry>
   <entry>
     <title>minecraft服务器</title>
-    <url>/posts/58654/</url>
+    <url>/2023/12/03/minecraft-server/</url>
     <content><![CDATA[<h1 id="基岩版服务器搭建"><a href="#基岩版服务器搭建" class="headerlink" title="基岩版服务器搭建"></a>基岩版服务器搭建</h1><h2 id="下载服务器文件"><a href="#下载服务器文件" class="headerlink" title="下载服务器文件"></a>下载服务器文件</h2><p><a href="https://www.minecraft.net/zh-hans/download/server/bedrock">服务器包下载链接</a></p>
 <h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><p>1.找一个文件夹把下载的压缩包解压<br>(解压路径不能有中文)<br>    kr-se-cncn-1.openfrp.top:19100<br><a href="http://www.openfrp.net/">www.openfrp.net</a></p>
 <div id="dplayer1" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><p>no url specified, no dplayer _(:3」∠)_</p>
@@ -1014,9 +1029,22 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
+    <title>minecraft</title>
+    <url>/2023/12/03/minecraft/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Y</category>
+        <category>游戏</category>
+        <category>minecraft</category>
+      </categories>
+      <tags>
+        <tag>游戏</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>OpenVPN</title>
-    <url>/posts/12473/</url>
-    <content><![CDATA[<p><a href="https://blog.csdn.net/zhangshenghang/article/details/135292267">https://blog.csdn.net/zhangshenghang/article/details/135292267</a>)</p>
+    <url>/2024/01/25/openvpn/</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/zhangshenghang/article/details/135292267">https://blog.csdn.net/zhangshenghang/article/details/135292267</a></p>
 <h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull kylemanna/openvpn:2.4</span><br></pre></td></tr></table></figure>
 
 <h3 id="创建配置文件"><a href="#创建配置文件" class="headerlink" title="创建配置文件"></a>创建配置文件</h3><p>ip换成服务器的ip(网址)再加端口(如:udp:&#x2F;&#x2F;x.x.x.x:port)</p>
@@ -1078,13 +1106,13 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
   </entry>
   <entry>
     <title>password</title>
-    <url>/posts/51319/</url>
+    <url>/2023/12/17/password/</url>
     <content><![CDATA[<p style="color: #FF0000;">无效：</p>
 75908，09066，09060，09069，77995，15902，77599，08526，09063，08652，07598，06980，05280，]]></content>
   </entry>
   <entry>
     <title>电脑软件</title>
-    <url>/posts/2118/</url>
+    <url>/2023/12/14/pc-software/</url>
     <content><![CDATA[<h1 id="实用"><a href="#实用" class="headerlink" title="实用"></a>实用</h1>]]></content>
       <categories>
         <category>Y</category>
@@ -1097,35 +1125,46 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
   </entry>
   <entry>
     <title>泡菜</title>
-    <url>/posts/313c8f6b/</url>
+    <url>/2024/03/10/pickle/</url>
     <content><![CDATA[<p>泡个菜来尝尝，虽然也只是一时兴起。</p>
 <h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><li style="margin-left: 40px;font-size: 15px">材料：</li>
 
 <p>泡菜坛子x1,</p>
 <h2 id="泡菜坛子开箱"><a href="#泡菜坛子开箱" class="headerlink" title="泡菜坛子开箱"></a>泡菜坛子开箱</h2><li style="margin-left: 40px;font-size: 15px">24-2-7在拼多多上买了个看着不错的玻璃坛子</li>
 
-<p><img src="/posts/313c8f6b/IMG_20240310_102430_1.jpg" alt="购买"></p>
+<img src="/2024/03/10/pickle/IMG_20240310_102430_1.jpg" alt="购买" style="zoom:25%;">
+
 <li style="margin-left: 40px;font-size: 15px">24-2-8到货</li>
 
-<p><img src="/posts/313c8f6b/PXL_20240308_235248686.jpg" alt="到货"></p>
+<img src="/2024/03/10/pickle/PXL_20240308_235248686.jpg" alt="到货" style="zoom:25%;">
+
 <li style="margin-left: 40px;font-size: 15px">24-2-9洗好晾干</li>
 
-<p><img src="/posts/313c8f6b/PXL_20240309_194255595.jpg" alt="晾干"></p>
+<img src="/2024/03/10/pickle/PXL_20240309_194255595.jpg" alt="晾干" style="zoom:25%;">
+
 <li style="margin-left: 40px;font-size: 15px">24-2-10发现瑕疵</li>
 
-<p><img src="/posts/313c8f6b/PXL_20240310_101338597.jpg" alt="24-3-10晾好"></p>
+<img src="/2024/03/10/pickle/PXL_20240310_101338597.jpg" alt="24-3-10晾好" style="zoom:25%;">
+
 <p>本来以为是水没干没想到是自带的，不过倒也无所谓，不影响使用就行。</p>
-<p><img src="/posts/313c8f6b/PXL_20240310_101413839.jpg" alt="PXL_20240310_101413839"></p>
+<img src="/2024/03/10/pickle/PXL_20240310_101413839.jpg" alt="PXL_20240310_101413839" style="zoom:25%;">
+
 <li style="margin-left: 40px;font-size: 15px">商家发的说明书</li>
 
-<p><img src="/posts/313c8f6b/PXL_20240309_194439866.jpg" alt="泡菜"></p>
-<p><img src="/posts/313c8f6b/PXL_20240309_194445788.jpg" alt="泡制鸡爪"></p>
-<p><img src="/posts/313c8f6b/PXL_20240309_194454899.jpg" alt="腌制糖蒜"></p>
-<p><img src="/posts/313c8f6b/PXL_20240309_194501714.jpg" alt="注意事项"></p>
+<table>
+<thead>
+<tr>
+<th><img src="/2024/03/10/pickle/PXL_20240309_194439866.jpg" alt="泡菜" style="zoom: 33%;"></th>
+<th><img src="/2024/03/10/pickle/PXL_20240309_194445788.jpg" alt="泡制鸡爪" style="zoom: 33%;"></th>
+<th><img src="/2024/03/10/pickle/PXL_20240309_194454899.jpg" alt="腌制糖蒜" style="zoom: 33%;"></th>
+<th><img src="/2024/03/10/pickle/PXL_20240309_194501714.jpg" alt="注意事项" style="zoom: 33%;"></th>
+</tr>
+</thead>
+</table>
 ]]></content>
       <categories>
-        <category>P</category>
-        <category>泡菜</category>
+        <category>S</category>
+        <category>生活</category>
       </categories>
       <tags>
         <tag>学习</tag>
@@ -1134,7 +1173,7 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
   </entry>
   <entry>
     <title>termux</title>
-    <url>/posts/44010/</url>
+    <url>/2023/10/19/termux/</url>
     <content><![CDATA[<h1 id="一-准备"><a href="#一-准备" class="headerlink" title="一.准备"></a>一.准备</h1><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><a href="https://www.123pan.com/s/wkn6Vv-AVpiH.html">123云盘下载_版本0.118.0</a>提取码：7qQk<br><a href="https://wwp.lanzoup.com/iDBWX1dugbpc">蓝奏云下载_版本0.118.0</a>提取码：acmx</p>
 <h3 id="换源"><a href="#换源" class="headerlink" title="换源"></a>换源</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">termux-change-repo <span class="keyword">in</span> turmux-tools</span><br></pre></td></tr></table></figure>
 <p>然后更新一下</p>
@@ -1174,8 +1213,8 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
   </entry>
   <entry>
     <title>视频制作</title>
-    <url>/posts/12501/</url>
-    <content><![CDATA[<h1 id="视频录制工具"><a href="#视频录制工具" class="headerlink" title="视频录制工具"></a>视频录制工具</h1><h2 id="AZ-Screen-Recorder"><a href="#AZ-Screen-Recorder" class="headerlink" title="AZ Screen Recorder"></a>AZ Screen Recorder</h2><p>1.介绍<br>支持画笔<br>支持最高1080p 12Mpbs 120FPS<br>应用图片(放不下就看看吧)<br><img src="/posts/12501/1.jpg" alt="图一"><br><img src="/posts/12501/2.jpg" alt="图二"><br>2.下载链接<br><a href="https://www.123pan.com/s/wkn6Vv-3VpiH.html">123云盘下载_版本5.10.6</a>提取码：eqMd<br><a href="https://wwp.lanzoup.com/iM4H51dug88h">蓝奏云下载_版本5.10.6</a>提取码：8c5h</p>
+    <url>/2023/11/05/video/</url>
+    <content><![CDATA[<h1 id="视频录制工具"><a href="#视频录制工具" class="headerlink" title="视频录制工具"></a>视频录制工具</h1><h2 id="AZ-Screen-Recorder"><a href="#AZ-Screen-Recorder" class="headerlink" title="AZ Screen Recorder"></a>AZ Screen Recorder</h2><p>1.介绍<br>支持画笔<br>支持最高1080p 12Mpbs 120FPS<br>应用图片(放不下就看看吧)<br><img src="/2023/11/05/video/1.jpg" alt="图一"><br><img src="/2023/11/05/video/2.jpg" alt="图二"><br>2.下载链接<br><a href="https://www.123pan.com/s/wkn6Vv-3VpiH.html">123云盘下载_版本5.10.6</a>提取码：eqMd<br><a href="https://wwp.lanzoup.com/iM4H51dug88h">蓝奏云下载_版本5.10.6</a>提取码：8c5h</p>
 <h1 id="视频剪辑工具"><a href="#视频剪辑工具" class="headerlink" title="视频剪辑工具"></a>视频剪辑工具</h1><h2 id="VN"><a href="#VN" class="headerlink" title="VN"></a>VN</h2><p>免登录可用<br>应用商店下载就行</p>
 <h1 id="视频播放器"><a href="#视频播放器" class="headerlink" title="视频播放器"></a>视频播放器</h1><h2 id="XPlayer-已破解"><a href="#XPlayer-已破解" class="headerlink" title="XPlayer(已破解)"></a>XPlayer(已破解)</h2><p>视频,音乐都能播放，功能强大<br><a href="https://www.123pan.com/s/wkn6Vv-hVpiH.html">123云盘下载_版本2.2.1.2</a>提取码：XWsx<br><a href="https://wwp.lanzoup.com/iW26T1dug49e">蓝奏云下载_版本2.2.1.2</a>提取码：apj4</p>
 ]]></content>
@@ -1190,7 +1229,7 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
   </entry>
   <entry>
     <title>web</title>
-    <url>/posts/41754/</url>
+    <url>/2023/10/19/web/</url>
     <content><![CDATA[<h1 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h1><p>只能搭建静态网站</p>
 <h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p>1.default</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/nginx/sites-enabled/default</span><br></pre></td></tr></table></figure>
@@ -1210,7 +1249,7 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
   </entry>
   <entry>
     <title>win10-ftpserver</title>
-    <url>/posts/7417/</url>
+    <url>/2024/01/26/win10-ftpserver/</url>
     <content><![CDATA[<p><a href="https://cloud.tencent.com/developer/article/1935592">win10系统下搭建FTP服务器(完成文件上传与下载)-腾讯云开发者社区-腾讯云 (tencent.com)</a></p>
 ]]></content>
   </entry>
