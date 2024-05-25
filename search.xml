@@ -92,8 +92,9 @@
     <url>/2023/11/26/English/</url>
     <content><![CDATA[<h2 id="2024-2-22"><a href="#2024-2-22" class="headerlink" title="2024-2-22"></a>2024-2-22</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-22/1708597913u781347483.mp4?20240222" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
 height: 80%; left: 0; top: 0;"> </iframe></div>
-[视频链接](https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-22/1708597913u781347483.mp4?20240222)
 
+
+<p><a href="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-22/1708597913u781347483.mp4?20240222">视频链接</a></p>
 <p><a href="https://moive2.qupeiyin.com/home/show/share?id=MDAwMDAwMDAwMLGtomaBsa7br6d4rw&share_from=&hid=2">原分享链接</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-22/1708597913u781347483.mp4?20240222</span><br></pre></td></tr></table></figure>
 
@@ -617,15 +618,6 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
       </tags>
   </entry>
   <entry>
-    <title>心得</title>
-    <url>/2024/03/01/feelings/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>S</category>
-        <category>生活</category>
-      </categories>
-  </entry>
-  <entry>
     <title>如何使用filebrowser</title>
     <url>/2023/10/02/filebrowser/</url>
     <content><![CDATA[<h2 id="Linux下的使用教程"><a href="#Linux下的使用教程" class="headerlink" title="Linux下的使用教程"></a>Linux下的使用教程</h2><p>filebrowser是一个独立的文件管理工具，它使用go语言，不需要依赖直接.&#x2F;filebrowser即可运行，为了方便使用该篇文章叫你如何开机启动它。</p>
@@ -659,6 +651,16 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
       <categories>
         <category>W</category>
         <category>文件管理</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>心得</title>
+    <url>/2024/03/01/feelings/</url>
+    <content><![CDATA[<p>异种物品分开放，可排忧解难。</p>
+]]></content>
+      <categories>
+        <category>S</category>
+        <category>生活</category>
       </categories>
   </entry>
   <entry>
@@ -871,7 +873,9 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
   <entry>
     <title>hexo常用写作技巧</title>
     <url>/2023/12/24/hexo-3/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h2 id="推送用"><a href="#推送用" class="headerlink" title="推送用"></a>推送用</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+
+]]></content>
       <categories>
         <category>H</category>
         <category>hexo</category>
@@ -1042,6 +1046,20 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
+    <title>nodeppt</title>
+    <url>/2024/03/31/nodeppt/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>H</category>
+        <category>hexo</category>
+        <category>扩展</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>ppt</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>OpenVPN</title>
     <url>/2024/01/25/openvpn/</url>
     <content><![CDATA[<p><a href="https://blog.csdn.net/zhangshenghang/article/details/135292267">https://blog.csdn.net/zhangshenghang/article/details/135292267</a></p>
@@ -1169,6 +1187,25 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       <tags>
         <tag>学习</tag>
         <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>远程控制</title>
+    <url>/2024/04/04/remote-control/</url>
+    <content><![CDATA[<h1 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h1><h2 id="微软远程桌面"><a href="#微软远程桌面" class="headerlink" title="微软远程桌面"></a>微软远程桌面</h2><blockquote>
+<p>自带的挺好用，用之前必须给账户<code>设置密码</code>才能用。</p>
+</blockquote>
+<li style="margin-left: 40px;font-size: 15px">给账户设置密码</li>
+
+<img src="/2024/04/04/remote-control/GIF.gif" alt="GIF" style="zoom: 50%;">
+
+]]></content>
+      <categories>
+        <category>Y</category>
+        <category>远程控制</category>
+      </categories>
+      <tags>
+        <tag>远控</tag>
       </tags>
   </entry>
   <entry>
