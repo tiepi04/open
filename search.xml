@@ -249,38 +249,6 @@ height: 80%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
-    <title>Linux的常用的指令</title>
-    <url>/2023/10/03/Linux-1/</url>
-    <content><![CDATA[<p>这篇关于Linux常用的关于关于存储和管理密码 ，WiFi等的命令。</p>
-<h2 id="一-内存"><a href="#一-内存" class="headerlink" title="一.内存"></a>一.内存</h2><h3 id="查看剩余内存-1"><a href="#查看剩余内存-1" class="headerlink" title="查看剩余内存-1"></a>查看剩余内存-1</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">df</span> -h</span><br></pre></td></tr></table></figure>
-<h3 id="查看剩余寿命-固态-2"><a href="#查看剩余寿命-固态-2" class="headerlink" title="查看剩余寿命(固态)-2"></a>查看剩余寿命(固态)-2</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> /sys/class/mmc_host/mmc0/mmc0:0001/life_time</span><br></pre></td></tr></table></figure>
-<p>0X04 用了40%的寿命<br>0X08 用了80%的寿命<br>0X00 看不到寿命<br>·如图<br><img src="/2023/10/03/Linux-1/EMMC.png" alt="EMMC寿命对照表"><br>所以你已经懂它的格式了吧<br>不懂我就给你看两张照片对比一下<br>看不到寿命或满血的情况<br><img src="/2023/10/03/Linux-1/1.jpg" alt="看不到寿命的情况"><br>能看到寿命的情况<br><img src="/2023/10/03/Linux-1/2.jpg" alt="能看到寿命的情况"></p>
-<h2 id="二-网络"><a href="#二-网络" class="headerlink" title="二.网络"></a>二.网络</h2><h3 id="设置网络-WiFi或USB网络设置-1"><a href="#设置网络-WiFi或USB网络设置-1" class="headerlink" title="设置网络(WiFi或USB网络设置)-1"></a>设置网络(WiFi或USB网络设置)-1</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nmtui</span><br></pre></td></tr></table></figure>
-<p>设置后最好再reboot重启一下</p>
-<h3 id="查看ip-2"><a href="#查看ip-2" class="headerlink" title="查看ip-2"></a>查看ip-2</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ifconfig</span><br></pre></td></tr></table></figure>
-
-<h3 id="查看端口占用-3"><a href="#查看端口占用-3" class="headerlink" title="查看端口占用-3"></a>查看端口占用-3</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat/ss -antulp | grep :端口号</span><br></pre></td></tr></table></figure>
-<p>详细的查看PID</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps -aux | grep 进程PID</span><br></pre></td></tr></table></figure>
-<p>查看该PID所处目录(末尾加&#x2F;会显示进程路径的内容，不加显示进程具体路径)</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ll /proc/进程PID/cwd</span><br></pre></td></tr></table></figure>
-<h2 id="三-用户"><a href="#三-用户" class="headerlink" title="三.用户"></a>三.用户</h2><h3 id="改密码-1"><a href="#改密码-1" class="headerlink" title="改密码-1"></a>改密码-1</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">passwd</span><br></pre></td></tr></table></figure>
-<h2 id="四-杀死进程-kill-pkill-killall"><a href="#四-杀死进程-kill-pkill-killall" class="headerlink" title="四.杀死进程(kill,pkill,killall)"></a>四.杀死进程(kill,pkill,killall)</h2><h3 id="kill-1"><a href="#kill-1" class="headerlink" title="kill -1"></a>kill -1</h3><p>kill PID<br>强制下线<br>kill -9 PID<br>批量精准操作(-9为强制操作，非必须)<br>kill -9 PID</p>
-<h3 id="pkill-2"><a href="#pkill-2" class="headerlink" title="pkill -2"></a>pkill -2</h3><p>pkill 进程名<br>也可以加上-9<br>通过pkill -h获取帮助</p>
-<h3 id="killall-3"><a href="#killall-3" class="headerlink" title="killall -3"></a>killall -3</h3><p>killall和pkill差不多(好像-9前面不需要空格)<br>killall -h获得帮助</p>
-]]></content>
-      <categories>
-        <category>Z</category>
-        <category>指令</category>
-        <category>Linux指令</category>
-        <category>L</category>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Root</title>
     <url>/2023/10/19/Root/</url>
     <content><![CDATA[<h1 id="检测工具"><a href="#检测工具" class="headerlink" title="检测工具"></a>检测工具</h1><p>1.”momo”环境检测4.4.1版<br><a href="https://www.123pan.com/s/wkn6Vv-eipiH.html">123云盘下载_版本4.4.1</a><br><a href="https://wwp.lanzoup.com/iC9SP1dug0qh">蓝奏云下载_版本4.4.1</a>提取码：2r5d</p>
@@ -416,6 +384,38 @@ height: 80%; left: 0; top: 0;"> </iframe></div>
 </tbody></table>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://blog.csdn.net/DDJ_TEST/article/details/120287342">scrcpy投屏教程、scrcpy无线投屏、scrcpy命令大全-CSDN博客</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Linux的常用的指令</title>
+    <url>/2023/10/03/Linux-1/</url>
+    <content><![CDATA[<p>这篇关于Linux常用的关于关于存储和管理密码 ，WiFi等的命令。</p>
+<h2 id="一-内存"><a href="#一-内存" class="headerlink" title="一.内存"></a>一.内存</h2><h3 id="查看剩余内存-1"><a href="#查看剩余内存-1" class="headerlink" title="查看剩余内存-1"></a>查看剩余内存-1</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">df</span> -h</span><br></pre></td></tr></table></figure>
+<h3 id="查看剩余寿命-固态-2"><a href="#查看剩余寿命-固态-2" class="headerlink" title="查看剩余寿命(固态)-2"></a>查看剩余寿命(固态)-2</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> /sys/class/mmc_host/mmc0/mmc0:0001/life_time</span><br></pre></td></tr></table></figure>
+<p>0X04 用了40%的寿命<br>0X08 用了80%的寿命<br>0X00 看不到寿命<br>·如图<br><img src="/2023/10/03/Linux-1/EMMC.png" alt="EMMC寿命对照表"><br>所以你已经懂它的格式了吧<br>不懂我就给你看两张照片对比一下<br>看不到寿命或满血的情况<br><img src="/2023/10/03/Linux-1/1.jpg" alt="看不到寿命的情况"><br>能看到寿命的情况<br><img src="/2023/10/03/Linux-1/2.jpg" alt="能看到寿命的情况"></p>
+<h2 id="二-网络"><a href="#二-网络" class="headerlink" title="二.网络"></a>二.网络</h2><h3 id="设置网络-WiFi或USB网络设置-1"><a href="#设置网络-WiFi或USB网络设置-1" class="headerlink" title="设置网络(WiFi或USB网络设置)-1"></a>设置网络(WiFi或USB网络设置)-1</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nmtui</span><br></pre></td></tr></table></figure>
+<p>设置后最好再reboot重启一下</p>
+<h3 id="查看ip-2"><a href="#查看ip-2" class="headerlink" title="查看ip-2"></a>查看ip-2</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ifconfig</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看端口占用-3"><a href="#查看端口占用-3" class="headerlink" title="查看端口占用-3"></a>查看端口占用-3</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat/ss -antulp | grep :端口号</span><br></pre></td></tr></table></figure>
+<p>详细的查看PID</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps -aux | grep 进程PID</span><br></pre></td></tr></table></figure>
+<p>查看该PID所处目录(末尾加&#x2F;会显示进程路径的内容，不加显示进程具体路径)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ll /proc/进程PID/cwd</span><br></pre></td></tr></table></figure>
+<h2 id="三-用户"><a href="#三-用户" class="headerlink" title="三.用户"></a>三.用户</h2><h3 id="改密码-1"><a href="#改密码-1" class="headerlink" title="改密码-1"></a>改密码-1</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">passwd</span><br></pre></td></tr></table></figure>
+<h2 id="四-杀死进程-kill-pkill-killall"><a href="#四-杀死进程-kill-pkill-killall" class="headerlink" title="四.杀死进程(kill,pkill,killall)"></a>四.杀死进程(kill,pkill,killall)</h2><h3 id="kill-1"><a href="#kill-1" class="headerlink" title="kill -1"></a>kill -1</h3><p>kill PID<br>强制下线<br>kill -9 PID<br>批量精准操作(-9为强制操作，非必须)<br>kill -9 PID</p>
+<h3 id="pkill-2"><a href="#pkill-2" class="headerlink" title="pkill -2"></a>pkill -2</h3><p>pkill 进程名<br>也可以加上-9<br>通过pkill -h获取帮助</p>
+<h3 id="killall-3"><a href="#killall-3" class="headerlink" title="killall -3"></a>killall -3</h3><p>killall和pkill差不多(好像-9前面不需要空格)<br>killall -h获得帮助</p>
+]]></content>
+      <categories>
+        <category>Z</category>
+        <category>指令</category>
+        <category>Linux指令</category>
+        <category>L</category>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
   </entry>
   <entry>
     <title>adb</title>
@@ -618,6 +618,16 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
       </tags>
   </entry>
   <entry>
+    <title>心得</title>
+    <url>/2024/03/01/feelings/</url>
+    <content><![CDATA[<p>异种物品分开放，可排忧解难。</p>
+]]></content>
+      <categories>
+        <category>S</category>
+        <category>生活</category>
+      </categories>
+  </entry>
+  <entry>
     <title>如何使用filebrowser</title>
     <url>/2023/10/02/filebrowser/</url>
     <content><![CDATA[<h2 id="Linux下的使用教程"><a href="#Linux下的使用教程" class="headerlink" title="Linux下的使用教程"></a>Linux下的使用教程</h2><p>filebrowser是一个独立的文件管理工具，它使用go语言，不需要依赖直接.&#x2F;filebrowser即可运行，为了方便使用该篇文章叫你如何开机启动它。</p>
@@ -651,16 +661,6 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
       <categories>
         <category>W</category>
         <category>文件管理</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>心得</title>
-    <url>/2024/03/01/feelings/</url>
-    <content><![CDATA[<p>异种物品分开放，可排忧解难。</p>
-]]></content>
-      <categories>
-        <category>S</category>
-        <category>生活</category>
       </categories>
   </entry>
   <entry>
@@ -871,6 +871,19 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
+    <title>Hexo的个性化</title>
+    <url>/2024/03/31/hexo-4/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>H</category>
+        <category>hexo</category>
+        <category>个性化</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo常用写作技巧</title>
     <url>/2023/12/24/hexo-3/</url>
     <content><![CDATA[<h2 id="推送用"><a href="#推送用" class="headerlink" title="推送用"></a>推送用</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
@@ -880,19 +893,6 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
         <category>H</category>
         <category>hexo</category>
         <category>写作命令</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo的个性化</title>
-    <url>/2024/03/31/hexo-4/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>H</category>
-        <category>hexo</category>
-        <category>个性化</category>
       </categories>
       <tags>
         <tag>hexo</tag>
@@ -1060,6 +1060,25 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
+    <title>password</title>
+    <url>/2023/12/17/password/</url>
+    <content><![CDATA[<p style="color: #FF0000;">无效：</p>
+75908，09066，09060，09069，77995，15902，77599，08526，09063，08652，07598，06980，05280，]]></content>
+  </entry>
+  <entry>
+    <title>电脑软件</title>
+    <url>/2023/12/14/pc-software/</url>
+    <content><![CDATA[<h1 id="实用"><a href="#实用" class="headerlink" title="实用"></a>实用</h1>]]></content>
+      <categories>
+        <category>Y</category>
+        <category>应用</category>
+        <category>电脑应用</category>
+      </categories>
+      <tags>
+        <tag>应用</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>OpenVPN</title>
     <url>/2024/01/25/openvpn/</url>
     <content><![CDATA[<p><a href="https://blog.csdn.net/zhangshenghang/article/details/135292267">https://blog.csdn.net/zhangshenghang/article/details/135292267</a></p>
@@ -1123,32 +1142,9 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
-    <title>password</title>
-    <url>/2023/12/17/password/</url>
-    <content><![CDATA[<p style="color: #FF0000;">无效：</p>
-75908，09066，09060，09069，77995，15902，77599，08526，09063，08652，07598，06980，05280，]]></content>
-  </entry>
-  <entry>
-    <title>电脑软件</title>
-    <url>/2023/12/14/pc-software/</url>
-    <content><![CDATA[<h1 id="实用"><a href="#实用" class="headerlink" title="实用"></a>实用</h1>]]></content>
-      <categories>
-        <category>Y</category>
-        <category>应用</category>
-        <category>电脑应用</category>
-      </categories>
-      <tags>
-        <tag>应用</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>泡菜</title>
     <url>/2024/03/10/pickle/</url>
-    <content><![CDATA[<p>泡个菜来尝尝，虽然也只是一时兴起。</p>
-<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><li style="margin-left: 40px;font-size: 15px">材料：</li>
-
-<p>泡菜坛子x1,</p>
-<h2 id="泡菜坛子开箱"><a href="#泡菜坛子开箱" class="headerlink" title="泡菜坛子开箱"></a>泡菜坛子开箱</h2><li style="margin-left: 40px;font-size: 15px">24-2-7在拼多多上买了个看着不错的玻璃坛子</li>
+    <content><![CDATA[<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="泡菜坛子开箱"><a href="#泡菜坛子开箱" class="headerlink" title="泡菜坛子开箱"></a>泡菜坛子开箱</h2><li style="margin-left: 40px;font-size: 15px">24-2-7在拼多多上买了个看着不错的玻璃坛子</li>
 
 <img src="/2024/03/10/pickle/IMG_20240310_102430_1.jpg" alt="购买" style="zoom:25%;">
 
@@ -1179,6 +1175,26 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
 </tr>
 </thead>
 </table>
+<h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p>先说一下这个过程是不对的哈</p>
+<p>24-5-26开始</p>
+<p>1.倒一包盐到洗好的坛子里</p>
+<p>2.倒入刚烧好的开水</p>
+<p>3.冷却2h</p>
+<p>4.加入菜（我加的豇豆）</p>
+<p>5.等一个星期</p>
+<table>
+<thead>
+<tr>
+<th><img src="/2024/03/10/pickle/IMG_20240526_142837.jpg" alt="IMG_20240526_142837" style="zoom:25%;"></th>
+<th><img src="/2024/03/10/pickle/IMG_20240526_142839.jpg" alt="IMG_20240526_142839" style="zoom:25%;"></th>
+</tr>
+</thead>
+</table>
+<h1 id="评价"><a href="#评价" class="headerlink" title="评价"></a>评价</h1><li style="margin-left: 40px;font-size: 15px">挺一般的，和平时吃的一样</li>
+
+
+
+<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><p>坛口的水隔一段时间要全换了，不然会生蛆！！！</p>
 ]]></content>
       <categories>
         <category>S</category>
