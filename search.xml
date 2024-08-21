@@ -238,7 +238,7 @@ height: 80%; left: 0; top: 0;"> </iframe></div>
 <p><code>其他人都可以通过这个链接直接播放视频</code></p>
 <p style="color: #00FF00;">优点:</p>播放便捷
 
-<p style="color: #FF0000;">缺点:</p>有效期一年,一年后需要重新打开在趣配音里分享的链接激活一下.]]></content>
+<p style="color: #FF0000;">缺点:</p>有效期不确定,可能经常需要重新打开在趣配音里分享的链接激活一下.]]></content>
       <categories>
         <category>X</category>
         <category>学习</category>
@@ -284,11 +284,11 @@ height: 80%; left: 0; top: 0;"> </iframe></div>
     <title>铁锈战争</title>
     <url>/2024/07/31/RW/</url>
     <content><![CDATA[<h1 id="联机"><a href="#联机" class="headerlink" title="联机"></a>联机</h1><blockquote>
-<p>简单来说有两种方法局域网联机和服务器联机<br>各有优缺点</p>
+<p>简单来说有两种方法<br>局域网联机和服务器联机<br>各有优缺点</p>
 </blockquote>
 <h2 id="局域网联机"><a href="#局域网联机" class="headerlink" title="局域网联机"></a>局域网联机</h2><p>1.同一wifi下创好房间输入ip就行<br>2.有公网ip时端口映射5123&#x2F;tcp也能远程玩(稳定性难说)</p>
-<p style="color: #00FF00;">优</p>：一次没玩完任意玩家保存后可以下次继续
-<p style="color: #FF0000;">缺</p>：远程联机很容易断开连接
+<p style="color: #00FF00;">优：</p>一次没玩完任意玩家保存后可以下次继续
+<p style="color: #FF0000;">缺：</p>远程联机很容易断开连接
     单位上限低
 
 <h2 id="服务器联机"><a href="#服务器联机" class="headerlink" title="服务器联机"></a>服务器联机</h2><h3 id="一种是官方服务器"><a href="#一种是官方服务器" class="headerlink" title="一种是官方服务器"></a>一种是官方服务器</h3><p>使用也很简单，在IP栏输入rnews或Rmods创建原版房或mod房（房间号是随机的不推荐）</p>
@@ -296,22 +296,31 @@ height: 80%; left: 0; top: 0;"> </iframe></div>
 <ol>
 <li><p>在”请输入IP地址”处输入r6666，H6666（数字部分必须是是任意的四位及以上数字）<br>其实这就是<code>房间号</code>，一般会出现以下截图</p>
 <img src="/2024/07/31/RW/connect.jpg" alt="连接失败" style="zoom:20%;">
-这个界面能做的事就更多了
+这个界面能做的事就很多了
 </li>
-<li><p>开房指令<br>上个步骤完成后就可以输入开房指令了</p>
+<li><p>开房指令<br><i>一般开不了公开房，没位置<br>H&#x2F;h开头的完全不能公开（房间号是”HPAWZJ”这种的）</i></p>
 </li>
 </ol>
-<p><i>一般公开不了，没位置H&#x2F;h开头的不能公开（房间号还是”HPAWZJ”这种的）</i></p>
+<p>上个步骤完成后就可以输入开房指令了</p>
 <p>公开原版房&#x2F;mod房：newup&#x2F;modsup<br>不公开原版房&#x2F;mod房：new&#x2F;mods<br>指定人数房：newp20&#x2F;modsp20<br>指定倍数(英文逗号后是大写的i)：new,I20<br>指定房间号(666)：c666&#x2F;cm666</p>
-<p>例：newp10,200I30是新建原版房，人数最多10人，单位上限200，经济倍率30<br>我试出来单位上限默认200,最多999999999（9个9）</p>
+<p>例：newp10,200I30是新建原版房，人数最多10人，单位上限200，经济倍率30</p>
+<p>我试出来单位上限默认200,最多999999999（9个9）</p>
 <h3 id="另一种是私人自建服务器"><a href="#另一种是私人自建服务器" class="headerlink" title="另一种是私人自建服务器"></a>另一种是私人自建服务器</h3><p>与官方服务器不同的是私人服务器的任何操作都必须先加入服务器才能使用</p>
 <blockquote>
-<p>简单来说就是必须要先加入服务器才能进行其余操作（如加入房间）</p>
+<p>简单来说就是必须要先<code>加入服务器</code>才能进行其余操作（如加入房间）</p>
 </blockquote>
-<p>视频演示：</p>
+<p>视频演示：<br>开始输入T666是因为房间号是T666,不过我估计进入那个界面后只需要输入后面的数字就行</p>
 <div id="dplayer1" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer1"),"hotkey":true,"preload":"metadata","video":{"url":"/2024/07/31/RW/rwvideo.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 
-<h1 id="搭建服务器"><a href="#搭建服务器" class="headerlink" title="搭建服务器"></a>搭建服务器</h1><p>懒得写，链接在这，自己学</p>
+<p style="color: #00FF00;">优：</p>
+1. 联机稳定
+2. 单位上限可以高到离谱（服务器都不一定撑得住）
+3. 联机简单
+<p style="color: #FF0000;">缺：</p>
+1. 能保存，但不能在服务器上继续玩。
+2. 只能一次性玩完，不然只能在手机上开，可能所有玩家保存存档后可以在服务器上网（失败提示的是其他玩家无该存档）
+
+<h1 id="搭建私人服务器"><a href="#搭建私人服务器" class="headerlink" title="搭建私人服务器"></a>搭建私人服务器</h1><p>懒得写，链接在这，自己学</p>
 <p><a href="https://github.com/RW-HPS/RW-HPS">https://github.com/RW-HPS/RW-HPS</a></p>
 ]]></content>
       <categories>
@@ -512,141 +521,6 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
       </tags>
   </entry>
   <entry>
-    <title>狗</title>
-    <url>/2024/03/10/dog/</url>
-    <content><![CDATA[<p>狗子叫<b>毛毛</b></p>
-<h1 id="照片集"><a href="#照片集" class="headerlink" title="照片集"></a>照片集</h1><table>
-<thead>
-<tr>
-<th><img src="/2024/03/10/dog/ (1).jpg" alt=" (1)" style="zoom:15%;"></th>
-<th><img src="/2024/03/10/dog/ (2).jpg" alt=" (2)" style="zoom:15%;"></th>
-<th><img src="/2024/03/10/dog/ (3).jpg" alt=" (3)" style="zoom:15%;"></th>
-<th><img src="/2024/03/10/dog/ (4).jpg" alt=" (4)" style="zoom:15%;"></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><img src="/2024/03/10/dog/ (5).jpg" alt=" (5)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (6).jpg" alt=" (6)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (7).jpg" alt=" (7)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (8).jpg" alt=" (8)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (9).jpg" alt=" (9)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (10).jpg" alt=" (10)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (11).jpg" alt=" (11)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (12).jpg" alt=" (12)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (13).jpg" alt=" (13)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (14).jpg" alt=" (14)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (15).jpg" alt=" (15)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (16).jpg" alt=" (16)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (17).jpg" alt=" (17)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (18).jpg" alt=" (18)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (19).jpg" alt=" (19)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (20).jpg" alt=" (20)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (21).jpg" alt=" (21)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (22).jpg" alt=" (22)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (23).jpg" alt=" (23)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (24).jpg" alt=" (24)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (25).jpg" alt=" (25)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (26).jpg" alt=" (26)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (27).jpg" alt=" (27)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (28).jpg" alt=" (28)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (29).jpg" alt=" (29)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (30).jpg" alt=" (30)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (31).jpg" alt=" (31)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (32).jpg" alt=" (32)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (33).jpg" alt=" (33)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (34).jpg" alt=" (34)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (35).jpg" alt=" (35)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (36).jpg" alt=" (36)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (37).jpg" alt=" (37)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (38).jpg" alt=" (38)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (39).jpg" alt=" (39)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (40).jpg" alt=" (40)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (41).jpg" alt=" (41)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (42).jpg" alt=" (42)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (43).jpg" alt=" (43)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (44).jpg" alt=" (44)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (45).jpg" alt=" (45)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (46).jpg" alt=" (46)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (47).jpg" alt=" (47)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (48).jpg" alt=" (48)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (49).jpg" alt=" (49)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (50).jpg" alt=" (50)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (51).jpg" alt=" (51)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (52).jpg" alt=" (52)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (53).jpg" alt=" (53)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (54).jpg" alt=" (54)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (55).jpg" alt=" (55)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (56).jpg" alt=" (56)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (57).jpg" alt=" (57)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (58).jpg" alt=" (58)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (59).jpg" alt=" (59)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (60).jpg" alt=" (60)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (61).jpg" alt=" (61)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (62).jpg" alt=" (62)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (63).jpg" alt=" (63)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (64).jpg" alt=" (64)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (65).jpg" alt=" (65)" style="zoom:15%;"></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="视频集"><a href="#视频集" class="headerlink" title="视频集"></a>视频集</h1><table>
-<thead>
-<tr>
-<th><video src="dog/Pxl 20240309 184245149.mp4"></video></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-</table>
-]]></content>
-      <categories>
-        <category>D</category>
-        <category>狗子</category>
-      </categories>
-      <tags>
-        <tag>生活</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>生态瓶</title>
     <url>/2023/12/22/ecosystem/</url>
     <content><![CDATA[]]></content>
@@ -659,16 +533,6 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
       <tags>
         <tag>学习</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>心得</title>
-    <url>/2024/03/01/feelings/</url>
-    <content><![CDATA[<p>异种物品分开放，可排忧解难。</p>
-]]></content>
-      <categories>
-        <category>S</category>
-        <category>生活</category>
-      </categories>
   </entry>
   <entry>
     <title>如何使用filebrowser</title>
@@ -707,20 +571,28 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
       </categories>
   </entry>
   <entry>
-    <title>修手机</title>
-    <url>/2023/12/17/fix-phone/</url>
-    <content><![CDATA[<h1 id="小米"><a href="#小米" class="headerlink" title="小米"></a>小米</h1><li style="margin-left: 40px;font-size: 15px">一键锁屏</li>
-
-<p>在添加小部件里可能找不到<b>一键锁屏</b>，你只需要<code>断开网络</code>然后在添加小部件最下方就会多出一个选项，在那里应该就能找到<b>一键锁屏</b>了。</p>
-<p style="color: #FF0000;">注:</p>
-仅在MIUI12.5测试过]]></content>
+    <title>心得</title>
+    <url>/2024/03/01/feelings/</url>
+    <content><![CDATA[<p>异种物品分开放，可排忧解难。</p>
+]]></content>
       <categories>
-        <category>X</category>
-        <category>修理</category>
-        <category>手机</category>
+        <category>S</category>
+        <category>生活</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>hexo常用写作技巧</title>
+    <url>/2023/12/24/hexo-3/</url>
+    <content><![CDATA[<h2 id="推送用"><a href="#推送用" class="headerlink" title="推送用"></a>推送用</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>H</category>
+        <category>hexo</category>
+        <category>写作命令</category>
       </categories>
       <tags>
-        <tag>修理</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -917,18 +789,158 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
-    <title>hexo常用写作技巧</title>
-    <url>/2023/12/24/hexo-3/</url>
-    <content><![CDATA[<h2 id="推送用"><a href="#推送用" class="headerlink" title="推送用"></a>推送用</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+    <title>手机</title>
+    <url>/2023/12/17/fix-phone/</url>
+    <content><![CDATA[<h1 id="小米"><a href="#小米" class="headerlink" title="小米"></a>小米</h1><li style="margin-left: 40px;font-size: 15px">一键锁屏</li>
 
+<p>在添加小部件里可能找不到<b>一键锁屏</b>，你只需要<code>断开网络</code>然后在添加小部件最下方就会多出一个选项，在那里应该就能找到<b>一键锁屏</b>了。</p>
+<p style="color: #FF0000;">注:</p>
+仅在MIUI12.5测试过
+
+<h1 id="耳机问题"><a href="#耳机问题" class="headerlink" title="耳机问题"></a>耳机问题</h1><p>1 没插耳机缺显示插了<br>使用该app</p>
 ]]></content>
       <categories>
-        <category>H</category>
-        <category>hexo</category>
-        <category>写作命令</category>
+        <category>S</category>
+        <category>手机</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
+        <tag>修理</tag>
+        <tag>手机</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>狗</title>
+    <url>/2024/03/10/dog/</url>
+    <content><![CDATA[<p>狗子叫<b>毛毛</b></p>
+<h1 id="照片集"><a href="#照片集" class="headerlink" title="照片集"></a>照片集</h1><table>
+<thead>
+<tr>
+<th><img src="/2024/03/10/dog/ (1).jpg" alt=" (1)" style="zoom:15%;"></th>
+<th><img src="/2024/03/10/dog/ (2).jpg" alt=" (2)" style="zoom:15%;"></th>
+<th><img src="/2024/03/10/dog/ (3).jpg" alt=" (3)" style="zoom:15%;"></th>
+<th><img src="/2024/03/10/dog/ (4).jpg" alt=" (4)" style="zoom:15%;"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="/2024/03/10/dog/ (5).jpg" alt=" (5)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (6).jpg" alt=" (6)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (7).jpg" alt=" (7)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (8).jpg" alt=" (8)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (9).jpg" alt=" (9)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (10).jpg" alt=" (10)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (11).jpg" alt=" (11)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (12).jpg" alt=" (12)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (13).jpg" alt=" (13)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (14).jpg" alt=" (14)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (15).jpg" alt=" (15)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (16).jpg" alt=" (16)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (17).jpg" alt=" (17)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (18).jpg" alt=" (18)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (19).jpg" alt=" (19)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (20).jpg" alt=" (20)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (21).jpg" alt=" (21)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (22).jpg" alt=" (22)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (23).jpg" alt=" (23)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (24).jpg" alt=" (24)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (25).jpg" alt=" (25)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (26).jpg" alt=" (26)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (27).jpg" alt=" (27)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (28).jpg" alt=" (28)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (29).jpg" alt=" (29)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (30).jpg" alt=" (30)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (31).jpg" alt=" (31)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (32).jpg" alt=" (32)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (33).jpg" alt=" (33)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (34).jpg" alt=" (34)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (35).jpg" alt=" (35)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (36).jpg" alt=" (36)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (37).jpg" alt=" (37)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (38).jpg" alt=" (38)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (39).jpg" alt=" (39)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (40).jpg" alt=" (40)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (41).jpg" alt=" (41)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (42).jpg" alt=" (42)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (43).jpg" alt=" (43)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (44).jpg" alt=" (44)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (45).jpg" alt=" (45)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (46).jpg" alt=" (46)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (47).jpg" alt=" (47)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (48).jpg" alt=" (48)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (49).jpg" alt=" (49)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (50).jpg" alt=" (50)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (51).jpg" alt=" (51)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (52).jpg" alt=" (52)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (53).jpg" alt=" (53)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (54).jpg" alt=" (54)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (55).jpg" alt=" (55)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (56).jpg" alt=" (56)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (57).jpg" alt=" (57)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (58).jpg" alt=" (58)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (59).jpg" alt=" (59)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (60).jpg" alt=" (60)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (61).jpg" alt=" (61)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (62).jpg" alt=" (62)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (63).jpg" alt=" (63)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (64).jpg" alt=" (64)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (65).jpg" alt=" (65)" style="zoom:15%;"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id="视频集"><a href="#视频集" class="headerlink" title="视频集"></a>视频集</h1><table>
+<thead>
+<tr>
+<th><div id="dplayer2" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer2"),"hotkey":true,"preload":"metadata","video":{"url":"/2024/03/10/dog/Pxl%2020240309%20184245149.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+</table>
+]]></content>
+      <categories>
+        <category>G</category>
+        <category>狗子</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
       </tags>
   </entry>
   <entry>
@@ -966,6 +978,19 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       <tags>
         <tag>hexo</tag>
         <tag>termux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>html</title>
+    <url>/2024/08/01/html/</url>
+    <content><![CDATA[<p>表格<br><a href="https://blog.csdn.net/u013179804/article/details/136817757">https://blog.csdn.net/u013179804/article/details/136817757</a></p>
+]]></content>
+      <categories>
+        <category>H</category>
+        <category>html</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
       </tags>
   </entry>
   <entry>
@@ -1054,18 +1079,13 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
-    <title>我</title>
-    <url>/2024/03/01/me/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>minecraft服务器</title>
     <url>/2023/12/03/minecraft-server/</url>
     <content><![CDATA[<h1 id="基岩版服务器搭建"><a href="#基岩版服务器搭建" class="headerlink" title="基岩版服务器搭建"></a>基岩版服务器搭建</h1><h2 id="下载服务器文件"><a href="#下载服务器文件" class="headerlink" title="下载服务器文件"></a>下载服务器文件</h2><p><a href="https://www.minecraft.net/zh-hans/download/server/bedrock">服务器包下载链接</a></p>
 <h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><p>1.找一个文件夹把下载的压缩包解压<br>(解压路径不能有中文)<br>    kr-se-cncn-1.openfrp.top:19100<br><a href="http://www.openfrp.net/">www.openfrp.net</a></p>
-<div id="dplayer2" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><p>no url specified, no dplayer _(:3」∠)_</p>
+<div id="dplayer3" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><p>no url specified, no dplayer _(:3」∠)_</p>
 <p>例：</p>
-<div id="dplayer3" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer3"),"autoplay":true,"hotkey":true,"preload":"metadata","video":{"url":"//gitee.com/tiepi04/tiepi04.gitee.io/raw/master/2023/11/26/English/sp.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script> 
+<div id="dplayer4" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer4"),"autoplay":true,"hotkey":true,"preload":"metadata","video":{"url":"//gitee.com/tiepi04/tiepi04.gitee.io/raw/master/2023/11/26/English/sp.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script> 
 
 
 ]]></content>
@@ -1078,6 +1098,11 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       <tags>
         <tag>游戏</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>我</title>
+    <url>/2024/03/01/me/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>minecraft</title>
@@ -1105,6 +1130,12 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
         <tag>hexo</tag>
         <tag>ppt</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>password</title>
+    <url>/2023/12/17/password/</url>
+    <content><![CDATA[<p style="color: #FF0000;">无效：</p>
+75908，09066，09060，09069，77995，15902，77599，08526，09063，08652，07598，06980，05280，]]></content>
   </entry>
   <entry>
     <title>OpenVPN</title>
@@ -1170,12 +1201,6 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
-    <title>password</title>
-    <url>/2023/12/17/password/</url>
-    <content><![CDATA[<p style="color: #FF0000;">无效：</p>
-75908，09066，09060，09069，77995，15902，77599，08526，09063，08652，07598，06980，05280，]]></content>
-  </entry>
-  <entry>
     <title>电脑软件</title>
     <url>/2023/12/14/pc-software/</url>
     <content><![CDATA[<h1 id="实用"><a href="#实用" class="headerlink" title="实用"></a>实用</h1>]]></content>
@@ -1187,6 +1212,30 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       <tags>
         <tag>应用</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>远程控制</title>
+    <url>/2024/04/04/remote-control/</url>
+    <content><![CDATA[<h1 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h1><h2 id="微软远程桌面"><a href="#微软远程桌面" class="headerlink" title="微软远程桌面"></a>微软远程桌面</h2><blockquote>
+<p>自带的挺好用，用之前必须给账户<code>设置密码</code>才能用。</p>
+</blockquote>
+<li style="margin-left: 40px;font-size: 15px">给账户设置密码</li>
+
+<img src="/2024/04/04/remote-control/GIF.gif" alt="GIF" style="zoom: 50%;">
+
+]]></content>
+      <categories>
+        <category>Y</category>
+        <category>远程控制</category>
+      </categories>
+      <tags>
+        <tag>远控</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>手机问题</title>
+    <url>/2024/08/19/phone/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>泡菜</title>
@@ -1253,23 +1302,11 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
-    <title>远程控制</title>
-    <url>/2024/04/04/remote-control/</url>
-    <content><![CDATA[<h1 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h1><h2 id="微软远程桌面"><a href="#微软远程桌面" class="headerlink" title="微软远程桌面"></a>微软远程桌面</h2><blockquote>
-<p>自带的挺好用，用之前必须给账户<code>设置密码</code>才能用。</p>
-</blockquote>
-<li style="margin-left: 40px;font-size: 15px">给账户设置密码</li>
-
-<img src="/2024/04/04/remote-control/GIF.gif" alt="GIF" style="zoom: 50%;">
-
+    <title>Rog3解bl</title>
+    <url>/2024/08/04/rog3/</url>
+    <content><![CDATA[<p>1 备份文件<br>2 降级</p>
+<p>网上找了刷机包，经过两天才弄明白怎么启动和使用（外网的东西，学好英语的重要性）<br>以后找不到方法去出处、源处找方法，人们的只言片语会给你极大收获</p>
 ]]></content>
-      <categories>
-        <category>Y</category>
-        <category>远程控制</category>
-      </categories>
-      <tags>
-        <tag>远控</tag>
-      </tags>
   </entry>
   <entry>
     <title>termux</title>
