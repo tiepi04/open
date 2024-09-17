@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Docker</title>
+    <url>/2023/11/23/Docker/</url>
+    <content><![CDATA[<h1 id="Docker使用"><a href="#Docker使用" class="headerlink" title="Docker使用"></a>Docker使用</h1><h2 id="Portainer-可视化容器管理工具"><a href="#Portainer-可视化容器管理工具" class="headerlink" title="Portainer(可视化容器管理工具)"></a>Portainer(可视化容器管理工具)</h2><p>安装好Docker后输入这个<br>1).</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker volume create portainer_data</span><br></pre></td></tr></table></figure>
+<p>2).启动(端口9000，前一个是访问的端口9000)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest</span><br></pre></td></tr></table></figure>
+<h3 id="本地浏览器访问Portainer"><a href="#本地浏览器访问Portainer" class="headerlink" title="本地浏览器访问Portainer"></a>本地浏览器访问Portainer</h3><p>http:&#x2F;&#x2F;服务器ip地址:9000</p>
+<p>首次访问需要设置admin密码</p>
+<h2 id="novnc-网页图形界面"><a href="#novnc-网页图形界面" class="headerlink" title="novnc(网页图形界面)"></a>novnc(网页图形界面)</h2><p>HTTP_PASSWORD&#x3D;12345678  默认密码是12345678，这里可以自定义，1440，x720是分辨率，这里同样可以改成自己想要的分辨率，访问端口是6080</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d -p 6080:80 -v <span class="variable">$PWD</span>:/workspace:rw -e HTTP_PASSWORD=12345678 -e RESOLUTION=1440x720 --name ubuntu-novnc1 fredblgr/ubuntu-novnc:20.04</span><br></pre></td></tr></table></figure>
+<p>安装好后我们可以用http:&#x2F;&#x2F;服务器ip地址:6080<br>默认用户名：root</p>
+<p>默认密码：12345678（别忘了改成自己的）</p>
+<h1 id="Linux篇"><a href="#Linux篇" class="headerlink" title="Linux篇"></a>Linux篇</h1><h2 id="系统更新"><a href="#系统更新" class="headerlink" title="系统更新"></a>系统更新</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update -y &amp;&amp; sudo apt-get upgrade -y</span><br></pre></td></tr></table></figure>
+<h2 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install docker.io -y &amp;&amp; sudo apt install docker-compose</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>D</category>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>常用指令</title>
     <url>/2023/10/09/Common-instruction/</url>
-    <content><![CDATA[<h2 id="文件管理指令"><a href="#文件管理指令" class="headerlink" title="文件管理指令"></a>文件管理指令</h2><p>1.nano(系统自带的短小美)</p>
+    <content><![CDATA[<h2 id="文件管理指令"><a href="#文件管理指令" class="headerlink" title="文件管理指令"></a>文件管理指令</h2><p>1.nano</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nano </span><br></pre></td></tr></table></figure>
 <p>2.vim(比较常用的)</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim </span><br></pre></td></tr></table></figure>
@@ -61,30 +85,6 @@
       </categories>
       <tags>
         <tag>指令</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Docker</title>
-    <url>/2023/11/23/Docker/</url>
-    <content><![CDATA[<h1 id="Docker使用"><a href="#Docker使用" class="headerlink" title="Docker使用"></a>Docker使用</h1><h2 id="Portainer-可视化容器管理工具"><a href="#Portainer-可视化容器管理工具" class="headerlink" title="Portainer(可视化容器管理工具)"></a>Portainer(可视化容器管理工具)</h2><p>安装好Docker后输入这个<br>1).</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker volume create portainer_data</span><br></pre></td></tr></table></figure>
-<p>2).启动(端口9000，前一个是访问的端口9000)</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest</span><br></pre></td></tr></table></figure>
-<h3 id="本地浏览器访问Portainer"><a href="#本地浏览器访问Portainer" class="headerlink" title="本地浏览器访问Portainer"></a>本地浏览器访问Portainer</h3><p>http:&#x2F;&#x2F;服务器ip地址:9000</p>
-<p>首次访问需要设置admin密码</p>
-<h2 id="novnc-网页图形界面"><a href="#novnc-网页图形界面" class="headerlink" title="novnc(网页图形界面)"></a>novnc(网页图形界面)</h2><p>HTTP_PASSWORD&#x3D;12345678  默认密码是12345678，这里可以自定义，1440，x720是分辨率，这里同样可以改成自己想要的分辨率，访问端口是6080</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d -p 6080:80 -v <span class="variable">$PWD</span>:/workspace:rw -e HTTP_PASSWORD=12345678 -e RESOLUTION=1440x720 --name ubuntu-novnc1 fredblgr/ubuntu-novnc:20.04</span><br></pre></td></tr></table></figure>
-<p>安装好后我们可以用http:&#x2F;&#x2F;服务器ip地址:6080<br>默认用户名：root</p>
-<p>默认密码：12345678（别忘了改成自己的）</p>
-<h1 id="Linux篇"><a href="#Linux篇" class="headerlink" title="Linux篇"></a>Linux篇</h1><h2 id="系统更新"><a href="#系统更新" class="headerlink" title="系统更新"></a>系统更新</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update -y &amp;&amp; sudo apt-get upgrade -y</span><br></pre></td></tr></table></figure>
-<h2 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install docker.io -y &amp;&amp; sudo apt install docker-compose</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>D</category>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
       </tags>
   </entry>
   <entry>
@@ -249,32 +249,54 @@ height: 80%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
-    <title>Linux的常用的指令</title>
+    <title>关于Linux的使用</title>
     <url>/2023/10/03/Linux-1/</url>
-    <content><![CDATA[<p>这篇关于Linux常用的关于关于存储和管理密码 ，WiFi等的命令。</p>
-<h2 id="一-内存"><a href="#一-内存" class="headerlink" title="一.内存"></a>一.内存</h2><h3 id="查看剩余内存-1"><a href="#查看剩余内存-1" class="headerlink" title="查看剩余内存-1"></a>查看剩余内存-1</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">df</span> -h</span><br></pre></td></tr></table></figure>
-<h3 id="查看剩余寿命-固态-2"><a href="#查看剩余寿命-固态-2" class="headerlink" title="查看剩余寿命(固态)-2"></a>查看剩余寿命(固态)-2</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> /sys/class/mmc_host/mmc0/mmc0:0001/life_time</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<p><i>这篇关于Linux。(废话dog)</i><br>生成封面用的工具是<b>neofetch</b></p>
+<h1 id="ssh连接工具"><a href="#ssh连接工具" class="headerlink" title="ssh连接工具"></a>ssh连接工具</h1><p>1.<b>finalshell</b><br>仅有电脑版，但功能强大<br><a href="https://www.123pan.com/s/A6cA-2rHJh">点击前往123pan下载</a><br>2.<b>Juicessh</b><br>安卓上比较好用的</p>
+<h1 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h1><h2 id="查看剩余内存"><a href="#查看剩余内存" class="headerlink" title="查看剩余内存"></a>查看剩余内存</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">df</span> -h</span><br></pre></td></tr></table></figure>
+<h2 id="查看剩余寿命-固态"><a href="#查看剩余寿命-固态" class="headerlink" title="查看剩余寿命(固态)"></a>查看剩余寿命(固态)</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> /sys/class/mmc_host/mmc0/mmc0:0001/life_time</span><br></pre></td></tr></table></figure>
 <p>0X04 用了40%的寿命<br>0X08 用了80%的寿命<br>0X00 看不到寿命<br>·如图<br><img src="/2023/10/03/Linux-1/EMMC.png" alt="EMMC寿命对照表"><br>所以你已经懂它的格式了吧<br>不懂我就给你看两张照片对比一下<br>看不到寿命或满血的情况<br><img src="/2023/10/03/Linux-1/1.jpg" alt="看不到寿命的情况"><br>能看到寿命的情况<br><img src="/2023/10/03/Linux-1/2.jpg" alt="能看到寿命的情况"></p>
-<h2 id="二-网络"><a href="#二-网络" class="headerlink" title="二.网络"></a>二.网络</h2><h3 id="设置网络-WiFi或USB网络设置-1"><a href="#设置网络-WiFi或USB网络设置-1" class="headerlink" title="设置网络(WiFi或USB网络设置)-1"></a>设置网络(WiFi或USB网络设置)-1</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nmtui</span><br></pre></td></tr></table></figure>
-<p>设置后最好再reboot重启一下</p>
-<h3 id="查看ip-2"><a href="#查看ip-2" class="headerlink" title="查看ip-2"></a>查看ip-2</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ifconfig</span><br></pre></td></tr></table></figure>
+<h1 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h1><h2 id="设置网络-WiFi、USB网络、设置名称等"><a href="#设置网络-WiFi、USB网络、设置名称等" class="headerlink" title="设置网络(WiFi、USB网络、设置名称等)"></a>设置网络(WiFi、USB网络、设置名称等)</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nmtui</span><br></pre></td></tr></table></figure>
+<p>设置后再<code>reboot</code>重启一下保存</p>
+<h2 id="查看ip"><a href="#查看ip" class="headerlink" title="查看ip"></a>查看ip</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ifconfig</span><br></pre></td></tr></table></figure>
 
-<h3 id="查看端口占用-3"><a href="#查看端口占用-3" class="headerlink" title="查看端口占用-3"></a>查看端口占用-3</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat/ss -antulp | grep :端口号</span><br></pre></td></tr></table></figure>
+<h2 id="查看端口占用"><a href="#查看端口占用" class="headerlink" title="查看端口占用"></a>查看端口占用</h2><p><i>比如查看80端口占用情况</i></p>
+<li style="margin-left: 40px;font-size: 15px">第一种</li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat/ss -antulp | grep :端口号</span><br></pre></td></tr></table></figure>
+<li style="margin-left: 40px;font-size: 15px">第二种</li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsof -i tcp:80</span><br></pre></td></tr></table></figure>
+<i>第二种没有占有就无内容输出(第一种没试过)</i>
+<li style="margin-left: 40px;font-size: 15px">强制kill该进程</li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">kill</span> -9 PID</span><br></pre></td></tr></table></figure>
+
+<p><i>以下是扩展操作</i></p>
 <p>详细的查看PID</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps -aux | grep 进程PID</span><br></pre></td></tr></table></figure>
 <p>查看该PID所处目录(末尾加&#x2F;会显示进程路径的内容，不加显示进程具体路径)</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ll /proc/进程PID/cwd</span><br></pre></td></tr></table></figure>
-<h2 id="三-用户"><a href="#三-用户" class="headerlink" title="三.用户"></a>三.用户</h2><h3 id="改密码-1"><a href="#改密码-1" class="headerlink" title="改密码-1"></a>改密码-1</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">passwd</span><br></pre></td></tr></table></figure>
-<h2 id="四-杀死进程-kill-pkill-killall"><a href="#四-杀死进程-kill-pkill-killall" class="headerlink" title="四.杀死进程(kill,pkill,killall)"></a>四.杀死进程(kill,pkill,killall)</h2><h3 id="kill-1"><a href="#kill-1" class="headerlink" title="kill -1"></a>kill -1</h3><p>kill PID<br>强制下线<br>kill -9 PID<br>批量精准操作(-9为强制操作，非必须)<br>kill -9 PID</p>
-<h3 id="pkill-2"><a href="#pkill-2" class="headerlink" title="pkill -2"></a>pkill -2</h3><p>pkill 进程名<br>也可以加上-9<br>通过pkill -h获取帮助</p>
-<h3 id="killall-3"><a href="#killall-3" class="headerlink" title="killall -3"></a>killall -3</h3><p>killall和pkill差不多(好像-9前面不需要空格)<br>killall -h获得帮助</p>
+
+<h1 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h1><h2 id="改密码"><a href="#改密码" class="headerlink" title="改密码"></a>改密码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">passwd</span><br></pre></td></tr></table></figure>
+
+<h1 id="杀死进程-kill-pkill-killall"><a href="#杀死进程-kill-pkill-killall" class="headerlink" title="杀死进程(kill,pkill,killall)"></a>杀死进程(kill,pkill,killall)</h1><h2 id="kill"><a href="#kill" class="headerlink" title="kill"></a>kill</h2><p>kill PID<br>强制下线<br>kill -9 PID<br>批量精准操作(-9为强制操作，非必须)<br>kill -9 PID</p>
+<h2 id="pkill"><a href="#pkill" class="headerlink" title="pkill"></a>pkill</h2><p>pkill 进程名<br>也可以加上-9<br>通过pkill -h获取帮助</p>
+<h2 id="killall"><a href="#killall" class="headerlink" title="killall"></a>killall</h2><p>killall和pkill差不多(好像-9前面不需要空格)<br>killall -h获得帮助</p>
+<h1 id="安全检查"><a href="#安全检查" class="headerlink" title="安全检查"></a>安全检查</h1><h2 id="主机自动记录所有登陆事件"><a href="#主机自动记录所有登陆事件" class="headerlink" title="主机自动记录所有登陆事件"></a>主机自动记录所有登陆事件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /var/log/secure</span><br></pre></td></tr></table></figure>
+<h2 id="所有登陆失败记录"><a href="#所有登陆失败记录" class="headerlink" title="所有登陆失败记录"></a>所有登陆失败记录</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lastb</span><br></pre></td></tr></table></figure>
+<h2 id="所有登陆成功事件记录"><a href="#所有登陆成功事件记录" class="headerlink" title="所有登陆成功事件记录"></a>所有登陆成功事件记录</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">last</span><br></pre></td></tr></table></figure>
+
+<h1 id="使用systemctl自启动服务"><a href="#使用systemctl自启动服务" class="headerlink" title="使用systemctl自启动服务"></a>使用systemctl自启动服务</h1><p><code>systemctl</code>脚本存放在:<code>/usr/lib/systemd/</code>,有系统（<code>system</code>）和用户（<code>user</code>）之分,需要开机不登陆就能运行的程序，存在系统服务里<br>即：<code>/usr/lib/systemd/system</code>目录下.每一个服务以<code>.service</code>结尾，一般会分为3部分：<code>[Unit]</code>、<code>[Service]</code>和<code>[Install]</code></p>
+<li style="margin-left: 40px;font-size: 15px">[Unit]</li>
+<li style="margin-left: 40px;font-size: 15px">[Service]</li>
+<li style="margin-left: 40px;font-size: 15px">[Install]</li>
+
+<li style="margin-left: 40px;font-size: 15px">实例</li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=devzat</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=forking</span><br><span class="line">WorkingDirectory=/home/tiepiserver/devzat/</span><br><span class="line">ExecStart=/home/tiepiserver/devzat/devzat</span><br><span class="line">Restart=always</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+
+<p>参考链接<br><a href="https://www.cnblogs.com/hlooc/p/15183479.html">https://www.cnblogs.com/hlooc/p/15183479.html</a></p>
 ]]></content>
       <categories>
-        <category>Z</category>
-        <category>指令</category>
-        <category>Linux指令</category>
         <category>L</category>
-        <category>Linux</category>
+        <category>linux</category>
       </categories>
       <tags>
         <tag>Linux</tag>
@@ -322,10 +344,11 @@ height: 80%; left: 0; top: 0;"> </iframe></div>
 
 <h1 id="搭建私人服务器"><a href="#搭建私人服务器" class="headerlink" title="搭建私人服务器"></a>搭建私人服务器</h1><p>懒得写，链接在这，自己学</p>
 <p><a href="https://github.com/RW-HPS/RW-HPS">https://github.com/RW-HPS/RW-HPS</a></p>
+<p>现在学不了了，好像跑路了，打不开</p>
 ]]></content>
       <categories>
-        <category>T</category>
-        <category>铁锈战争</category>
+        <category>Y</category>
+        <category>游戏</category>
       </categories>
       <tags>
         <tag>铁锈战争</tag>
@@ -344,6 +367,15 @@ height: 80%; left: 0; top: 0;"> </iframe></div>
       </categories>
       <tags>
         <tag>搞机</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VoceChat</title>
+    <url>/2024/09/05/VoceChat/</url>
+    <content><![CDATA[<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://cloud.tencent.com/developer/article/2227520">https://cloud.tencent.com/developer/article/2227520</a></p>
+]]></content>
+      <tags>
+        <tag>Chat</tag>
       </tags>
   </entry>
   <entry>
@@ -468,6 +500,13 @@ height: 80%; left: 0; top: 0;"> </iframe></div>
 </tbody></table>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://blog.csdn.net/DDJ_TEST/article/details/120287342">scrcpy投屏教程、scrcpy无线投屏、scrcpy命令大全-CSDN博客</a></p>
 ]]></content>
+      <categories>
+        <category>A</category>
+        <category>adb</category>
+      </categories>
+      <tags>
+        <tag>adb</tag>
+      </tags>
   </entry>
   <entry>
     <title>adb</title>
@@ -486,10 +525,10 @@ height: 80%; left: 0; top: 0;"> </iframe></div>
       <categories>
         <category>G</category>
         <category>搞机</category>
-        <category>adb</category>
       </categories>
       <tags>
         <tag>搞机</tag>
+        <tag>adb</tag>
       </tags>
   </entry>
   <entry>
@@ -521,6 +560,141 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
       </tags>
   </entry>
   <entry>
+    <title>狗</title>
+    <url>/2024/03/10/dog/</url>
+    <content><![CDATA[<p>狗子叫<b>毛毛</b></p>
+<h1 id="照片集"><a href="#照片集" class="headerlink" title="照片集"></a>照片集</h1><table>
+<thead>
+<tr>
+<th><img src="/2024/03/10/dog/ (1).jpg" alt=" (1)" style="zoom:15%;"></th>
+<th><img src="/2024/03/10/dog/ (2).jpg" alt=" (2)" style="zoom:15%;"></th>
+<th><img src="/2024/03/10/dog/ (3).jpg" alt=" (3)" style="zoom:15%;"></th>
+<th><img src="/2024/03/10/dog/ (4).jpg" alt=" (4)" style="zoom:15%;"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="/2024/03/10/dog/ (5).jpg" alt=" (5)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (6).jpg" alt=" (6)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (7).jpg" alt=" (7)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (8).jpg" alt=" (8)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (9).jpg" alt=" (9)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (10).jpg" alt=" (10)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (11).jpg" alt=" (11)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (12).jpg" alt=" (12)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (13).jpg" alt=" (13)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (14).jpg" alt=" (14)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (15).jpg" alt=" (15)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (16).jpg" alt=" (16)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (17).jpg" alt=" (17)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (18).jpg" alt=" (18)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (19).jpg" alt=" (19)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (20).jpg" alt=" (20)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (21).jpg" alt=" (21)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (22).jpg" alt=" (22)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (23).jpg" alt=" (23)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (24).jpg" alt=" (24)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (25).jpg" alt=" (25)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (26).jpg" alt=" (26)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (27).jpg" alt=" (27)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (28).jpg" alt=" (28)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (29).jpg" alt=" (29)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (30).jpg" alt=" (30)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (31).jpg" alt=" (31)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (32).jpg" alt=" (32)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (33).jpg" alt=" (33)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (34).jpg" alt=" (34)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (35).jpg" alt=" (35)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (36).jpg" alt=" (36)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (37).jpg" alt=" (37)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (38).jpg" alt=" (38)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (39).jpg" alt=" (39)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (40).jpg" alt=" (40)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (41).jpg" alt=" (41)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (42).jpg" alt=" (42)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (43).jpg" alt=" (43)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (44).jpg" alt=" (44)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (45).jpg" alt=" (45)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (46).jpg" alt=" (46)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (47).jpg" alt=" (47)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (48).jpg" alt=" (48)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (49).jpg" alt=" (49)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (50).jpg" alt=" (50)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (51).jpg" alt=" (51)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (52).jpg" alt=" (52)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (53).jpg" alt=" (53)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (54).jpg" alt=" (54)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (55).jpg" alt=" (55)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (56).jpg" alt=" (56)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (57).jpg" alt=" (57)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (58).jpg" alt=" (58)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (59).jpg" alt=" (59)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (60).jpg" alt=" (60)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (61).jpg" alt=" (61)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (62).jpg" alt=" (62)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (63).jpg" alt=" (63)" style="zoom:15%;"></td>
+<td><img src="/2024/03/10/dog/ (64).jpg" alt=" (64)" style="zoom:15%;"></td>
+</tr>
+<tr>
+<td><img src="/2024/03/10/dog/ (65).jpg" alt=" (65)" style="zoom:15%;"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id="视频集"><a href="#视频集" class="headerlink" title="视频集"></a>视频集</h1><table>
+<thead>
+<tr>
+<th><div id="dplayer2" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer2"),"hotkey":true,"preload":"metadata","video":{"url":"/2024/03/10/dog/Pxl%2020240309%20184245149.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+</table>
+]]></content>
+      <categories>
+        <category>G</category>
+        <category>狗子</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>生态瓶</title>
     <url>/2023/12/22/ecosystem/</url>
     <content><![CDATA[]]></content>
@@ -532,6 +706,18 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
       </categories>
       <tags>
         <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>心得</title>
+    <url>/2024/03/01/feelings/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>S</category>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -571,28 +757,59 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
       </categories>
   </entry>
   <entry>
-    <title>心得</title>
-    <url>/2024/03/01/feelings/</url>
-    <content><![CDATA[<p>异种物品分开放，可排忧解难。</p>
+    <title>手机</title>
+    <url>/2023/12/17/fix-phone/</url>
+    <content><![CDATA[<h1 id="小米"><a href="#小米" class="headerlink" title="小米"></a>小米</h1><li style="margin-left: 40px;font-size: 15px">一键锁屏</li>
+
+<p>在添加小部件里可能找不到<b>一键锁屏</b>，你只需要<code>断开网络</code>然后在添加小部件最下方就会多出一个选项，在那里应该就能找到<b>一键锁屏</b>了。</p>
+<p style="color: #FF0000;">注:</p>
+仅在MIUI12.5测试过
+
+<h1 id="耳机问题"><a href="#耳机问题" class="headerlink" title="耳机问题"></a>耳机问题</h1><p>1 没插耳机缺显示插了<br>使用Lesser AudioSwitch<a href download="Lesser AudioSwitch_2.8.4.apk">点击下载</a><br>如图操作<br><img src="/2023/12/17/fix-phone/IMG_20240819.jpg"></p>
 ]]></content>
       <categories>
         <category>S</category>
-        <category>生活</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>hexo常用写作技巧</title>
-    <url>/2023/12/24/hexo-3/</url>
-    <content><![CDATA[<h2 id="推送用"><a href="#推送用" class="headerlink" title="推送用"></a>推送用</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>H</category>
-        <category>hexo</category>
-        <category>写作命令</category>
+        <category>手机</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
+        <tag>修理</tag>
+        <tag>手机</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>自建frp服务器</title>
+    <url>/2024/08/27/frp/</url>
+    <content><![CDATA[<p><i>frp可以通过有公网IP的的服务器将内网的主机暴露给互联网，从而实现通过外网能直接访问到内网主机；frp有服务端和客户端，服务端需要装在有公网ip的服务器上，客户端装在内网主机上。</i></p>
+<h1 id="简单图解"><a href="#简单图解" class="headerlink" title="简单图解"></a>简单图解</h1><img src="/2024/08/27/frp/show.png" alt="介绍" style="zoom:30%;">
+
+<h1 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h1><h2 id="下载frp"><a href="#下载frp" class="headerlink" title="下载frp"></a>下载frp</h2><p>找到相应架构的文件<br><a href="https://github.com/fatedier/frp">https://github.com/fatedier/frp</a></p>
+<h2 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -txvf 文件名</span><br></pre></td></tr></table></figure>
+
+<p>解压如下：<br><img src="/2024/08/27/frp/jieya.png" alt="解压" style="zoom:50%;"></p>
+<h2 id="执行命令"><a href="#执行命令" class="headerlink" title="执行命令"></a>执行命令</h2><h3 id="文件权限更改"><a href="#文件权限更改" class="headerlink" title="文件权限更改"></a>文件权限更改</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 服务器端给执行文件添加权限</span></span><br><span class="line">sudo <span class="built_in">chmod</span> 777 frps</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 客户端给执行文件添加权限</span></span><br><span class="line">sudo <span class="built_in">chmod</span> 777 frpc</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置文件修改"><a href="#配置文件修改" class="headerlink" title="配置文件修改"></a>配置文件修改</h3><li style="margin-left: 40px;font-size: 15px">服务端配置文件修改</li>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 打开服务端配置文件</span></span><br><span class="line">vim frps.toml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 我的填写内容如下：</span></span><br><span class="line">bindPort = 7000</span><br><span class="line"></span><br><span class="line"><span class="comment"># 这是frp服务器端口，自行更换，更多功能看官方介绍</span></span><br></pre></td></tr></table></figure>
+
+<p>启动frps：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 前台启动</span></span><br><span class="line">./frps -c ./frps.toml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 后台启动</span></span><br><span class="line">./frps -c ./frps.toml &amp;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<li style="margin-left: 40px;font-size: 15px">客户端配置文件修改</li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 打开客户端配置文件</span></span><br><span class="line">vim frpc.toml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 我的填写内容如下：</span></span><br><span class="line">serverPort = 7000   <span class="comment"># 服务端运行端口</span></span><br><span class="line">[[proxies]]</span><br><span class="line">name = <span class="string">&quot;test-tcp&quot;</span></span><br><span class="line"><span class="built_in">type</span> = <span class="string">&quot;tcp&quot;</span></span><br><span class="line">localIP = <span class="string">&quot;127.0.0.1&quot;</span>   <span class="comment"># 本地ip</span></span><br><span class="line">localPort = 22  <span class="comment"># 想转发的(本地)端口</span></span><br><span class="line">remotePort = 6000   <span class="comment"># 转发到(服务器的)此端口</span></span><br></pre></td></tr></table></figure>
+
+<li style="margin-left: 40px;font-size: 15px">安卓客户端app</li>
+1 FRP_1.2.0.apk<a href="FRP_1.2.0.apk">点击下载</a>
+
+<p>2 Frpc_0.39.1.1.apk<a href="Frpc_0.39.1.1.apk">点击下载</a><br><i>配置在前面，复制更改一下即可</i></p>
+<h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1><p><a href="https://blog.csdn.net/qq_36981760/article/details/115713179">https://blog.csdn.net/qq_36981760&#x2F;article&#x2F;details&#x2F;115713179</a></p>
+]]></content>
+      <categories>
+        <category>F</category>
+        <category>frp</category>
+      </categories>
+      <tags>
+        <tag>frp</tag>
       </tags>
   </entry>
   <entry>
@@ -761,13 +978,13 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">| ![xxx](\images\xxx.jpg) | ![xxx](\images\xxx.jpg) | ![xxx](\images\xxx.jpg) |</span><br><span class="line">| --- | ---| --- |</span><br></pre></td></tr></table></figure>
 
 <h2 id="添加多分类"><a href="#添加多分类" class="headerlink" title="添加多分类"></a>添加多分类</h2><p>categories 后面这样写就行了</p>
-<p>分级分类<br>前一个的等级高<br>标签1&gt;标签2&gt;标签3</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">categories: [标签1,标签2,标签3]</span><br></pre></td></tr></table></figure>
+<p>分级分类<br>前一个的等级高<br>类别1&gt;类别2&gt;类别3</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">categories: [类别1,类别2,类别3]</span><br></pre></td></tr></table></figure>
 
 <p>同级分类(可以包含分级分类)</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">categories:</span><br><span class="line">    - [Diary, PlayStation]</span><br><span class="line">    - [Diary, Games]</span><br><span class="line">    - [Life]</span><br></pre></td></tr></table></figure>
-<p>此时这篇文章同时包括三个分类：<br>PlayStation 和 Games 分别都是父分类 Diary 的子分类<br>同时 Life 是一个没有子分类的分类。</p>
-<h2 id="添加多个标签"><a href="#添加多个标签" class="headerlink" title="添加多个标签"></a>添加多个标签</h2><p>标签好像不存在分级<br>tags 后面这样写就行了</p>
+<p>此时这篇文章同时包括三个分类：<br>PlayStation 和 Games 分别都是父分类 Diary 的子分类<br>同时 Life 是一个没有子分类的分类。<br><i>但在我的使用中它们混在一起了</i></p>
+<h2 id="添加多个标签"><a href="#添加多个标签" class="headerlink" title="添加多个标签"></a>添加多个标签</h2><p>标签没有分级<br>tags 后面直接这样写就行了</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tags: [标签1,标签2,标签3]</span><br></pre></td></tr></table></figure>
 
 <h1 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h1><h2 id="引用文章"><a href="#引用文章" class="headerlink" title="引用文章"></a>引用文章</h2><p>正常使用链接文章在<a href></a>写&#x2F;年&#x2F;月&#x2F;日&#x2F;文章名<br>也就是写生成后的静态页面的地址。<br>这要是改以下年月日不就GG了。</p>
@@ -778,6 +995,13 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;% post_link Hello-World %&#125;</span><br><span class="line">&#123;% post_link Hello-World 你好世界 %&#125;</span><br></pre></td></tr></table></figure>
 
 <p>不理解的话实际操作一下就明白了。</p>
+<h2 id="博客内下载文件"><a href="#博客内下载文件" class="headerlink" title="博客内下载文件"></a>博客内下载文件</h2><p>用来本地下载<br>不在同一目录把文件的路径加到前面</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;a href=&quot;&quot; download=&quot;文件名&quot;&gt;点击下载&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="封面"><a href="#封面" class="headerlink" title="封面"></a>封面</h2><p>添加两个东西即可<br>例如</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hexo的建设及踩坑</span><br><span class="line">top_img: http://up.36992.com/pic/e6/c5/51/e6c551e768092c8655292d89a4034a74.jpg</span><br><span class="line">cover: http://up.36992.com/pic/e6/c5/51/e6c551e768092c8655292d89a4034a74.jpg</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p><code>top_img</code>是文章内顶部照片<br><code>cover</code>是文章外文章预览照片</p>
 ]]></content>
       <categories>
         <category>H</category>
@@ -789,158 +1013,18 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
-    <title>手机</title>
-    <url>/2023/12/17/fix-phone/</url>
-    <content><![CDATA[<h1 id="小米"><a href="#小米" class="headerlink" title="小米"></a>小米</h1><li style="margin-left: 40px;font-size: 15px">一键锁屏</li>
+    <title>hexo常用写作技巧</title>
+    <url>/2023/12/24/hexo-3/</url>
+    <content><![CDATA[<h2 id="推送用"><a href="#推送用" class="headerlink" title="推送用"></a>推送用</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
 
-<p>在添加小部件里可能找不到<b>一键锁屏</b>，你只需要<code>断开网络</code>然后在添加小部件最下方就会多出一个选项，在那里应该就能找到<b>一键锁屏</b>了。</p>
-<p style="color: #FF0000;">注:</p>
-仅在MIUI12.5测试过
-
-<h1 id="耳机问题"><a href="#耳机问题" class="headerlink" title="耳机问题"></a>耳机问题</h1><p>1 没插耳机缺显示插了<br>使用该app</p>
 ]]></content>
       <categories>
-        <category>S</category>
-        <category>手机</category>
+        <category>H</category>
+        <category>hexo</category>
+        <category>写作命令</category>
       </categories>
       <tags>
-        <tag>修理</tag>
-        <tag>手机</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>狗</title>
-    <url>/2024/03/10/dog/</url>
-    <content><![CDATA[<p>狗子叫<b>毛毛</b></p>
-<h1 id="照片集"><a href="#照片集" class="headerlink" title="照片集"></a>照片集</h1><table>
-<thead>
-<tr>
-<th><img src="/2024/03/10/dog/ (1).jpg" alt=" (1)" style="zoom:15%;"></th>
-<th><img src="/2024/03/10/dog/ (2).jpg" alt=" (2)" style="zoom:15%;"></th>
-<th><img src="/2024/03/10/dog/ (3).jpg" alt=" (3)" style="zoom:15%;"></th>
-<th><img src="/2024/03/10/dog/ (4).jpg" alt=" (4)" style="zoom:15%;"></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><img src="/2024/03/10/dog/ (5).jpg" alt=" (5)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (6).jpg" alt=" (6)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (7).jpg" alt=" (7)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (8).jpg" alt=" (8)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (9).jpg" alt=" (9)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (10).jpg" alt=" (10)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (11).jpg" alt=" (11)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (12).jpg" alt=" (12)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (13).jpg" alt=" (13)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (14).jpg" alt=" (14)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (15).jpg" alt=" (15)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (16).jpg" alt=" (16)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (17).jpg" alt=" (17)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (18).jpg" alt=" (18)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (19).jpg" alt=" (19)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (20).jpg" alt=" (20)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (21).jpg" alt=" (21)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (22).jpg" alt=" (22)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (23).jpg" alt=" (23)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (24).jpg" alt=" (24)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (25).jpg" alt=" (25)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (26).jpg" alt=" (26)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (27).jpg" alt=" (27)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (28).jpg" alt=" (28)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (29).jpg" alt=" (29)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (30).jpg" alt=" (30)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (31).jpg" alt=" (31)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (32).jpg" alt=" (32)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (33).jpg" alt=" (33)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (34).jpg" alt=" (34)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (35).jpg" alt=" (35)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (36).jpg" alt=" (36)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (37).jpg" alt=" (37)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (38).jpg" alt=" (38)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (39).jpg" alt=" (39)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (40).jpg" alt=" (40)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (41).jpg" alt=" (41)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (42).jpg" alt=" (42)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (43).jpg" alt=" (43)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (44).jpg" alt=" (44)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (45).jpg" alt=" (45)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (46).jpg" alt=" (46)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (47).jpg" alt=" (47)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (48).jpg" alt=" (48)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (49).jpg" alt=" (49)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (50).jpg" alt=" (50)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (51).jpg" alt=" (51)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (52).jpg" alt=" (52)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (53).jpg" alt=" (53)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (54).jpg" alt=" (54)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (55).jpg" alt=" (55)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (56).jpg" alt=" (56)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (57).jpg" alt=" (57)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (58).jpg" alt=" (58)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (59).jpg" alt=" (59)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (60).jpg" alt=" (60)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (61).jpg" alt=" (61)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (62).jpg" alt=" (62)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (63).jpg" alt=" (63)" style="zoom:15%;"></td>
-<td><img src="/2024/03/10/dog/ (64).jpg" alt=" (64)" style="zoom:15%;"></td>
-</tr>
-<tr>
-<td><img src="/2024/03/10/dog/ (65).jpg" alt=" (65)" style="zoom:15%;"></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="视频集"><a href="#视频集" class="headerlink" title="视频集"></a>视频集</h1><table>
-<thead>
-<tr>
-<th><div id="dplayer2" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer2"),"hotkey":true,"preload":"metadata","video":{"url":"/2024/03/10/dog/Pxl%2020240309%20184245149.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-</table>
-]]></content>
-      <categories>
-        <category>G</category>
-        <category>狗子</category>
-      </categories>
-      <tags>
-        <tag>生活</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -978,19 +1062,6 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       <tags>
         <tag>hexo</tag>
         <tag>termux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>html</title>
-    <url>/2024/08/01/html/</url>
-    <content><![CDATA[<p>表格<br><a href="https://blog.csdn.net/u013179804/article/details/136817757">https://blog.csdn.net/u013179804/article/details/136817757</a></p>
-]]></content>
-      <categories>
-        <category>H</category>
-        <category>html</category>
-      </categories>
-      <tags>
-        <tag>html</tag>
       </tags>
   </entry>
   <entry>
@@ -1040,42 +1111,36 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
-    <title>Linux</title>
-    <url>/2023/11/23/linux/</url>
-    <content><![CDATA[<h2 id="ssh连接工具"><a href="#ssh连接工具" class="headerlink" title="ssh连接工具"></a>ssh连接工具</h2><p>1.finalshell<br>仅有电脑版，但功能强大<br><a href="https://www.123pan.com/s/A6cA-2rHJh">点击前往123pan下载</a><br>2.Juicessh<br>安卓上比较好用的</p>
-<h1 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h1><h2 id="检查某端口是否开启"><a href="#检查某端口是否开启" class="headerlink" title="检查某端口是否开启"></a>检查某端口是否开启</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --query-port=25/tcp --zone=public  <span class="comment">#查询25端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=80/tcp --zone=public  <span class="comment">#查询80端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=888/tcp --zone=public  <span class="comment">#查询888端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=8888/tcp --zone=public  <span class="comment">#查询8888端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=8889/tcp --zone=public  <span class="comment">#查询8889端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=443/tcp --zone=public  <span class="comment">#查询443端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=20/tcp --zone=public  <span class="comment">#查询20端口是否开启,自行修改端口号</span></span><br><span class="line">firewall-cmd --query-port=21/tcp --zone=public  <span class="comment">#查询21端口是否开启,自行修改端口号</span></span><br></pre></td></tr></table></figure>
-<p>返回no即未开启，显示yes为已开启。</p>
-<h2 id="开启某端口代码"><a href="#开启某端口代码" class="headerlink" title="开启某端口代码"></a>开启某端口代码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=25/tcp --permanent <span class="comment">#添加25端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --add-port=888/tcp --permanent <span class="comment">#添加888端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --add-port=8888/tcp --permanent <span class="comment">#添加8888端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --add-port=443/tcp --permanent <span class="comment">#添加443端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --add-port=20/tcp --permanent <span class="comment">#添加20端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --add-port=21/tcp --permanent <span class="comment">#添加21端口，如需添加其他端口，自行修改端口号</span></span><br></pre></td></tr></table></figure>
-<h2 id="关闭某端口代码"><a href="#关闭某端口代码" class="headerlink" title="关闭某端口代码"></a>关闭某端口代码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --remove-port=25/tcp --permanent <span class="comment">#关闭25端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --remove-port=888/tcp --permanent <span class="comment">#关闭888端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --remove-port=8888/tcp --permanent <span class="comment">#关闭8888端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --remove-port=443/tcp --permanent <span class="comment">#关闭443端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --remove-port=20/tcp --permanent <span class="comment">#关闭20端口，如需添加其他端口，自行修改端口号</span></span><br><span class="line">firewall-cmd --zone=public --remove-port=21/tcp --permanent <span class="comment">#关闭21端口，如需添加其他端口，自行修改端口号</span></span><br></pre></td></tr></table></figure>
-<p>修改完成后需要重启服务器才能生效</p>
-<h2 id="看端口占用情况命令"><a href="#看端口占用情况命令" class="headerlink" title="看端口占用情况命令"></a>看端口占用情况命令</h2><p>(比如查看80端口占用情况使用如下命令）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsof -i tcp:80</span><br></pre></td></tr></table></figure>
-<h1 id="查看防火墙状态"><a href="#查看防火墙状态" class="headerlink" title="查看防火墙状态"></a>查看防火墙状态</h1><h2 id="CentOS系统"><a href="#CentOS系统" class="headerlink" title="CentOS系统:"></a>CentOS系统:</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure>
-<p>有如下提示(running)表示开启</p>
-<p>Active: active (running)</p>
-<h3 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl stop firewalld</span><br></pre></td></tr></table></figure>
-<p>有如下提示表示已经关闭</p>
-<p>Active: inactive (dead)</p>
-<h3 id="开启防火墙，没有任何提示即开启成功"><a href="#开启防火墙，没有任何提示即开启成功" class="headerlink" title="开启防火墙，没有任何提示即开启成功"></a>开启防火墙，没有任何提示即开启成功</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start firewalld</span><br></pre></td></tr></table></figure>
-<p>再次查看防火墙状态</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure>
-<p>有如下提示(running)表示开启</p>
-<p>Active: active (running)</p>
-<h2 id="Debian-Ubuntu系统："><a href="#Debian-Ubuntu系统：" class="headerlink" title="Debian&#x2F;Ubuntu系统："></a>Debian&#x2F;Ubuntu系统：</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">iptables -P INPUT ACCEPT</span><br><span class="line">iptables -P FORWARD ACCEPT</span><br><span class="line">iptables -P OUTPUT ACCEPT</span><br><span class="line">iptables -Fapt-get purge netfilter-persistent</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
-<h1 id="安全检查"><a href="#安全检查" class="headerlink" title="安全检查"></a>安全检查</h1><p>#主机自动记录所有登陆事件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /var/log/secure</span><br></pre></td></tr></table></figure>
-<p>#所有登陆失败记录</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lastb</span><br></pre></td></tr></table></figure>
-<p>#所有登陆成功事件记录</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">last</span><br></pre></td></tr></table></figure>
-
+    <title>html</title>
+    <url>/2024/08/01/html/</url>
+    <content><![CDATA[<p>表格<br><a href="https://blog.csdn.net/u013179804/article/details/136817757">https://blog.csdn.net/u013179804/article/details/136817757</a></p>
 ]]></content>
       <categories>
-        <category>L</category>
-        <category>Linux</category>
+        <category>H</category>
+        <category>html</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
+        <tag>html</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我</title>
+    <url>/2024/03/01/me/</url>
+    <content><![CDATA[<p>问东西详细点，再进一步就可以了。不要问到一半就说够了！！！</p>
+<p>问路问题</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>minecraft</title>
+    <url>/2023/12/03/minecraft/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Y</category>
+        <category>游戏</category>
+        <category>minecraft</category>
+      </categories>
+      <tags>
+        <tag>游戏</tag>
       </tags>
   </entry>
   <entry>
@@ -1100,24 +1165,6 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
-    <title>我</title>
-    <url>/2024/03/01/me/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>minecraft</title>
-    <url>/2023/12/03/minecraft/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Y</category>
-        <category>游戏</category>
-        <category>minecraft</category>
-      </categories>
-      <tags>
-        <tag>游戏</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>nodeppt</title>
     <url>/2024/03/31/nodeppt/</url>
     <content><![CDATA[]]></content>
@@ -1130,12 +1177,6 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
         <tag>hexo</tag>
         <tag>ppt</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>password</title>
-    <url>/2023/12/17/password/</url>
-    <content><![CDATA[<p style="color: #FF0000;">无效：</p>
-75908，09066，09060，09069，77995，15902，77599，08526，09063，08652，07598，06980，05280，]]></content>
   </entry>
   <entry>
     <title>OpenVPN</title>
@@ -1201,6 +1242,12 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
+    <title>password</title>
+    <url>/2023/12/17/password/</url>
+    <content><![CDATA[<p style="color: #FF0000;">无效：</p>
+75908，09066，09060，09069，77995，15902，77599，08526，09063，08652，07598，06980，05280，]]></content>
+  </entry>
+  <entry>
     <title>电脑软件</title>
     <url>/2023/12/14/pc-software/</url>
     <content><![CDATA[<h1 id="实用"><a href="#实用" class="headerlink" title="实用"></a>实用</h1>]]></content>
@@ -1211,25 +1258,6 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </categories>
       <tags>
         <tag>应用</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>远程控制</title>
-    <url>/2024/04/04/remote-control/</url>
-    <content><![CDATA[<h1 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h1><h2 id="微软远程桌面"><a href="#微软远程桌面" class="headerlink" title="微软远程桌面"></a>微软远程桌面</h2><blockquote>
-<p>自带的挺好用，用之前必须给账户<code>设置密码</code>才能用。</p>
-</blockquote>
-<li style="margin-left: 40px;font-size: 15px">给账户设置密码</li>
-
-<img src="/2024/04/04/remote-control/GIF.gif" alt="GIF" style="zoom: 50%;">
-
-]]></content>
-      <categories>
-        <category>Y</category>
-        <category>远程控制</category>
-      </categories>
-      <tags>
-        <tag>远控</tag>
       </tags>
   </entry>
   <entry>
@@ -1302,11 +1330,113 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
+    <title>远程控制</title>
+    <url>/2024/04/04/remote-control/</url>
+    <content><![CDATA[<h1 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h1><h2 id="微软远程桌面"><a href="#微软远程桌面" class="headerlink" title="微软远程桌面"></a>微软远程桌面</h2><blockquote>
+<p>自带的挺好用，用之前必须给账户<code>设置密码</code>才能用。</p>
+</blockquote>
+<li style="margin-left: 40px;font-size: 15px">给账户设置密码</li>
+
+<img src="/2024/04/04/remote-control/GIF.gif" alt="GIF" style="zoom: 50%;">
+
+]]></content>
+      <categories>
+        <category>Y</category>
+        <category>远程控制</category>
+      </categories>
+      <tags>
+        <tag>远控</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Rog3解bl</title>
     <url>/2024/08/04/rog3/</url>
     <content><![CDATA[<p>1 备份文件<br>2 降级</p>
 <p>网上找了刷机包，经过两天才弄明白怎么启动和使用（外网的东西，学好英语的重要性）<br>以后找不到方法去出处、源处找方法，人们的只言片语会给你极大收获</p>
 ]]></content>
+      <categories>
+        <category>G</category>
+        <category>搞机</category>
+      </categories>
+      <tags>
+        <tag>搞机</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RustDesk远控</title>
+    <url>/2024/08/27/rustdesk/</url>
+    <content><![CDATA[<p><i>RustDesk 是一款可以平替 TeamViewer 的开源软件，旨在提供安全便捷的自建方案。</i><br><a href="rustdesk.com">官网</a></p>
+<h1 id="自建服务器"><a href="#自建服务器" class="headerlink" title="自建服务器"></a>自建服务器</h1><h2 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo docker image pull rustdesk/rustdesk-server</span><br></pre></td></tr></table></figure>
+<h2 id="开启hbbs"><a href="#开启hbbs" class="headerlink" title="开启hbbs"></a>开启hbbs</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run --name hbbs -p 26115:21115 -p 26116:21116 -p 26116:21116/udp -p 26118:21118 -v [你的自定义地址/hbbs]:/root -td rustdesk/rustdesk-server hbbs -r [你的地址（IP/域名）]:26116 -k [你的自定义key]</span><br></pre></td></tr></table></figure>
+<h2 id="开启hbbr"><a href="#开启hbbr" class="headerlink" title="开启hbbr"></a>开启hbbr</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo docker run --name hbbr -p 26117:21117 -p 26119:21119 -v [你的自定义地址/hbbr]:/root -td rustdesk/rustdesk-server hbbr -k [你的自定义key]</span><br></pre></td></tr></table></figure>
+<h1 id="命令解释"><a href="#命令解释" class="headerlink" title="命令解释"></a>命令解释</h1><li style="margin-left: 40px;font-size: 15px">替换路径和域名的地方加了个[]，是为了便于区分，替换的时候记得删除。</li>
+<li style="margin-left: 40px;font-size: 15px">“-p 26115:21115” ： 26115 是docker宿主机（本机端口），21115 是RustDesk 的默认端口， 如果不修改默认端口 请使用“-p 21115:21115”，其他的端口映射类似</li>
+<li style="margin-left: 40px;font-size: 15px">--name 是定义了 docker 实例的名称，可以方便引用</li>
+<li style="margin-left: 40px;font-size: 15px">-v 是docker宿主机到容器内的文件映射</li>
+<li style="margin-left: 40px;font-size: 15px">“rustdesk/rustdesk-server hbbr” 是带 hbbr或者hbbs 参数启动</li>
+<li style="margin-left: 40px;font-size: 15px">-r [你的地址（IP/域名）]:26116  是 在你的指定端口监听 ，默认端口是 21116 </li>
+
+<h1 id="开放端口"><a href="#开放端口" class="headerlink" title="开放端口"></a>开放端口</h1><p>默认情况下，hbbs 监听21115(tcp), 21116(tcp&#x2F;udp), 21118(tcp)，hbbr 监听21117(tcp), 21119(tcp)。务必在防火墙开启这几个端口， 请注意21116同时要开启TCP和UDP 。其中21115是hbbs用作NAT类型测试，21116&#x2F;UDP是hbbs用作ID注册与心跳服务，21116&#x2F;TCP是hbbs用作TCP打洞与连接服务，21117是hbbr用作中继服务, 21118和21119是为了支持网页客户端。如果您不需要网页客户端（21118，21119）支持，对应端口可以不开。</p>
+<pre><code>&lt;li style=&quot;margin-left: 40px;font-size: 15px&quot;&gt;TCP( 21115, 21116, 21117, 21118, 21119 )&lt;/li&gt;
+&lt;li style=&quot;margin-left: 40px;font-size: 15px&quot;&gt;UDP( 21116 )&lt;/li&gt;
+</code></pre>
+<h1 id="加密key"><a href="#加密key" class="headerlink" title="加密key"></a>加密key</h1><h2 id="自定义key"><a href="#自定义key" class="headerlink" title="自定义key"></a>自定义key</h2><p>前面的<b>开启hbbs</b>和<b>开启hbbr</b>中的<code>-k [你的自定义key]</code>就是了</p>
+<p>你把这段删掉就是生成<code>默认key</code>，这个应该是随机的，建议还是自定义</p>
+<h2 id="获取默认key"><a href="#获取默认key" class="headerlink" title="获取默认key"></a>获取默认key</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1.进入镜像</span></span><br><span class="line">sudo docker <span class="built_in">exec</span> -it hbbs bash </span><br><span class="line"><span class="comment"># 2.获取key</span></span><br><span class="line"><span class="built_in">cat</span> ./id_ed25519.pub </span><br></pre></td></tr></table></figure>
+
+<li style="margin-left: 40px;font-size: 15px"><p style="color: #FF0000;">测试你的 hbbs和hbbr 端口，确保防火墙放行</p></li>
+
+<h1 id="客户端下载地址"><a href="#客户端下载地址" class="headerlink" title="客户端下载地址"></a>客户端下载地址</h1><p><a href="https://rustdesk.com/zh/">https://rustdesk.com/zh/</a><br><a href="https://github.com/rustdesk/rustdesk/releases">https://github.com/rustdesk/rustdesk/releases</a><br>  <li style="margin-left: 40px;font-size: 15px">下载完成，需要安装才能配置自建的rustdesk服务器</li></p>
+<h1 id="客户端的配置"><a href="#客户端的配置" class="headerlink" title="客户端的配置"></a>客户端的配置</h1><p>修改了端口的配置如下，<b>如果使用默认端口 只需要在 ID服务器填上你的服务器地址</b>，图中以上文端口为例<br><img src="/2024/08/27/rustdesk/rustdesk1.png"><br>在客户端两边均填写相同信息，便可以像TeamViewer一样访问了，可以使用下图中的配置的复制粘贴功能<br><img src="/2024/08/27/rustdesk/rustdesk2.png"></p>
+<p>参考链接<a href="https://www.cnblogs.com/HeisenbergUncertainty/p/17908858.html">https://www.cnblogs.com/HeisenbergUncertainty/p/17908858.html</a></p>
+]]></content>
+      <categories>
+        <category>R</category>
+        <category>RustDesk远控</category>
+      </categories>
+      <tags>
+        <tag>远控</tag>
+        <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>sip</title>
+    <url>/2024/08/30/sip/</url>
+    <content><![CDATA[<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="http://t.csdnimg.cn/QNB62">http://t.csdnimg.cn/QNB62</a></p>
+]]></content>
+      <categories>
+        <category>S</category>
+        <category>sip</category>
+      </categories>
+      <tags>
+        <tag>sip</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>泰拉瑞亚</title>
+    <url>/2024/08/26/terarria/</url>
+    <content><![CDATA[<h1 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h1><p>1 下载termux<br>2 下载proot-distro<br>3 下载ubuntu</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">proot－distro install ubuntu</span><br></pre></td></tr></table></figure>
+<p>完成后再</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">proot-distro login ubuntu</span><br></pre></td></tr></table></figure>
+
+<p>当然你也可以用其它方法安装来Linux，都一样的</p>
+<p>4 下载wget</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pkg install wget</span><br></pre></td></tr></table></figure>
+<p>5 下载 .net6</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt-get install dotnet-sdk-6.0</span><br></pre></td></tr></table></figure>
+<p>6 下载TShock</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://github.com/Pryaxis/TShock/releases/download/v5.1.3/TShock-5.1.3-for-Terraria-1.4.4.9-linux-arm64-Release.zip</span><br></pre></td></tr></table></figure>
+<p>7 运行tshock</p>
+]]></content>
+      <categories>
+        <category>Y</category>
+        <category>游戏</category>
+      </categories>
+      <tags>
+        <tag>游戏</tag>
+        <tag>服务器</tag>
+      </tags>
   </entry>
   <entry>
     <title>termux</title>
@@ -1349,9 +1479,70 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
+    <title>tiepiserver</title>
+    <url>/2024/08/31/tiepiserver/</url>
+    <content><![CDATA[<p><i>这是仅供我个人用的文章</i></p>
+<h1 id="已部署的服务"><a href="#已部署的服务" class="headerlink" title="已部署的服务"></a>已部署的服务</h1><h2 id="直接部署"><a href="#直接部署" class="headerlink" title="直接部署"></a>直接部署</h2><ol>
+<li>MCSManager面板tcp23333,24444</li>
+<li>FRP服务器tcp7000</li>
+<li>devzat(ssh聊天服务器)tcp2221,2222,5550</li>
+</ol>
+<h2 id="docker部署"><a href="#docker部署" class="headerlink" title="docker部署"></a>docker部署</h2><ol>
+<li>宝塔面板tcp80,443,888,2000,12121,18888,20001,20002,21000,32770,32768,32769</li>
+<li>青龙面板tcp5700</li>
+<li>Alist tcp5244</li>
+<li>ddns-go</li>
+<li>rw-hps(铁锈战争服务器)tcp5123</li>
+<li>speedtest(网络测速)tcp9003</li>
+<li>ws-scrcpy(网页adb连接)tcp8000</li>
+<li>synctv(同步观影)tcp9001</li>
+<li>portsip(sip服务器)<br>UDP：5060、5066、25000-34999、45000-65000<br>TCP：5061、5063、5065、5067、8882、8883、8885、8887、8888、8889、10443</li>
+<li>open VPN tcp1194</li>
+<li>portainer(docker管理)tcp9000</li>
+<li>navidrome tcp4533</li>
+<li>iperf3(同speedtest)tcp&#x2F;udp5201</li>
+<li>RustDesk服务器tcp21116,21117,21119,21118<br>udp21116<br>hbbs和hbbr<br>hbbs需要指定端口用于客户端的ID服务器、hbbr用于中继服务器</li>
+<li>filecodebox(文件快递站)tcp12345</li>
+<li>filebrowser(文件管理)tcp52243</li>
+<li>cloudflare(穿透服务)</li>
+<li>charming_brahmagupta(我忘了是什么)</li>
+</ol>
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>内存仅剩43G<br>CPU性能不够强<br>网络防火墙有点发颠</p>
+<p>emm<br>乱搞防火墙还导致docker创不了容器</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>F</category>
+        <category>服务器</category>
+      </categories>
+      <tags>
+        <tag>server</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>视频制作</title>
     <url>/2023/11/05/video/</url>
-    <content><![CDATA[<h1 id="视频录制工具"><a href="#视频录制工具" class="headerlink" title="视频录制工具"></a>视频录制工具</h1><h2 id="AZ-Screen-Recorder"><a href="#AZ-Screen-Recorder" class="headerlink" title="AZ Screen Recorder"></a>AZ Screen Recorder</h2><p>1.介绍<br>支持画笔<br>支持最高1080p 12Mpbs 120FPS<br>应用图片(放不下就看看吧)<br><img src="/2023/11/05/video/1.jpg" alt="图一"><br><img src="/2023/11/05/video/2.jpg" alt="图二"><br>2.下载链接<br><a href="https://www.123pan.com/s/wkn6Vv-3VpiH.html">123云盘下载_版本5.10.6</a>提取码：eqMd<br><a href="https://wwp.lanzoup.com/iM4H51dug88h">蓝奏云下载_版本5.10.6</a>提取码：8c5h</p>
+    <content><![CDATA[<h1 id="视频录制工具"><a href="#视频录制工具" class="headerlink" title="视频录制工具"></a>视频录制工具</h1><h2 id="AZ-Screen-Recorder"><a href="#AZ-Screen-Recorder" class="headerlink" title="AZ Screen Recorder"></a>AZ Screen Recorder</h2><p>1.介绍<br>支持画笔<br>支持最高1080p 12Mpbs 120FPS<br>应用图片(放不下就看看吧)</p>
+<table>
+<thead>
+<tr>
+<th>图一</th>
+<th>图二</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="/2023/11/05/video/1.jpg" alt="图一"></td>
+<td><img src="/2023/11/05/video/2.jpg" alt="图二"></td>
+</tr>
+<tr>
+<td>2.下载链接</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://www.123pan.com/s/wkn6Vv-3VpiH.html">123云盘下载_版本5.10.6</a>提取码：eqMd</td>
+<td><a href="https://wwp.lanzoup.com/iM4H51dug88h">蓝奏云下载_版本5.10.6</a>提取码：8c5h</td>
+</tr>
+</tbody></table>
 <h1 id="视频剪辑工具"><a href="#视频剪辑工具" class="headerlink" title="视频剪辑工具"></a>视频剪辑工具</h1><h2 id="VN"><a href="#VN" class="headerlink" title="VN"></a>VN</h2><p>免登录可用<br>应用商店下载就行</p>
 <h1 id="视频播放器"><a href="#视频播放器" class="headerlink" title="视频播放器"></a>视频播放器</h1><h2 id="XPlayer-已破解"><a href="#XPlayer-已破解" class="headerlink" title="XPlayer(已破解)"></a>XPlayer(已破解)</h2><p>视频,音乐都能播放，功能强大<br><a href="https://www.123pan.com/s/wkn6Vv-hVpiH.html">123云盘下载_版本2.2.1.2</a>提取码：XWsx<br><a href="https://wwp.lanzoup.com/iW26T1dug49e">蓝奏云下载_版本2.2.1.2</a>提取码：apj4</p>
 ]]></content>
@@ -1389,5 +1580,24 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
     <url>/2024/01/26/win10-ftpserver/</url>
     <content><![CDATA[<p><a href="https://cloud.tencent.com/developer/article/1935592">win10系统下搭建FTP服务器(完成文件上传与下载)-腾讯云开发者社区-腾讯云 (tencent.com)</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>ws-scrcpy</title>
+    <url>/2024/08/27/ws-scrcpy/</url>
+    <content><![CDATA[<p><i>ws-scrcpy用浏览器远程控制 Android 手机，实现云手机效果</i></p>
+<p>不过我实际用下来效果<b>很差</b>，我觉得勉强应急用可以。</p>
+<h1 id="docker部署ws-scrcpy"><a href="#docker部署ws-scrcpy" class="headerlink" title="docker部署ws-scrcpy"></a>docker部署ws-scrcpy</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run --name ws-scrcpy -d -p 8000:8000 scavin/ws-scrcpy</span><br></pre></td></tr></table></figure>
+<h2 id="连接手机"><a href="#连接手机" class="headerlink" title="连接手机"></a>连接手机</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> ws-scrcpy adb connect 安卓IP地址:5555</span><br></pre></td></tr></table></figure>
+
+<h1 id="相关链接及参考"><a href="#相关链接及参考" class="headerlink" title="相关链接及参考"></a>相关链接及参考</h1><p><a href="https://github.com/NetrisTV/ws-scrcpy">https://github.com/NetrisTV/ws-scrcpy</a><br><a href="https://www.appinn.com/ws-scrcpy/">https://www.appinn.com/ws-scrcpy/</a></p>
+]]></content>
+      <categories>
+        <category>A</category>
+        <category>adb</category>
+      </categories>
+      <tags>
+        <tag>adb</tag>
+        <tag>docker</tag>
+      </tags>
   </entry>
 </search>
