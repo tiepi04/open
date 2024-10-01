@@ -64,6 +64,30 @@
       </tags>
   </entry>
   <entry>
+    <title>Docker</title>
+    <url>/2023/11/23/Docker/</url>
+    <content><![CDATA[<h1 id="Docker使用"><a href="#Docker使用" class="headerlink" title="Docker使用"></a>Docker使用</h1><h2 id="Portainer-可视化容器管理工具"><a href="#Portainer-可视化容器管理工具" class="headerlink" title="Portainer(可视化容器管理工具)"></a>Portainer(可视化容器管理工具)</h2><p>安装好Docker后输入这个<br>1).</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker volume create portainer_data</span><br></pre></td></tr></table></figure>
+<p>2).启动(端口9000，前一个是访问的端口9000)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest</span><br></pre></td></tr></table></figure>
+<h3 id="本地浏览器访问Portainer"><a href="#本地浏览器访问Portainer" class="headerlink" title="本地浏览器访问Portainer"></a>本地浏览器访问Portainer</h3><p>http:&#x2F;&#x2F;服务器ip地址:9000</p>
+<p>首次访问需要设置admin密码</p>
+<h2 id="novnc-网页图形界面"><a href="#novnc-网页图形界面" class="headerlink" title="novnc(网页图形界面)"></a>novnc(网页图形界面)</h2><p>HTTP_PASSWORD&#x3D;12345678  默认密码是12345678，这里可以自定义，1440，x720是分辨率，这里同样可以改成自己想要的分辨率，访问端口是6080</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d -p 6080:80 -v <span class="variable">$PWD</span>:/workspace:rw -e HTTP_PASSWORD=12345678 -e RESOLUTION=1440x720 --name ubuntu-novnc1 fredblgr/ubuntu-novnc:20.04</span><br></pre></td></tr></table></figure>
+<p>安装好后我们可以用http:&#x2F;&#x2F;服务器ip地址:6080<br>默认用户名：root</p>
+<p>默认密码：12345678（别忘了改成自己的）</p>
+<h1 id="Linux篇"><a href="#Linux篇" class="headerlink" title="Linux篇"></a>Linux篇</h1><h2 id="系统更新"><a href="#系统更新" class="headerlink" title="系统更新"></a>系统更新</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update -y &amp;&amp; sudo apt-get upgrade -y</span><br></pre></td></tr></table></figure>
+<h2 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install docker.io -y &amp;&amp; sudo apt install docker-compose</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>D</category>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>English</title>
     <url>/2023/11/26/English/</url>
     <content><![CDATA[<h2 id="2024-2-22"><a href="#2024-2-22" class="headerlink" title="2024-2-22"></a>2024-2-22</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://ctyunhljdcdn.qnqcdn.net/pycdn.qupeiyin.cn/dubbing/2024-02-22/1708597913u781347483.mp4?20240222" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; 
@@ -485,27 +509,26 @@ height: 80%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
-    <title>Docker</title>
-    <url>/2023/11/23/Docker/</url>
-    <content><![CDATA[<h1 id="Docker使用"><a href="#Docker使用" class="headerlink" title="Docker使用"></a>Docker使用</h1><h2 id="Portainer-可视化容器管理工具"><a href="#Portainer-可视化容器管理工具" class="headerlink" title="Portainer(可视化容器管理工具)"></a>Portainer(可视化容器管理工具)</h2><p>安装好Docker后输入这个<br>1).</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker volume create portainer_data</span><br></pre></td></tr></table></figure>
-<p>2).启动(端口9000，前一个是访问的端口9000)</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest</span><br></pre></td></tr></table></figure>
-<h3 id="本地浏览器访问Portainer"><a href="#本地浏览器访问Portainer" class="headerlink" title="本地浏览器访问Portainer"></a>本地浏览器访问Portainer</h3><p>http:&#x2F;&#x2F;服务器ip地址:9000</p>
-<p>首次访问需要设置admin密码</p>
-<h2 id="novnc-网页图形界面"><a href="#novnc-网页图形界面" class="headerlink" title="novnc(网页图形界面)"></a>novnc(网页图形界面)</h2><p>HTTP_PASSWORD&#x3D;12345678  默认密码是12345678，这里可以自定义，1440，x720是分辨率，这里同样可以改成自己想要的分辨率，访问端口是6080</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d -p 6080:80 -v <span class="variable">$PWD</span>:/workspace:rw -e HTTP_PASSWORD=12345678 -e RESOLUTION=1440x720 --name ubuntu-novnc1 fredblgr/ubuntu-novnc:20.04</span><br></pre></td></tr></table></figure>
-<p>安装好后我们可以用http:&#x2F;&#x2F;服务器ip地址:6080<br>默认用户名：root</p>
-<p>默认密码：12345678（别忘了改成自己的）</p>
-<h1 id="Linux篇"><a href="#Linux篇" class="headerlink" title="Linux篇"></a>Linux篇</h1><h2 id="系统更新"><a href="#系统更新" class="headerlink" title="系统更新"></a>系统更新</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update -y &amp;&amp; sudo apt-get upgrade -y</span><br></pre></td></tr></table></figure>
-<h2 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install docker.io -y &amp;&amp; sudo apt install docker-compose</span><br></pre></td></tr></table></figure>
+    <title>adb</title>
+    <url>/2023/10/19/adb/</url>
+    <content><![CDATA[<h3 id="设置屏幕息屏时间-1"><a href="#设置屏幕息屏时间-1" class="headerlink" title="设置屏幕息屏时间-1"></a>设置屏幕息屏时间-1</h3><p>永不息屏</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">settings put system screen_off_timeout 2147483647</span><br></pre></td></tr></table></figure>
+<p>查看息屏时间</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">settings put system screen_off_timeout</span><br></pre></td></tr></table></figure>
+<h3 id="设置电池假装充电状态-2"><a href="#设置电池假装充电状态-2" class="headerlink" title="设置电池假装充电状态-2"></a>设置电池假装充电状态-2</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dumpsys battery <span class="built_in">set</span> status 2</span><br></pre></td></tr></table></figure>
+<h3 id="激活应用-3"><a href="#激活应用-3" class="headerlink" title="激活应用-3"></a>激活应用-3</h3><p>键鼠映射软件:Panda Mouse pro</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh /storage/emulated/0/.chaozhuo.gameassistant2/inject.sh</span><br></pre></td></tr></table></figure>
+<p>下载<br><a href="https://www.123pan.com/s/wkn6Vv-ttpiH.html">123云盘下载_版本1.5.0</a><br><a href="https://wwp.lanzoup.com/iQ62S1dug35e">蓝奏云下载_版本1.5.0</a>提取码：38ev</p>
+<h3 id="adb-pull命令使用"><a href="#adb-pull命令使用" class="headerlink" title="adb pull命令使用"></a>adb pull命令使用</h3><p>把手机&#x2F;sdcard&#x2F;1里的文件下载到电脑D:\1文件夹里(&#x2F;sdcard&#x2F;1&#x2F;文件名也行)<br>adb pull &#x2F;sdcard&#x2F;1 D:\1</p>
+<p>主题<a href="https://theme-next.org/">https://theme-next.org/</a><br>彩色字<a href="https://benpaodewoniu.github.io/2020/01/27/hexo12/">https://benpaodewoniu.github.io/2020/01/27/hexo12/</a></p>
 ]]></content>
       <categories>
-        <category>D</category>
-        <category>Docker</category>
+        <category>G</category>
+        <category>搞机</category>
       </categories>
       <tags>
-        <tag>Docker</tag>
+        <tag>搞机</tag>
+        <tag>adb</tag>
       </tags>
   </entry>
   <entry>
@@ -548,18 +571,6 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
       </categories>
       <tags>
         <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>心得</title>
-    <url>/2024/03/01/feelings/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>S</category>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -698,6 +709,38 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
       </tags>
   </entry>
   <entry>
+    <title>心得</title>
+    <url>/2024/03/01/feelings/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>S</category>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>手机</title>
+    <url>/2023/12/17/fix-phone/</url>
+    <content><![CDATA[<h1 id="小米"><a href="#小米" class="headerlink" title="小米"></a>小米</h1><li style="margin-left: 40px;font-size: 15px">一键锁屏</li>
+
+<p>在添加小部件里可能找不到<b>一键锁屏</b>，你只需要<code>断开网络</code>然后在添加小部件最下方就会多出一个选项，在那里应该就能找到<b>一键锁屏</b>了。</p>
+<p style="color: #FF0000;">注:</p>
+仅在MIUI12.5测试过
+
+<h1 id="耳机问题"><a href="#耳机问题" class="headerlink" title="耳机问题"></a>耳机问题</h1><p>1 没插耳机缺显示插了<br>使用Lesser AudioSwitch<a href download="Lesser AudioSwitch_2.8.4.apk">点击下载</a><br>如图操作<br><img src="/2023/12/17/fix-phone/IMG_20240819.jpg"></p>
+]]></content>
+      <categories>
+        <category>S</category>
+        <category>手机</category>
+      </categories>
+      <tags>
+        <tag>修理</tag>
+        <tag>手机</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>如何使用filebrowser</title>
     <url>/2023/10/02/filebrowser/</url>
     <content><![CDATA[<h2 id="Linux下的使用教程"><a href="#Linux下的使用教程" class="headerlink" title="Linux下的使用教程"></a>Linux下的使用教程</h2><p>filebrowser是一个独立的文件管理工具，它使用go语言，不需要依赖直接.&#x2F;filebrowser即可运行，为了方便使用该篇文章叫你如何开机启动它。</p>
@@ -734,27 +777,9 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
       </categories>
   </entry>
   <entry>
-    <title>adb</title>
-    <url>/2023/10/19/adb/</url>
-    <content><![CDATA[<h3 id="设置屏幕息屏时间-1"><a href="#设置屏幕息屏时间-1" class="headerlink" title="设置屏幕息屏时间-1"></a>设置屏幕息屏时间-1</h3><p>永不息屏</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">settings put system screen_off_timeout 2147483647</span><br></pre></td></tr></table></figure>
-<p>查看息屏时间</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">settings put system screen_off_timeout</span><br></pre></td></tr></table></figure>
-<h3 id="设置电池假装充电状态-2"><a href="#设置电池假装充电状态-2" class="headerlink" title="设置电池假装充电状态-2"></a>设置电池假装充电状态-2</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dumpsys battery <span class="built_in">set</span> status 2</span><br></pre></td></tr></table></figure>
-<h3 id="激活应用-3"><a href="#激活应用-3" class="headerlink" title="激活应用-3"></a>激活应用-3</h3><p>键鼠映射软件:Panda Mouse pro</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh /storage/emulated/0/.chaozhuo.gameassistant2/inject.sh</span><br></pre></td></tr></table></figure>
-<p>下载<br><a href="https://www.123pan.com/s/wkn6Vv-ttpiH.html">123云盘下载_版本1.5.0</a><br><a href="https://wwp.lanzoup.com/iQ62S1dug35e">蓝奏云下载_版本1.5.0</a>提取码：38ev</p>
-<h3 id="adb-pull命令使用"><a href="#adb-pull命令使用" class="headerlink" title="adb pull命令使用"></a>adb pull命令使用</h3><p>把手机&#x2F;sdcard&#x2F;1里的文件下载到电脑D:\1文件夹里(&#x2F;sdcard&#x2F;1&#x2F;文件名也行)<br>adb pull &#x2F;sdcard&#x2F;1 D:\1</p>
-<p>主题<a href="https://theme-next.org/">https://theme-next.org/</a><br>彩色字<a href="https://benpaodewoniu.github.io/2020/01/27/hexo12/">https://benpaodewoniu.github.io/2020/01/27/hexo12/</a></p>
-]]></content>
-      <categories>
-        <category>G</category>
-        <category>搞机</category>
-      </categories>
-      <tags>
-        <tag>搞机</tag>
-        <tag>adb</tag>
-      </tags>
+    <title>git</title>
+    <url>/2023/12/03/git/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>自建frp服务器</title>
@@ -793,9 +818,19 @@ height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
       </tags>
   </entry>
   <entry>
-    <title>git</title>
-    <url>/2023/12/03/git/</url>
-    <content><![CDATA[]]></content>
+    <title>hexo常用写作技巧</title>
+    <url>/2023/12/24/hexo-3/</url>
+    <content><![CDATA[<h2 id="推送用"><a href="#推送用" class="headerlink" title="推送用"></a>推送用</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>H</category>
+        <category>hexo</category>
+        <category>写作命令</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title>Hexo的基本使用</title>
@@ -993,21 +1028,6 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
-    <title>hexo常用写作技巧</title>
-    <url>/2023/12/24/hexo-3/</url>
-    <content><![CDATA[<h2 id="推送用"><a href="#推送用" class="headerlink" title="推送用"></a>推送用</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>H</category>
-        <category>hexo</category>
-        <category>写作命令</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo的个性化</title>
     <url>/2024/03/31/hexo-4/</url>
     <content><![CDATA[]]></content>
@@ -1018,30 +1038,6 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </categories>
       <tags>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Termux上搭建hexo</title>
-    <url>/2023/11/25/hexo-termux/</url>
-    <content><![CDATA[<p>这个我忘了是干什么的了</p>
-<p>sed -i ‘s@^(deb.*stable main)$@#\1\ndeb <a href="https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24">https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24</a> stable main@’ $PREFIX&#x2F;etc&#x2F;apt&#x2F;sources.list</p>
-<p>pkg update</p>
-<p>pkg install nodejs-lts<br>pkg install git<br>pkg install vim</p>
-<p>mkdir hexo<br>chmod 777 hexo<br>cd hexo</p>
-<p>npm install hexo-cli -g<br>hexo init</p>
-<p>hexo g<br>hexo s </p>
-<p>主题<br>git clone -b master <a href="https://github.com/jerryc127/hexo-theme-butterfly.git">https://github.com/jerryc127/hexo-theme-butterfly.git</a> themes&#x2F;butterfly</p>
-<p>vim themes&#x2F;butterfly&#x2F;_config.yml</p>
-<p>vim编辑器:<br>输入i才能编辑<br>按下esc 再输入:wq保存退出npm install hexo-renderer-pug hexo-renderer-stylus –save</p>
-]]></content>
-      <categories>
-        <category>H</category>
-        <category>hexo</category>
-        <category>termux</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>termux</tag>
       </tags>
   </entry>
   <entry>
@@ -1104,24 +1100,35 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
-    <title>手机</title>
-    <url>/2023/12/17/fix-phone/</url>
-    <content><![CDATA[<h1 id="小米"><a href="#小米" class="headerlink" title="小米"></a>小米</h1><li style="margin-left: 40px;font-size: 15px">一键锁屏</li>
-
-<p>在添加小部件里可能找不到<b>一键锁屏</b>，你只需要<code>断开网络</code>然后在添加小部件最下方就会多出一个选项，在那里应该就能找到<b>一键锁屏</b>了。</p>
-<p style="color: #FF0000;">注:</p>
-仅在MIUI12.5测试过
-
-<h1 id="耳机问题"><a href="#耳机问题" class="headerlink" title="耳机问题"></a>耳机问题</h1><p>1 没插耳机缺显示插了<br>使用Lesser AudioSwitch<a href download="Lesser AudioSwitch_2.8.4.apk">点击下载</a><br>如图操作<br><img src="/2023/12/17/fix-phone/IMG_20240819.jpg"></p>
+    <title>Termux上搭建hexo</title>
+    <url>/2023/11/25/hexo-termux/</url>
+    <content><![CDATA[<p>这个我忘了是干什么的了</p>
+<p>sed -i ‘s@^(deb.*stable main)$@#\1\ndeb <a href="https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24">https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24</a> stable main@’ $PREFIX&#x2F;etc&#x2F;apt&#x2F;sources.list</p>
+<p>pkg update</p>
+<p>pkg install nodejs-lts<br>pkg install git<br>pkg install vim</p>
+<p>mkdir hexo<br>chmod 777 hexo<br>cd hexo</p>
+<p>npm install hexo-cli -g<br>hexo init</p>
+<p>hexo g<br>hexo s </p>
+<p>主题<br>git clone -b master <a href="https://github.com/jerryc127/hexo-theme-butterfly.git">https://github.com/jerryc127/hexo-theme-butterfly.git</a> themes&#x2F;butterfly</p>
+<p>vim themes&#x2F;butterfly&#x2F;_config.yml</p>
+<p>vim编辑器:<br>输入i才能编辑<br>按下esc 再输入:wq保存退出npm install hexo-renderer-pug hexo-renderer-stylus –save</p>
 ]]></content>
       <categories>
-        <category>S</category>
-        <category>手机</category>
+        <category>H</category>
+        <category>hexo</category>
+        <category>termux</category>
       </categories>
       <tags>
-        <tag>修理</tag>
-        <tag>手机</tag>
+        <tag>hexo</tag>
+        <tag>termux</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>我</title>
+    <url>/2024/03/01/me/</url>
+    <content><![CDATA[<p>问东西详细点，再进一步就可以了。不要问到一半就说够了！！！</p>
+<p>问路问题</p>
+]]></content>
   </entry>
   <entry>
     <title>minecraft服务器</title>
@@ -1139,6 +1146,19 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
         <category>游戏</category>
         <category>minecraft</category>
         <category>服务器</category>
+      </categories>
+      <tags>
+        <tag>游戏</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>minecraft</title>
+    <url>/2023/12/03/minecraft/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Y</category>
+        <category>游戏</category>
+        <category>minecraft</category>
       </categories>
       <tags>
         <tag>游戏</tag>
@@ -1246,6 +1266,25 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
+    <title>远程控制</title>
+    <url>/2024/04/04/remote-control/</url>
+    <content><![CDATA[<h1 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h1><h2 id="微软远程桌面"><a href="#微软远程桌面" class="headerlink" title="微软远程桌面"></a>微软远程桌面</h2><blockquote>
+<p>自带的挺好用，用之前必须给账户<code>设置密码</code>才能用。</p>
+</blockquote>
+<li style="margin-left: 40px;font-size: 15px">给账户设置密码</li>
+
+<img src="/2024/04/04/remote-control/GIF.gif" alt="GIF" style="zoom: 50%;">
+
+]]></content>
+      <categories>
+        <category>Y</category>
+        <category>远程控制</category>
+      </categories>
+      <tags>
+        <tag>远控</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>泡菜</title>
     <url>/2024/03/10/pickle/</url>
     <content><![CDATA[<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="泡菜坛子开箱"><a href="#泡菜坛子开箱" class="headerlink" title="泡菜坛子开箱"></a>泡菜坛子开箱</h2><li style="margin-left: 40px;font-size: 15px">24-2-7在拼多多上买了个看着不错的玻璃坛子</li>
@@ -1310,26 +1349,6 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
-    <title>minecraft</title>
-    <url>/2023/12/03/minecraft/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Y</category>
-        <category>游戏</category>
-        <category>minecraft</category>
-      </categories>
-      <tags>
-        <tag>游戏</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我</title>
-    <url>/2024/03/01/me/</url>
-    <content><![CDATA[<p>问东西详细点，再进一步就可以了。不要问到一半就说够了！！！</p>
-<p>问路问题</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Rog3解bl</title>
     <url>/2024/08/04/rog3/</url>
     <content><![CDATA[<p>1 备份文件<br>2 降级</p>
@@ -1381,22 +1400,16 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
-    <title>远程控制</title>
-    <url>/2024/04/04/remote-control/</url>
-    <content><![CDATA[<h1 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h1><h2 id="微软远程桌面"><a href="#微软远程桌面" class="headerlink" title="微软远程桌面"></a>微软远程桌面</h2><blockquote>
-<p>自带的挺好用，用之前必须给账户<code>设置密码</code>才能用。</p>
-</blockquote>
-<li style="margin-left: 40px;font-size: 15px">给账户设置密码</li>
-
-<img src="/2024/04/04/remote-control/GIF.gif" alt="GIF" style="zoom: 50%;">
-
+    <title>sip</title>
+    <url>/2024/08/30/sip/</url>
+    <content><![CDATA[<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="http://t.csdnimg.cn/QNB62">http://t.csdnimg.cn/QNB62</a></p>
 ]]></content>
       <categories>
-        <category>Y</category>
-        <category>远程控制</category>
+        <category>S</category>
+        <category>sip</category>
       </categories>
       <tags>
-        <tag>远控</tag>
+        <tag>sip</tag>
       </tags>
   </entry>
   <entry>
@@ -1466,19 +1479,6 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </tags>
   </entry>
   <entry>
-    <title>sip</title>
-    <url>/2024/08/30/sip/</url>
-    <content><![CDATA[<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="http://t.csdnimg.cn/QNB62">http://t.csdnimg.cn/QNB62</a></p>
-]]></content>
-      <categories>
-        <category>S</category>
-        <category>sip</category>
-      </categories>
-      <tags>
-        <tag>sip</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>tiepiserver</title>
     <url>/2024/08/31/tiepiserver/</url>
     <content><![CDATA[<p><i>这是仅供我个人用的文章</i></p>
@@ -1517,31 +1517,6 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </categories>
       <tags>
         <tag>server</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>win10-ftpserver</title>
-    <url>/2024/01/26/win10-ftpserver/</url>
-    <content><![CDATA[<p><a href="https://cloud.tencent.com/developer/article/1935592">win10系统下搭建FTP服务器(完成文件上传与下载)-腾讯云开发者社区-腾讯云 (tencent.com)</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>ws-scrcpy</title>
-    <url>/2024/08/27/ws-scrcpy/</url>
-    <content><![CDATA[<p><i>ws-scrcpy用浏览器远程控制 Android 手机，实现云手机效果</i></p>
-<p>不过我实际用下来效果<b>很差</b>，我觉得勉强应急用可以。</p>
-<h1 id="docker部署ws-scrcpy"><a href="#docker部署ws-scrcpy" class="headerlink" title="docker部署ws-scrcpy"></a>docker部署ws-scrcpy</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run --name ws-scrcpy -d -p 8000:8000 scavin/ws-scrcpy</span><br></pre></td></tr></table></figure>
-<h2 id="连接手机"><a href="#连接手机" class="headerlink" title="连接手机"></a>连接手机</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> ws-scrcpy adb connect 安卓IP地址:5555</span><br></pre></td></tr></table></figure>
-
-<h1 id="相关链接及参考"><a href="#相关链接及参考" class="headerlink" title="相关链接及参考"></a>相关链接及参考</h1><p><a href="https://github.com/NetrisTV/ws-scrcpy">https://github.com/NetrisTV/ws-scrcpy</a><br><a href="https://www.appinn.com/ws-scrcpy/">https://www.appinn.com/ws-scrcpy/</a></p>
-]]></content>
-      <categories>
-        <category>A</category>
-        <category>adb</category>
-      </categories>
-      <tags>
-        <tag>adb</tag>
-        <tag>docker</tag>
       </tags>
   </entry>
   <entry>
@@ -1598,6 +1573,31 @@ height: 100%; left: 0; top: 0;"> </iframe></div>
       </categories>
       <tags>
         <tag>网站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>win10-ftpserver</title>
+    <url>/2024/01/26/win10-ftpserver/</url>
+    <content><![CDATA[<p><a href="https://cloud.tencent.com/developer/article/1935592">win10系统下搭建FTP服务器(完成文件上传与下载)-腾讯云开发者社区-腾讯云 (tencent.com)</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>ws-scrcpy</title>
+    <url>/2024/08/27/ws-scrcpy/</url>
+    <content><![CDATA[<p><i>ws-scrcpy用浏览器远程控制 Android 手机，实现云手机效果</i></p>
+<p>不过我实际用下来效果<b>很差</b>，我觉得勉强应急用可以。</p>
+<h1 id="docker部署ws-scrcpy"><a href="#docker部署ws-scrcpy" class="headerlink" title="docker部署ws-scrcpy"></a>docker部署ws-scrcpy</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run --name ws-scrcpy -d -p 8000:8000 scavin/ws-scrcpy</span><br></pre></td></tr></table></figure>
+<h2 id="连接手机"><a href="#连接手机" class="headerlink" title="连接手机"></a>连接手机</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> ws-scrcpy adb connect 安卓IP地址:5555</span><br></pre></td></tr></table></figure>
+
+<h1 id="相关链接及参考"><a href="#相关链接及参考" class="headerlink" title="相关链接及参考"></a>相关链接及参考</h1><p><a href="https://github.com/NetrisTV/ws-scrcpy">https://github.com/NetrisTV/ws-scrcpy</a><br><a href="https://www.appinn.com/ws-scrcpy/">https://www.appinn.com/ws-scrcpy/</a></p>
+]]></content>
+      <categories>
+        <category>A</category>
+        <category>adb</category>
+      </categories>
+      <tags>
+        <tag>adb</tag>
+        <tag>docker</tag>
       </tags>
   </entry>
 </search>
