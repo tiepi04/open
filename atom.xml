@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>tiepi</title>
+  <icon>https://tiepi04.github.io/icon.png</icon>
+  <subtitle>强哥赞助</subtitle>
+  <link href="https://tiepi04.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://tiepi04.github.io/"/>
+  <updated>2024-09-05T04:35:11.919Z</updated>
+  <id>https://tiepi04.github.io/</id>
+  
+  <author>
+    <name>tiepi</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VoceChat</title>
+    <link href="https://tiepi04.github.io/2024/09/05/VoceChat/"/>
+    <id>https://tiepi04.github.io/2024/09/05/VoceChat/</id>
+    <published>2024-09-05T02:03:45.000Z</published>
+    <updated>2024-09-05T04:35:11.919Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h1&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Chat" scheme="https://tiepi04.github.io/tags/Chat/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>tiepiserver</title>
+    <link href="https://tiepi04.github.io/2024/08/31/tiepiserver/"/>
+    <id>https://tiepi04.github.io/2024/08/31/tiepiserver/</id>
+    <published>2024-08-31T02:57:08.000Z</published>
+    <updated>2024-08-31T05:04:25.792Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;i&gt;这是仅供我个人用的文章&lt;/i&gt;&lt;/p&gt;
+&lt;h1 id=&quot;已部署的服务&quot;&gt;&lt;a href=&quot;#已部署的服务&quot; class=&quot;headerlink&quot; title=&quot;已部署的服务&quot;&gt;&lt;/a&gt;已部署的服务&lt;/h1&gt;&lt;h2 id=&quot;直接部署&quot;&gt;&lt;a href=&quot;#直接部署&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="F" scheme="https://tiepi04.github.io/categories/F/"/>
+    
+    <category term="服务器" scheme="https://tiepi04.github.io/categories/F/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+    <category term="server" scheme="https://tiepi04.github.io/tags/server/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>sip</title>
+    <link href="https://tiepi04.github.io/2024/08/30/sip/"/>
+    <id>https://tiepi04.github.io/2024/08/30/sip/</id>
+    <published>2024-08-30T10:56:29.000Z</published>
+    <updated>2024-08-31T03:50:31.222Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h1&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="S" scheme="https://tiepi04.github.io/categories/S/"/>
+    
+    <category term="sip" scheme="https://tiepi04.github.io/categories/S/sip/"/>
+    
+    
+    <category term="sip" scheme="https://tiepi04.github.io/tags/sip/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自建frp服务器</title>
+    <link href="https://tiepi04.github.io/2024/08/27/frp/"/>
+    <id>https://tiepi04.github.io/2024/08/27/frp/</id>
+    <published>2024-08-27T12:05:46.000Z</published>
+    <updated>2024-08-29T00:21:30.468Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;i&gt;frp可以通过有公网IP的的服务器将内网的主机暴露给互联网，从而实现通过外网能直接访问到内网主机；frp有服务端和客户端，服务端需要装在有公网ip的服务器上，客户端装在内网主机上。&lt;/i&gt;&lt;/p&gt;
+&lt;h1 id=&quot;简单图解&quot;&gt;&lt;a href=&quot;#简单图解&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="F" scheme="https://tiepi04.github.io/categories/F/"/>
+    
+    <category term="frp" scheme="https://tiepi04.github.io/categories/F/frp/"/>
+    
+    
+    <category term="frp" scheme="https://tiepi04.github.io/tags/frp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ws-scrcpy</title>
+    <link href="https://tiepi04.github.io/2024/08/27/ws-scrcpy/"/>
+    <id>https://tiepi04.github.io/2024/08/27/ws-scrcpy/</id>
+    <published>2024-08-27T10:30:13.000Z</published>
+    <updated>2024-08-27T10:39:00.086Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;i&gt;ws-scrcpy用浏览器远程控制 Android 手机，实现云手机效果&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;不过我实际用下来效果&lt;b&gt;很差&lt;/b&gt;，我觉得勉强应急用可以。&lt;/p&gt;
+&lt;h1 id=&quot;docker部署ws-scrcpy&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="A" scheme="https://tiepi04.github.io/categories/A/"/>
+    
+    <category term="adb" scheme="https://tiepi04.github.io/categories/A/adb/"/>
+    
+    
+    <category term="adb" scheme="https://tiepi04.github.io/tags/adb/"/>
+    
+    <category term="docker" scheme="https://tiepi04.github.io/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RustDesk远控</title>
+    <link href="https://tiepi04.github.io/2024/08/27/rustdesk/"/>
+    <id>https://tiepi04.github.io/2024/08/27/rustdesk/</id>
+    <published>2024-08-27T02:51:09.000Z</published>
+    <updated>2024-08-27T03:44:05.229Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;i&gt;RustDesk 是一款可以平替 TeamViewer 的开源软件，旨在提供安全便捷的自建方案。&lt;/i&gt;&lt;br&gt;&lt;a href=&quot;rustdesk.com&quot;&gt;官网&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;自建服务器&quot;&gt;&lt;a href=&quot;#自建服务器&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="R" scheme="https://tiepi04.github.io/categories/R/"/>
+    
+    <category term="RustDesk远控" scheme="https://tiepi04.github.io/categories/R/RustDesk%E8%BF%9C%E6%8E%A7/"/>
+    
+    
+    <category term="远控" scheme="https://tiepi04.github.io/tags/%E8%BF%9C%E6%8E%A7/"/>
+    
+    <category term="docker" scheme="https://tiepi04.github.io/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>泰拉瑞亚</title>
+    <link href="https://tiepi04.github.io/2024/08/26/terarria/"/>
+    <id>https://tiepi04.github.io/2024/08/26/terarria/</id>
+    <published>2024-08-25T22:36:38.000Z</published>
+    <updated>2024-08-27T08:08:02.319Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;服务器&quot;&gt;&lt;a href=&quot;#服务器&quot; class=&quot;headerlink&quot; title=&quot;服务器&quot;&gt;&lt;/a&gt;服务器&lt;/h1&gt;&lt;p&gt;1 下载termux&lt;br&gt;2 下载proot-distro&lt;br&gt;3 下载ubuntu&lt;/p&gt;
+&lt;figure</summary>
+        
+      
+    
+    
+    
+    <category term="Y" scheme="https://tiepi04.github.io/categories/Y/"/>
+    
+    <category term="游戏" scheme="https://tiepi04.github.io/categories/Y/%E6%B8%B8%E6%88%8F/"/>
+    
+    
+    <category term="游戏" scheme="https://tiepi04.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="服务器" scheme="https://tiepi04.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>手机问题</title>
+    <link href="https://tiepi04.github.io/2024/08/19/phone/"/>
+    <id>https://tiepi04.github.io/2024/08/19/phone/</id>
+    <published>2024-08-19T03:00:54.000Z</published>
+    <updated>2024-08-21T16:17:43.768Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Rog3解bl</title>
+    <link href="https://tiepi04.github.io/2024/08/04/rog3/"/>
+    <id>https://tiepi04.github.io/2024/08/04/rog3/</id>
+    <published>2024-08-04T04:07:24.000Z</published>
+    <updated>2024-08-27T08:09:03.279Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;1 备份文件&lt;br&gt;2</summary>
+        
+      
+    
+    
+    
+    <category term="G" scheme="https://tiepi04.github.io/categories/G/"/>
+    
+    <category term="搞机" scheme="https://tiepi04.github.io/categories/G/%E6%90%9E%E6%9C%BA/"/>
+    
+    
+    <category term="搞机" scheme="https://tiepi04.github.io/tags/%E6%90%9E%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>html</title>
+    <link href="https://tiepi04.github.io/2024/08/01/html/"/>
+    <id>https://tiepi04.github.io/2024/08/01/html/</id>
+    <published>2024-08-01T02:28:50.000Z</published>
+    <updated>2024-08-01T02:42:27.848Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;表格&lt;br&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="H" scheme="https://tiepi04.github.io/categories/H/"/>
+    
+    <category term="html" scheme="https://tiepi04.github.io/categories/H/html/"/>
+    
+    
+    <category term="html" scheme="https://tiepi04.github.io/tags/html/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>铁锈战争</title>
+    <link href="https://tiepi04.github.io/2024/07/31/RW/"/>
+    <id>https://tiepi04.github.io/2024/07/31/RW/</id>
+    <published>2024-07-31T07:43:35.000Z</published>
+    <updated>2024-08-27T11:47:59.056Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;联机&quot;&gt;&lt;a href=&quot;#联机&quot; class=&quot;headerlink&quot; title=&quot;联机&quot;&gt;&lt;/a&gt;联机&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;简单来说有两种方法&lt;br&gt;局域网联机和服务器联机&lt;br&gt;各有优缺点&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Y" scheme="https://tiepi04.github.io/categories/Y/"/>
+    
+    <category term="游戏" scheme="https://tiepi04.github.io/categories/Y/%E6%B8%B8%E6%88%8F/"/>
+    
+    
+    <category term="铁锈战争" scheme="https://tiepi04.github.io/tags/%E9%93%81%E9%94%88%E6%88%98%E4%BA%89/"/>
+    
+    <category term="游戏" scheme="https://tiepi04.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>远程控制</title>
+    <link href="https://tiepi04.github.io/2024/04/04/remote-control/"/>
+    <id>https://tiepi04.github.io/2024/04/04/remote-control/</id>
+    <published>2024-04-04T02:25:56.000Z</published>
+    <updated>2024-07-31T07:38:54.768Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Windows&quot;&gt;&lt;a href=&quot;#Windows&quot; class=&quot;headerlink&quot; title=&quot;Windows&quot;&gt;&lt;/a&gt;Windows&lt;/h1&gt;&lt;h2 id=&quot;微软远程桌面&quot;&gt;&lt;a href=&quot;#微软远程桌面&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Y" scheme="https://tiepi04.github.io/categories/Y/"/>
+    
+    <category term="远程控制" scheme="https://tiepi04.github.io/categories/Y/%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6/"/>
+    
+    
+    <category term="远控" scheme="https://tiepi04.github.io/tags/%E8%BF%9C%E6%8E%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nodeppt</title>
+    <link href="https://tiepi04.github.io/2024/03/31/nodeppt/"/>
+    <id>https://tiepi04.github.io/2024/03/31/nodeppt/</id>
+    <published>2024-03-31T08:49:17.000Z</published>
+    <updated>2024-07-31T07:38:54.738Z</updated>
+    
+    
+    
+    
+    <category term="H" scheme="https://tiepi04.github.io/categories/H/"/>
+    
+    <category term="hexo" scheme="https://tiepi04.github.io/categories/H/hexo/"/>
+    
+    <category term="扩展" scheme="https://tiepi04.github.io/categories/H/hexo/%E6%89%A9%E5%B1%95/"/>
+    
+    
+    <category term="hexo" scheme="https://tiepi04.github.io/tags/hexo/"/>
+    
+    <category term="ppt" scheme="https://tiepi04.github.io/tags/ppt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo的个性化</title>
+    <link href="https://tiepi04.github.io/2024/03/31/hexo-4/"/>
+    <id>https://tiepi04.github.io/2024/03/31/hexo-4/</id>
+    <published>2024-03-31T06:50:38.000Z</published>
+    <updated>2024-07-31T07:38:54.718Z</updated>
+    
+    
+    
+    
+    <category term="H" scheme="https://tiepi04.github.io/categories/H/"/>
+    
+    <category term="hexo" scheme="https://tiepi04.github.io/categories/H/hexo/"/>
+    
+    <category term="个性化" scheme="https://tiepi04.github.io/categories/H/hexo/%E4%B8%AA%E6%80%A7%E5%8C%96/"/>
+    
+    
+    <category term="hexo" scheme="https://tiepi04.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>狗</title>
+    <link href="https://tiepi04.github.io/2024/03/10/dog/"/>
+    <id>https://tiepi04.github.io/2024/03/10/dog/</id>
+    <published>2024-03-10T02:21:28.000Z</published>
+    <updated>2024-08-01T03:06:23.033Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;狗子叫&lt;b&gt;毛毛&lt;/b&gt;&lt;/p&gt;
+&lt;h1 id=&quot;照片集&quot;&gt;&lt;a href=&quot;#照片集&quot; class=&quot;headerlink&quot; title=&quot;照片集&quot;&gt;&lt;/a&gt;照片集&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="G" scheme="https://tiepi04.github.io/categories/G/"/>
+    
+    <category term="狗子" scheme="https://tiepi04.github.io/categories/G/%E7%8B%97%E5%AD%90/"/>
+    
+    
+    <category term="生活" scheme="https://tiepi04.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>泡菜</title>
+    <link href="https://tiepi04.github.io/2024/03/10/pickle/"/>
+    <id>https://tiepi04.github.io/2024/03/10/pickle/</id>
+    <published>2024-03-09T23:50:58.000Z</published>
+    <updated>2024-07-31T07:38:54.768Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;headerlink&quot; title=&quot;准备工作&quot;&gt;&lt;/a&gt;准备工作&lt;/h1&gt;&lt;h2 id=&quot;泡菜坛子开箱&quot;&gt;&lt;a href=&quot;#泡菜坛子开箱&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="S" scheme="https://tiepi04.github.io/categories/S/"/>
+    
+    <category term="生活" scheme="https://tiepi04.github.io/categories/S/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="生活" scheme="https://tiepi04.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="学习" scheme="https://tiepi04.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>心得</title>
+    <link href="https://tiepi04.github.io/2024/03/01/feelings/"/>
+    <id>https://tiepi04.github.io/2024/03/01/feelings/</id>
+    <published>2024-03-01T14:53:02.000Z</published>
+    <updated>2024-08-29T10:23:59.013Z</updated>
+    
+    
+    
+    
+    <category term="S" scheme="https://tiepi04.github.io/categories/S/"/>
+    
+    <category term="随笔" scheme="https://tiepi04.github.io/categories/S/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="随笔" scheme="https://tiepi04.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我</title>
+    <link href="https://tiepi04.github.io/2024/03/01/me/"/>
+    <id>https://tiepi04.github.io/2024/03/01/me/</id>
+    <published>2024-03-01T14:52:04.000Z</published>
+    <updated>2024-09-17T00:33:37.824Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;问东西详细点，再进一步就可以了。不要问到一半就说够了！！！&lt;/p&gt;
+&lt;p&gt;问路问题&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>adb-scrcpy</title>
+    <link href="https://tiepi04.github.io/2024/01/30/adb-scrcpy/"/>
+    <id>https://tiepi04.github.io/2024/01/30/adb-scrcpy/</id>
+    <published>2024-01-30T11:47:36.000Z</published>
+    <updated>2024-08-27T10:40:24.776Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;使用前先用adb连接上设备&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;使用&quot;&gt;&lt;a href=&quot;#使用&quot; class=&quot;headerlink&quot; title=&quot;使用&quot;&gt;&lt;/a&gt;使用&lt;/h1&gt;&lt;p&gt;默认&lt;/p&gt;
+&lt;figure</summary>
+        
+      
+    
+    
+    
+    <category term="A" scheme="https://tiepi04.github.io/categories/A/"/>
+    
+    <category term="adb" scheme="https://tiepi04.github.io/categories/A/adb/"/>
+    
+    
+    <category term="adb" scheme="https://tiepi04.github.io/tags/adb/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>win10-ftpserver</title>
+    <link href="https://tiepi04.github.io/2024/01/26/win10-ftpserver/"/>
+    <id>https://tiepi04.github.io/2024/01/26/win10-ftpserver/</id>
+    <published>2024-01-26T02:01:21.000Z</published>
+    <updated>2024-07-31T07:38:54.778Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://cloud.tencent.com/developer/article/1935592&quot;&gt;win10系统下搭建FTP服务器(完成文件上传与下载)-腾讯云开发者社区-腾讯云</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
